@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'Fuggles Pro';
+  src: url('./../fonts/FugglesPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --c-white: #ffffff;
+  --c-white-soft: #f9fafb;
+  --c-white-mute: #f4f4f4;
+
+  --c-black: #000000;
+  --c-black-soft: #0C0C0C;
+  --c-black-mute: #202020;
+
+  --c-grey: #475467;
+  --c-grey-soft: #cccccc;
+  --c-grey-mute: #e8e8e8;
+
+  --c-gold: #ffd585;
+  --c-green: #155724;
+  --c-red: #ff0000;
+  --c-divider-light: #EAECF0;
+
+  --fm-fuggles: "Fuggles Pro", serif;
+  --fm-inter: "Inter", sans-serif;
+
+  --fw-extrabold: 900;
+  --fw-bolder: 800;
+  --fw-bold: 700;
+  --fw-sm-bold: 500;
+
+  --fs-h1: 50px;
+  --fs-h2: 32px;
+  --fs-20px: 20px;
+
+  --radius: 8px;
+  --section-gap: 160px;
+
+}
+
+/* semantic color variables for this project */
+:root {
+  /* colors */
+  --color-background: var(--c-black-soft);
+  --color-background-soft: var(--c-black-soft);
+  --color-background-dark: var(--c-black);
+  --color-background-button-secondary: var(--c-blue);
+
+  --color-text-primary: var(--c-gold);
+  --color-text-secondary: var(--c-white);
+  --color-text-accent-dark: var(--c-black-soft);
+  --color-text-accent-light: var(--c-white);
+  --color-text-info: var(--c-grey);
+
+  --color-outline-dark: var(--c-black);
+  --color-outline-light: var(--c-white);
+
+  --color-divider: var(--c-divider-light);
+  --color-input-border: var(--c-grey-soft);
+  --color-dropdown-hover: var(--c-grey-mute);
+
+  /* font families */
+  --font-family-primary: var(--fm-fuggles);
+  --font-family-secondary: var(--fm-inter);
+
+  /* font sizes */
+  --heading-size: var(--fs-h1);
+  --subheading-size: var(--fs-h2);
+  --text-20px-size: var(--fs-20px);
+
+  /* font weights */
+  --font-weight-hero-heading: var(--fw-extrabold);
+  --font-weight-heading: var(--fw-bolder);
+  --font-weight-strong: var(--fw-bold);
+  --font-weight-highlight: var(--fw-sm-bold);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-family-secondary);
+  color: var(--color-text-secondary);
+  background-color: var(--color-background);
+  line-height: 1.6;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-primary);
+  color: var(--color-text-primary);
+}
+
+h1 {
+  font-size: var(--heading-size);
+}
+
+h2 {
+  font-size: var(--subheading-size);
+}
