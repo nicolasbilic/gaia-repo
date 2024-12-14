@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Fuggles Pro';
-  src: url('./../fonts/FugglesPro-Regular.ttf') format('truetype');
+  font-family: "Fuggles Pro";
+  src: url("./../fonts/FugglesPro-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -11,7 +11,7 @@
   --c-white-mute: #f4f4f4;
 
   --c-black: #000000;
-  --c-black-soft: #0C0C0C;
+  --c-black-soft: #0c0c0c;
   --c-black-mute: #202020;
 
   --c-grey: #475467;
@@ -21,7 +21,7 @@
   --c-gold: #ffd585;
   --c-green: #155724;
   --c-red: #ff0000;
-  --c-divider-light: #EAECF0;
+  --c-divider-light: #eaecf0;
 
   --fm-fuggles: "Fuggles Pro", serif;
   --fm-inter: "Inter", sans-serif;
@@ -35,9 +35,8 @@
   --fs-h2: 32px;
   --fs-20px: 20px;
 
-  --radius: 8px;
+  --radius: 12px;
   --section-gap: 160px;
-
 }
 
 /* semantic color variables for this project */
