@@ -19,6 +19,7 @@
   --c-grey-mute: #e8e8e8;
 
   --c-gold: #ffd585;
+  --c-dark-blue: #242223;
   --c-green: #155724;
   --c-red: #ff0000;
   --c-divider-light: #eaecf0;
@@ -32,7 +33,7 @@
   --fw-sm-bold: 500;
 
   --fs-h1: 50px;
-  --fs-h2: 32px;
+  --fs-h2: 95px;
   --fs-20px: 20px;
 
   --radius: 12px;
@@ -42,7 +43,7 @@
 /* semantic color variables for this project */
 :root {
   /* colors */
-  --color-background: var(--c-black-soft);
+  --color-background: var(--c-dark-blue);
   --color-background-soft: var(--c-black-soft);
   --color-background-dark: var(--c-black);
   --color-background-button-secondary: var(--c-blue);
