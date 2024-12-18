@@ -34,6 +34,8 @@
 
   --fs-h1: 50px;
   --fs-h2: 95px;
+  --fs-h3: 80px;
+  --fs-18px: 18px;
   --fs-20px: 20px;
 
   --radius: 12px;
@@ -67,7 +69,9 @@
 
   /* font sizes */
   --heading-size: var(--fs-h1);
-  --subheading-size: var(--fs-h2);
+  --heading-2-size: var(--fs-h2);
+  --heading-3-size: var(--fs-h3);
+  --text-18px-size: var(--fs-18px);
   --text-20px-size: var(--fs-20px);
 
   /* font weights */
@@ -108,12 +112,15 @@ h5,
 h6 {
   font-family: var(--font-family-primary);
   color: var(--color-text-primary);
+  margin: 0;
+  /* line-height: 14vw; */
 }
-
 h1 {
   font-size: var(--heading-size);
 }
-
 h2 {
-  font-size: var(--subheading-size);
+  font-size: var(--heading-2-size);
+}
+h3 {
+  font-size: var(--heading-3-size);
 }

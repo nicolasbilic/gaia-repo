@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import UserNavBar from './components/UserNavBar.vue';
-import UserFooter from './components/UserFooter.vue';
+import UserNavBar from "./components/Layout/UserNavBar.vue";
+import UserFooter from "./components/Layout/UserFooter.vue";
 </script>
 
 <template>
-  <UserNavBar />
+  <!-- <UserNavBar /> -->
   <RouterView />
-  <UserFooter />
+  <!-- <UserFooter /> -->
 </template>
 
 <style scoped></style>

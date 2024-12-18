@@ -8,8 +8,8 @@ import App from './App.vue'
 import { createRouter, createWebHistory, type RouteMeta } from 'vue-router'
 import UserHome from './pages/UserHome.vue';
 import UserLegal from './pages/UserLegal.vue';
-import NotFound from './components/NotFound.vue';
-import Minuteur from './components/Minuteur.vue'
+import NotFound from './components/Layout/NotFound.vue';
+import Minuteur from './components/Todelete/Minuteur.vue'
 
 interface Meta extends RouteMeta {
   title?: string;
