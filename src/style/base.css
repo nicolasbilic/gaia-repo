@@ -15,11 +15,17 @@
   --c-black-mute: #202020;
 
   --c-grey: #475467;
-  --c-grey-soft: #cccccc;
-  --c-grey-mute: #e8e8e8;
+  --c-grey-soft: #57667d;
+  --c-grey-mute: #cccccc;
 
   --c-gold: #ffd585;
   --c-dark-blue: #242223;
+  --c-silver-grey: linear-gradient(
+    90deg,
+    rgba(36, 34, 35) 0%,
+    rgba(48, 46, 47, 1) 35%,
+    rgba(36, 34, 35, 1) 100%
+  );
   --c-green: #155724;
   --c-red: #ff0000;
   --c-divider-light: rgba(234, 236, 240, 0.6);
@@ -45,23 +51,25 @@
 /* semantic color variables for this project */
 :root {
   /* colors */
-  --color-background: var(--c-dark-blue);
+  --color-background: var(--c-silver-grey);
   --color-background-soft: var(--c-black-soft);
   --color-background-dark: var(--c-black);
   --color-background-light: var(--c-white);
+
   --color-background-button-secondary: var(--c-blue);
 
   --color-text-primary: var(--c-gold);
   --color-text-secondary: var(--c-white);
   --color-text-accent-dark: var(--c-black-soft);
   --color-text-accent-light: var(--c-white);
-  --color-text-info: var(--c-grey);
+  --color-text-info: var(--c-grey-soft);
 
   --color-outline-dark: var(--c-black);
   --color-outline-light: var(--c-white);
 
   --color-divider: var(--c-divider-light);
-  --color-input-border: var(--c-grey-soft);
+  --color-input-border: var(--c-grey-mute);
+  --color-input-placeholder: var(--c-grey-mute);
 
   /* font families */
   --font-family-primary: var(--fm-fuggles);
@@ -96,7 +104,8 @@ body {
   min-height: 100vh;
   font-family: var(--font-family-secondary);
   color: var(--color-text-secondary);
-  background-color: var(--color-background);
+  background: rgb(36, 34, 35);
+  background: var(--color-background);
   line-height: 1.6;
   /* line-height: clamp(40px, 14vw, 55px); */
   font-size: 16px;

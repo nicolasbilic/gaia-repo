@@ -2,7 +2,7 @@
 
 <template>
   <nav class="navbar navbar-expand-lg mx-2 mx-md-5">
-    <div class="container-fluid">
+    <div class="container-fluid gx-0">
       <RouterLink
         to="/"
         class="navbar-brand active d-block d-lg-none"
@@ -66,6 +66,10 @@ a {
   color: var(--color-text-secondary);
   font-size: 40px;
   line-height: clamp(40px, 14vw, 55px);
+}
+
+.navbar-collapse {
+  padding-left: 2px;
 }
 
 .navbar-brand {

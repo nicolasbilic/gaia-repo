@@ -78,13 +78,13 @@ onUnmounted(() => {
         /> -->
       </section>
 
-      <!-- <section
+      <section
         id="contact"
         class="contact-section transition-section"
         :class="{ visible: isElementVisible[4] }"
       >
         <Contact />
-      </section> -->
+      </section>
 
       <UserFooter />
     </div>
