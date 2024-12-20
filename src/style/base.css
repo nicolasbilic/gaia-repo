@@ -22,7 +22,7 @@
   --c-dark-blue: #242223;
   --c-green: #155724;
   --c-red: #ff0000;
-  --c-divider-light: #eaecf0;
+  --c-divider-light: rgba(234, 236, 240, 0.6);
 
   --fm-fuggles: "Fuggles Pro", serif;
   --fm-inter: "Inter", sans-serif;
@@ -48,6 +48,7 @@
   --color-background: var(--c-dark-blue);
   --color-background-soft: var(--c-black-soft);
   --color-background-dark: var(--c-black);
+  --color-background-light: var(--c-white);
   --color-background-button-secondary: var(--c-blue);
 
   --color-text-primary: var(--c-gold);
@@ -61,7 +62,6 @@
 
   --color-divider: var(--c-divider-light);
   --color-input-border: var(--c-grey-soft);
-  --color-dropdown-hover: var(--c-grey-mute);
 
   /* font families */
   --font-family-primary: var(--fm-fuggles);
@@ -98,6 +98,7 @@ body {
   color: var(--color-text-secondary);
   background-color: var(--color-background);
   line-height: 1.6;
+  /* line-height: clamp(40px, 14vw, 55px); */
   font-size: 16px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -113,7 +114,6 @@ h6 {
   font-family: var(--font-family-primary);
   color: var(--color-text-primary);
   margin: 0;
-  /* line-height: 14vw; */
 }
 h1 {
   font-size: var(--heading-size);

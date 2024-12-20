@@ -18,9 +18,9 @@ interface Meta extends RouteMeta {
 
 const routes = [
   { path: '/', component: UserHome, meta: { title: 'Gaia - Official Site', description: 'Explore the unique world of Gaia, a graphic designer specializing in AI-generated fantasy characters. Dive into imaginary realms where every illustration tells a story.' } as Meta },
-  { path: '/mentions-legales', component: UserLegal, meta: { title: 'Mentions légales - Gaia', description: 'Retrouvez les mentions légales - Gaia' } as Meta },
+  { path: '/legal', component: UserLegal, meta: { title: 'Legal - Gaia', description: 'Find the legal notices - Gaia' } as Meta },
   { path: '/minuteur', component: Minuteur },
-  { path: '/404', component: NotFound, meta: { title: 'Page non trouvée - Gaia', description: 'La page que vous recherchez n\'existe pas.' } as Meta },
+  { path: '/404', component: NotFound, meta: { title: 'Page Not Found - Gaia', description: 'Oops! The page you are looking for doesn’t exist.' } as Meta },
   { path: '/:catchAll(.*)', redirect: '/404' }
 ]
 
@@ -29,12 +29,20 @@ const router = createRouter({
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
+      // Retourner à la position sauvegardée (par exemple, après un retour en arrière)
       return savedPosition;
+    } else if (to.hash) {
+      // Si une ancre est spécifiée dans l'URL (hash), défiler vers l'élément correspondant
+      return {
+        el: to.hash, // Cible l'élément correspondant à l'ID du hash
+        behavior: 'smooth', // Défilement fluide
+      };
     } else {
+      // Si aucune position sauvegardée ou ancre, défiler en haut à gauche
       return { left: 0, top: 0 };
     }
-  }
-})
+  },
+});
 
 router.beforeEach((to, from, next) => {
   const meta = to.meta as Meta;

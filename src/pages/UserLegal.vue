@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted } from "vue";
+import UserNavBar from "../components/Layout/UserNavBar.vue";
+import UserFooter from "../components/Layout/UserFooter.vue";
+
 const show = ref(false);
 onMounted(() => {
   show.value = true;
@@ -9,16 +12,12 @@ onMounted(() => {
 <template>
   <transition name="fade-slide">
     <section v-if="show">
-      <UserNavBar navColor="black" />
+      <UserNavBar />
       <div class="relative-container">
         <div class="centered-container">
           <div class="padding-container">
-            <h1 class="animated-text">
-              Mentions légales
-            </h1>
-            <p class="sub-text">
-              En vigueur au 06/07/2024
-            </p>
+            <h1 class="animated-text">Legal Notices</h1>
+            <p class="sub-text pt-3">Effective as of 12/25/2024</p>
           </div>
         </div>
       </div>
@@ -28,137 +27,106 @@ onMounted(() => {
           <section>
             <article>
               <p>
-                Conformément aux dispositions des Articles 6-III et 19 de la Loi
-                n°2004-575 du 21 juin 2004 pour la Confiance dans l’économie
-                numérique, dite L.C.E.N., il est porté à la connaissance des
-                utilisateurs et visiteurs, ci-après l'"Utilisateur", du site
-                www.alpes.com , ci-après le "Site", les présentes mentions
-                légales.
+                In accordance with the provisions of Articles 6-III and 19 of
+                Law No. 2004-575 of June 21, 2004, on Confidence in the Digital
+                Economy (L.C.E.N.), the following legal notices are brought to
+                the attention of users and visitors, hereinafter referred to as
+                the "User," of the website www.gaia.com, hereinafter referred to
+                as the "Site."
               </p>
               <p>
-                La connexion et la navigation sur le Site par l’Utilisateur implique
-                acceptation intégrale et sans réserve des présentes mentions
-                légales.
+                Connection and navigation on the Site by the User implies full
+                and unconditional acceptance of these legal notices.
               </p>
-              <h2>
-                ARTICLE 1 - L'ÉDITEUR
-              </h2>
+              <h2>ARTICLE 1 - THE PUBLISHER</h2>
               <p>
-                L’édition et la direction de la publication du Site est assurée par
-                Nicolas Bilic, contact au 30 Bd Jean Moulin, 83780 Flayosc, dont le
-                numéro de téléphone est 0645901345, et l'adresse e-mail
-                <b>nicolasbilic.dev@nicolasbilic.com</b>, ci-après l'"Éditeur".
+                The publishing and management of the Site is carried out by
+                Nicolas Bilic, contactable at 30 Bd Jean Moulin, 83780 Flayosc,
+                whose phone number is 0645901345 and email address is
+                <b>nicolasbilic.dev@nicolasbilic.com</b>, hereinafter referred
+                to as the "Publisher."
               </p>
-              <h2>
-                ARTICLE 2 - L'HÉBERGEUR
-              </h2>
+              <h2>ARTICLE 2 - THE HOST</h2>
               <p>
-                L'hébergeur du Site est la société VERCEL Inc., dont le siège social
-                est situé au Vercel Inc. 340 S Lemon Ave #4133. Walnut, CA 91789,
-                dont le numéro de téléphone est (559) 288-7060.
+                The Site is hosted by the company VERCEL Inc., whose
+                headquarters are located at Vercel Inc., 340 S Lemon Ave #4133,
+                Walnut, CA 91789, phone number (559) 288-7060.
               </p>
-              <h2>
-                ARTICLE 3 - ACCÈS AU SITE
-              </h2>
+              <h2>ARTICLE 3 - ACCESS TO THE SITE</h2>
               <p>
-                Le Site est accessible en tout endroit, 7j/7, 24h/24 sauf cas de
-                force majeure, interruption programmée ou non et pouvant découlant
-                d’une nécessité de maintenance. En cas de modification, interruption
-                ou suspension du Site, l'Éditeur ne saurait être tenu responsable.
+                The Site is accessible from any location, 24/7, except in cases
+                of force majeure, scheduled or unscheduled interruptions, or
+                maintenance requirements. In the event of modification,
+                interruption, or suspension of the Site, the Publisher cannot be
+                held liable.
               </p>
-              <h2>
-                ARTICLE 4 - COLLECTE DES DONNEES
-              </h2>
+              <h2>ARTICLE 4 - DATA COLLECTION</h2>
               <p>
-                Le Site assure à l'Utilisateur une collecte et un traitement
-                d'informations personnelles dans le respect de la vie privée
-                conformément à la loi n°78-17 du 6 janvier 1978 relative à
-                l'informatique, aux fichiers et aux libertés.
+                The Site ensures the collection and processing of personal
+                information in compliance with privacy laws, in accordance with
+                Law No. 78-17 of January 6, 1978, on Information Technology,
+                Files, and Freedoms.
               </p>
-              <h3>
-                4.1 Nature des données collectées
-              </h3>
+              <h3>4.1 Nature of Data Collected</h3>
               <p>
-                Le site collecte uniquement l’adresse e-mail des utilisateurs
-                lorsqu’ils choisissent de nous contacter via le lien sur le site.
+                The Site collects only users' email addresses when they choose
+                to contact us via the link on the site.
               </p>
-              <h3>
-                4.2 Finalité de la collecte des données
-              </h3>
+              <h3>4.2 Purpose of Data Collection</h3>
               <p>
-                Les adresses e-mail collectées sont utilisées uniquement pour
-                répondre aux demandes de contact des utilisateurs.
+                The collected email addresses are used solely to respond to
+                users' contact requests.
               </p>
-              <h3>
-                4.3 Base légale du traitement
-              </h3>
+              <h3>4.3 Legal Basis for Processing</h3>
               <p>
-                La collecte et le traitement des adresses e-mail sont basés sur le
-                consentement de l’utilisateur, exprimé lorsqu’il choisit de nous
-                envoyer un e-mail.
+                The collection and processing of email addresses are based on
+                the user's consent, expressed when they choose to send us an
+                email.
               </p>
-              <h3>
-                4.4 Durée de conservation des données
-              </h3>
+              <h3>4.4 Data Retention Period</h3>
               <p>
-                Les adresses e-mail et les messages associés sont conservés pendant
-                le temps nécessaire pour traiter et répondre aux demandes des
-                utilisateurs. Elles peuvent être conservées ultérieurement si
-                nécessaire pour des raisons de suivi ou de gestion des projets.
+                Email addresses and associated messages are retained for as long
+                as necessary to process and respond to users' requests. They may
+                be retained further if necessary for follow-up or project
+                management.
               </p>
-              <h3>
-                4.5 Partage des données
-              </h3>
+              <h3>4.5 Data Sharing</h3>
               <p>
-                Les adresses e-mail et les messages ne sont pas partagés avec des
-                tiers, sauf si cela est nécessaire pour répondre à une demande
-                spécifique de l’utilisateur ou si la loi l’exige.
+                Email addresses and messages are not shared with third parties,
+                except when necessary to respond to a specific user request or
+                if required by law.
               </p>
-              <h3>
-                4.6 Droits des utilisateurs
-              </h3>
+              <h3>4.6 User Rights</h3>
               <p>
-                Les utilisateurs ont le droit d’accéder, de rectifier ou de demander
-                la suppression de leurs données personnelles. Pour exercer ces
-                droits, ils peuvent nous contacter à l’adresse e-mail suivante :
+                Users have the right to access, rectify, or request the deletion
+                of their personal data. To exercise these rights, they can
+                contact us at the following email address:
                 nicolasbilic.dev@nicolasbilic.com.
               </p>
               <p>
-                Les utilisateurs ont également le droit d’introduire une réclamation
-                auprès de la Commission Nationale de l’Informatique et des Libertés
-                (CNIL) s’ils estiment que leurs droits ne sont pas respectés. Pour
-                plus d’informations, ils peuvent visiter le site de la CNIL :
-                www.cnil.fr.
+                Users also have the right to lodge a complaint with the
+                Commission Nationale de l’Informatique et des Libertés (CNIL) if
+                they believe their rights are not being respected. For more
+                information, they can visit the CNIL website: www.cnil.fr.
               </p>
-              <h3>
-                4.7 Sécurité des données
-              </h3>
+              <h3>4.7 Data Security</h3>
               <p>
-                Nous prenons les mesures nécessaires pour protéger les données
-                personnelles contre tout accès non autorisé, altération ou
-                destruction.
+                We take the necessary measures to protect personal data from
+                unauthorized access, alteration, or destruction.
               </p>
               <br />
               <p>
-                Toute utilisation, reproduction, diffusion, commercialisation,
-                modification de toute ou partie du Site, sans autorisation de
-                l’Editeur est prohibée et pourra entraîner des actions et poursuites
-                judiciaires telles que notamment prévues par le Code de la propriété
-                intellectuelle et le Code civil.
-              </p>
-              <h2>
-                ARTICLE 5 - ATTRIBUTION
-              </h2>
-              <p>
-                Le site a utilisé une vidéo provenant de Vecteezy :
-                <a href="https://www.vecteezy.com/free-videos/ink-splash" target="_blank">Ink Splash Stock Videos by
-                  Vecteezy</a>
+                Any use, reproduction, distribution, commercialization, or
+                modification of all or part of the Site without the Publisher's
+                authorization is prohibited and may lead to legal actions as
+                provided by the Intellectual Property Code and the Civil Code.
               </p>
             </article>
           </section>
         </div>
       </div>
-    </section v-if="show" class="section-container">
+      <UserFooter />
+    </section>
   </transition>
 </template>
 
@@ -202,7 +170,8 @@ onMounted(() => {
 .relative-container h1 {
   font-size: 1.625rem;
   font-weight: bold;
-  color: #202020;
+  font-family: var(--font-family-secondary);
+  color: var(--color-text-secondary);
 }
 
 .sub-text {
@@ -232,13 +201,15 @@ article {
 
 article h2 {
   font-size: var(--text-20px-size);
-  color: #202020;
+  font-family: var(--font-family-secondary);
+  color: var(--color-text-secondary);
   margin: 30px 0 15px;
 }
 
 article h3 {
   font-size: 1.25rem;
-  color: #202020;
+  font-family: var(--font-family-secondary);
+  color: var(--color-text-secondary);
   margin: 20px 0 10px;
 }
 

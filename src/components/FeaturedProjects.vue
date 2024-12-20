@@ -1,50 +1,50 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="featured-projects-container">
-    <div class="container">
-      <h2>Featured Projects</h2>
-      <div class="featured-projects">
-        <div class="project">
-          <img
-            src="../assets/webp/artisan-celeste.webp"
-            alt="Celestian Artisan"
-            width="230"
-            height="auto"
-          />
-        </div>
-        <div class="project">
-          <img
-            src="../assets/webp/sorceress.webp"
-            alt="Sorceress"
-            width="230"
-            height="auto"
-          />
-        </div>
-        <div class="project">
-          <img
-            src="../assets/webp/star-nomad.webp"
-            alt="Star nomad"
-            width="230"
-            height="auto"
-          />
-        </div>
-        <div class="project">
-          <img
-            src="../assets/webp/lunar-archer.webp"
-            alt="Lunar archer"
-            width="230"
-            height="auto"
-          />
-        </div>
-        <div class="project">
-          <img
-            src="../assets/webp/oracle.webp"
-            alt="Oracle"
-            width="230"
-            height="auto"
-          />
-        </div>
+  <div
+    class="container d-flex flex-column justify-content-center align-items-center"
+  >
+    <h2>Featured Projects</h2>
+    <div class="featured-projects position-relative">
+      <div class="project position-absolute">
+        <img
+          src="../assets/webp/artisan-celeste.webp"
+          alt="Celestian Artisan"
+          width="230"
+          height="auto"
+        />
+      </div>
+      <div class="project position-absolute">
+        <img
+          src="../assets/webp/sorceress.webp"
+          alt="Sorceress"
+          width="230"
+          height="auto"
+        />
+      </div>
+      <div class="project">
+        <img
+          src="../assets/webp/star-nomad.webp"
+          alt="Star nomad"
+          width="230"
+          height="auto"
+        />
+      </div>
+      <div class="project position-absolute">
+        <img
+          src="../assets/webp/lunar-archer.webp"
+          alt="Lunar archer"
+          width="230"
+          height="auto"
+        />
+      </div>
+      <div class="project position-absolute">
+        <img
+          src="../assets/webp/oracle.webp"
+          alt="Oracle"
+          width="230"
+          height="auto"
+        />
       </div>
     </div>
   </div>
@@ -56,42 +56,45 @@ h2 {
   text-align: center;
   padding-bottom: 2rem;
 }
+
 .featured-projects {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
   transform-style: preserve-3d;
-  transform: perspective(1800px);
-  padding: 0 50px;
+  transform: perspective(1500px);
+  width: fit-content;
 }
 
 .featured-projects .project {
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.6s ease, filter 0.5s ease;
   filter: brightness(0.8);
+  transform: translateZ(0);
+  will-change: transform, filter;
+  backface-visibility: hidden;
 }
 
 /*** shuffle cards ***/
-.featured-projects .project {
-  transform: translateX(410px);
-  /* outline: 3px solid lightblue; */
+.featured-projects .project:nth-child(1) {
+  top: 0;
+  left: -27%;
+  /* Simule une carte plus en arrière */
+  transform: translateZ(-50px);
 }
-.featured-projects .project + * {
-  transform: translateX(205px);
-  /* outline: 3px solid purple; */
+.featured-projects .project:nth-child(2) {
+  top: 0;
+  left: -13%;
+  transform: translateZ(-25px);
 }
-.featured-projects .project + * + * {
-  transform: translateX(0px);
-  /* outline: 3px solid yellow; */
+.featured-projects .project:nth-child(3) {
+  transform: translateZ(0);
 }
-.featured-projects .project + * + * + * {
-  transform: translateX(-205px);
-  /* outline: 3px solid red; */
+.featured-projects .project:nth-child(4) {
+  top: 0;
+  right: -13%;
+  transform: translateZ(-25px);
 }
-.featured-projects .project + * + * + * + * {
-  transform: translateX(-410px);
-  /* outline: 3px solid green; */
+.featured-projects .project:nth-child(5) {
+  top: 0;
+  right: -27%;
+  transform: translateZ(-50px);
 }
 
 .featured-projects .project:hover {
@@ -135,106 +138,104 @@ h2 {
   border-radius: var(--radius);
 }
 
-.featured-projects .project:nth-child(1) {
-  z-index: 1;
-}
-.featured-projects .project:nth-child(2) {
-  z-index: 2;
-}
-.featured-projects .project:nth-child(3) {
-  z-index: 3;
-}
-.featured-projects .project:nth-child(4) {
-  z-index: 2;
-}
-.featured-projects .project:nth-child(5) {
-  z-index: 1;
-}
-
 /******______ MEDIA QUERIES ______******/
 /****** >= 576px ******/
 @media (width >= 576px) {
-  /*** shuffle cards ***/
-  .featured-projects .project {
-    transform: translateX(350px);
+  .featured-projects .project:nth-child(1) {
+    top: 0;
+    left: -55%;
   }
-  .featured-projects .project + * {
-    transform: translateX(175px);
+  .featured-projects .project:nth-child(2) {
+    top: 0;
+    left: -30%;
   }
-  .featured-projects .project + * + * {
-    transform: translateX(0px);
+  .featured-projects .project:nth-child(4) {
+    top: 0;
+    right: -30%;
   }
-  .featured-projects .project + * + * + * {
-    transform: translateX(-175px);
-  }
-  .featured-projects .project + * + * + * + * {
-    transform: translateX(-350px);
+  .featured-projects .project:nth-child(5) {
+    top: 0;
+    right: -55%;
   }
 }
+
 /****** >= 768px ******/
 @media (width >= 768px) {
-  /*** shuffle cards ***/
-  .featured-projects .project {
-    transform: translateX(275px);
+  .featured-projects .project:nth-child(1) {
+    top: 0;
+    left: -95%;
   }
-  .featured-projects .project + * {
-    transform: translateX(125px);
+  .featured-projects .project:nth-child(2) {
+    top: 0;
+    left: -55%;
   }
-  .featured-projects .project + * + * {
-    transform: translateX(0px);
+  .featured-projects .project:nth-child(4) {
+    top: 0;
+    right: -55%;
   }
-  .featured-projects .project + * + * + * {
-    transform: translateX(-125px);
-  }
-  .featured-projects .project + * + * + * + * {
-    transform: translateX(-275px);
+  .featured-projects .project:nth-child(5) {
+    top: 0;
+    right: -95%;
   }
 }
+
 /****** >= 992px ******/
 @media (width >= 992px) {
-  /*** shuffle cards ***/
-  .featured-projects .project {
-    transform: translateX(150px);
+  .featured-projects .project:nth-child(1) {
+    top: 0;
+    left: -145%;
   }
-  .featured-projects .project + * {
-    transform: translateX(75px);
+  .featured-projects .project:nth-child(2) {
+    top: 0;
+    left: -80%;
   }
-  .featured-projects .project + * + * {
-    transform: translateX(0px);
+  .featured-projects .project:nth-child(4) {
+    top: 0;
+    right: -80%;
   }
-  .featured-projects .project + * + * + * {
-    transform: translateX(-75px);
-  }
-  .featured-projects .project + * + * + * + * {
-    transform: translateX(-150px);
+  .featured-projects .project:nth-child(5) {
+    top: 0;
+    right: -145%;
   }
 }
 
 /****** >= 1200px ******/
 @media (width >= 1200px) {
-  /*** shuffle cards ***/
-  .featured-projects .project {
-    transform: translateX(50px);
+  .featured-projects .project:nth-child(1) {
+    top: 0;
+    left: -185%;
   }
-  .featured-projects .project + * {
-    transform: translateX(25px);
+  .featured-projects .project:nth-child(2) {
+    top: 0;
+    left: -95%;
   }
-  .featured-projects .project + * + * {
-    transform: translateX(0px);
+  .featured-projects .project:nth-child(4) {
+    top: 0;
+    right: -95%;
   }
-  .featured-projects .project + * + * + * {
-    transform: translateX(-25px);
-  }
-  .featured-projects .project + * + * + * + * {
-    transform: translateX(-50px);
+  .featured-projects .project:nth-child(5) {
+    top: 0;
+    right: -185%;
   }
 }
 
 /****** >= 1400px ******/
 @media (width >= 1400px) {
-  /*** shuffle cards ***/
-  .featured-projects .project {
-    transform: translateX(0px);
+  .featured-projects .project:nth-child(1) {
+    top: 0;
+    left: -212%;
+  }
+  .featured-projects .project:nth-child(2) {
+    top: 0;
+    left: -105%;
+  }
+  .featured-projects .project:nth-child(4) {
+    top: 0;
+    right: -105%;
+  }
+  .featured-projects .project:nth-child(5) {
+    top: 0;
+    right: -212%;
   }
 }
 </style>
