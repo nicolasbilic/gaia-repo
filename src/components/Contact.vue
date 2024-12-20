@@ -1,10 +1,144 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from "vue";
+// import emailjs from '@emailjs/browser';
+// const apiKey = import.meta.env.VITE_EMAIL_API_KEY; // à changer dans .env
+const form = ref<HTMLFormElement | null>(null);
+const isEmailSent = ref(false);
+
+//Prénom
+const firstName = ref("");
+const firstNameValid = ref(false);
+const firstNameTouched = ref(false);
+
+const validateFirstName = () => {
+  const firstNameRegex = /^[a-zA-ZÀ-ÿ\s']*$/;
+  firstNameValid.value =
+    firstNameRegex.test(firstName.value) &&
+    firstName.value.length >= 2 &&
+    firstName.value.length <= 80;
+  firstNameValid.value = firstNameValid.value && firstName.value !== "";
+};
+const markFirstNameTouched = () => {
+  firstNameTouched.value = true;
+};
+
+//Nom
+const name = ref("");
+const nameValid = ref(false);
+const nameTouched = ref(false);
+
+const validateName = () => {
+  const nameRegex = /^[a-zA-ZÀ-ÿ\s']*$/;
+  nameValid.value =
+    nameRegex.test(name.value) &&
+    name.value.length >= 2 &&
+    name.value.length <= 80;
+  nameValid.value = nameValid.value && name.value !== "";
+};
+const markNameTouched = () => {
+  nameTouched.value = true;
+};
+
+//Email
+const email = ref("");
+const emailValid = ref(false);
+const emailTouched = ref(false);
+
+const validateEmail = () => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  emailValid.value = emailRegex.test(email.value) && email.value.length <= 100;
+  emailValid.value = emailValid.value && email.value !== "";
+};
+const markEmailTouched = () => {
+  emailTouched.value = true;
+};
+
+//Consent
+const consent = ref(false);
+const consentValid = ref(false);
+const consentTouched = ref(false);
+
+const validateConsent = () => {
+  consentValid.value = consent.value;
+};
+const markConsentTouched = () => {
+  consentTouched.value = true;
+};
+
+// Validate form
+const validateForm = () => {
+  validateFirstName();
+  validateName();
+  validateEmail();
+  validateConsent();
+  return (
+    firstNameValid.value &&
+    nameValid.value &&
+    emailValid.value &&
+    consentValid.value
+  );
+};
+
+// const sendEmail = () => {
+//   if (form.value && validateForm()) {
+//     emailjs
+//       .sendForm('contact_service_aaaa', 'template_aaaa', form.value, apiKey)
+//       .then(
+//         () => {
+//           console.log('SUCCESS! it is sent');
+//           isEmailSent.value = true;
+//           resetForm();
+//         },
+//         (error) => {
+//           console.log('FAILED to send...', error.text);
+//         },
+//       );
+//   } else {
+//     console.log('Form reference is null, aucun élément html de formulaire trouvé');
+//   }
+// };
+
+// Inputs touched
+const markAllTouched = () => {
+  firstNameTouched.value = true;
+  nameTouched.value = true;
+  emailTouched.value = true;
+  consentTouched.value = true;
+};
+
+// Submit form
+const handleSubmit = () => {
+  markAllTouched();
+  if (validateForm()) {
+    // sendEmail();
+  }
+};
+
+// Reset form & confirmation messages
+const resetForm = () => {
+  firstName.value = "";
+  firstNameValid.value = true;
+  firstNameTouched.value = false;
+  name.value = "";
+  nameValid.value = true;
+  nameTouched.value = false;
+  email.value = "";
+  emailValid.value = true;
+  emailTouched.value = false;
+  consent.value = false;
+  consentValid.value = true;
+  consentTouched.value = false;
+};
+const resetConfirmationMessage = () => {
+  isEmailSent.value = false;
+};
+</script>
 
 <template>
   <div class="mx-3 mx-sm-0">
     <div class="container">
       <h2 class="mb-5">Reach me</h2>
-      <form>
+      <form ref="form" @submit.prevent="handleSubmit">
         <!-- First Name -->
         <label class="form-label mb-2" for="firstName">First name</label>
         <input
@@ -14,8 +148,19 @@
           id="firstName"
           placeholder="Your first name"
           pattern="[a-zA-Z]{2,}"
+          maxlength="80"
           required
+          v-model="firstName"
+          @input="validateFirstName"
+          @blur="markFirstNameTouched"
+          @click="resetConfirmationMessage"
         />
+        <span
+          class="mb-4"
+          v-if="firstNameTouched && (!firstNameValid || firstName === '')"
+        >
+          First name is required and must contain only letters.
+        </span>
         <p class="mb-4">First name must be at least 2 letters long.</p>
 
         <!-- Last Name -->
@@ -27,8 +172,16 @@
           id="lastName"
           placeholder="Your last name"
           pattern="[a-zA-Z]{2,}"
+          maxlength="80"
           required
+          v-model="name"
+          @input="validateName"
+          @blur="markNameTouched"
+          @click="resetConfirmationMessage"
         />
+        <span class="mb-4" v-if="nameTouched && (!nameValid || name === '')">
+          Last name is required and must contain only letters.
+        </span>
         <p class="mb-4">Last name must be at least 2 letters long.</p>
 
         <!-- Email -->
@@ -40,7 +193,14 @@
           id="email"
           placeholder="Your email"
           required
+          v-model="email"
+          @input="validateEmail"
+          @blur="markEmailTouched"
+          @click="resetConfirmationMessage"
         />
+        <span class="mb-4" v-if="emailTouched && (!emailValid || email === '')">
+          Your email is required and must be a valid email address.
+        </span>
         <p class="mb-4">
           Please enter a valid email address in the format example@domain.com.
         </p>
@@ -52,13 +212,18 @@
             type="checkbox"
             name="privacyPolicy"
             id="privacyPolicy"
-            required
+            v-model="consent"
+            @blur="markConsentTouched"
+            @change="validateConsent"
           />
           <label class="form-check-label" for="privacyPolicy">
             You agree to my friendly
             <RouterLink to="/legal" target="_blank">privacy policy</RouterLink>.
           </label>
         </div>
+        <p class="mb-4 error" v-if="consentTouched && !consentValid">
+          Vous devez accepter la politique de confidentialité.
+        </p>
 
         <!-- Submit Button -->
         <button class="btn btn-lg mt-3" type="submit">Submit</button>
@@ -136,8 +301,20 @@ p {
   color: var(--color-text-info);
   font-size: 14px;
 }
+span {
+  color: var(--color-error);
+  font-size: 14px;
+}
+.error {
+  color: var(--color-error);
+}
 
 input:invalid:not(:placeholder-shown) + p {
-  color: red;
+  color: var(--color-error);
 }
+
+/* cible le p après le span après l'input invalide */
+/* input:invalid:not(:placeholder-shown) + span + p {
+  color: var(--color-error);
+} */
 </style>

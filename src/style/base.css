@@ -71,6 +71,8 @@
   --color-input-border: var(--c-grey-mute);
   --color-input-placeholder: var(--c-grey-mute);
 
+  --color-error: var(--c-red);
+
   /* font families */
   --font-family-primary: var(--fm-fuggles);
   --font-family-secondary: var(--fm-inter);

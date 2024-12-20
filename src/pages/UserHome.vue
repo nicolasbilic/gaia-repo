@@ -25,7 +25,8 @@ const checkVisibility = () => {
   elements.forEach((element, index) => {
     if (element && !hasElementBeenVisible.value[index]) {
       const rect = element.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 235 && rect.bottom > 0) {
+      // -200 on soustrait 200 pixels à la hauteur de la fenêtre. (800 à 600) donc on retarde l'affichage du conteneur cible
+      if (rect.top < window.innerHeight - 200 && rect.bottom > 0) {
         isElementVisible.value[index] = true;
         hasElementBeenVisible.value[index] = true;
       }
@@ -60,13 +61,13 @@ onUnmounted(() => {
         <Artist />
       </div> -->
 
-      <section class="section">
-        <!-- <FeaturedProjects
+      <!-- <section class="section">
+        <FeaturedProjects
           id="featured-projects"
           class="transition-section"
           :class="{ visible: isElementVisible[1] }"
-        /> -->
-        <!-- <ProjectShowcase
+        />
+        <ProjectShowcase
           id="project-showcase"
           class="transition-section"
           :class="{ visible: isElementVisible[2] }"
@@ -75,8 +76,8 @@ onUnmounted(() => {
           id="project-gallery"
           class="transition-section"
           :class="{ visible: isElementVisible[3] }"
-        /> -->
-      </section>
+        />
+      </section> -->
 
       <section
         id="contact"
