@@ -1,10 +1,11 @@
 <script setup lang="ts"></script>
 
 <template>
-  <!-- svg en fond via l'outil pen de figma -->
-  <div class="artist-container position-relative container g-0 my-5">
-    <!-- The Artist in an imaginary world -->
-    <div id="artist-from-the-side">
+  <div
+    class="artist-container position-relative container d-flex flex-column align-items-center justify-content-center g-0 my-5 border border-primary"
+  >
+    <!-- ARTISTE PLUME IMAGE -->
+    <div id="artist-feather">
       <img
         src="../assets/webp/artiste-2.webp"
         alt="The artist from the side draws her creations in an imaginary world"
@@ -13,57 +14,41 @@
         loading="lazy"
       />
     </div>
-    <!-- title container -->
-    <div class="title-container position-absolute text-left">
+
+    <!-- ARTISTE PLUME TITRE -->
+    <div class="title-container text-left position-absolute top-0 start-50 p-3">
       <h3>
         The <br />
         Artist
       </h3>
     </div>
-    <!-- ARTIST CONTENT-->
-    <div class="artist-content position-relative">
-      <!-- intro text -->
-      <p>
-        Crafting worlds and characters born from imagination, I bring unique
-        visions to life through bold, evocative design.
-      </p>
-      <!-- The Artist -->
-      <img
-        id="artist-picture"
-        src="../assets/webp/artiste-7.webp"
-        alt="Picture of the artist"
-        width="300"
-        height="auto"
-        loading="lazy"
-      />
-      <!-- Description text -->
-      <p>
-        Graphic designer for six years, I've worked with multiple companies to
-        create original artworks.
-      </p>
+  </div>
+
+  <!-- ARTIST CONTENT-->
+  <div
+    class="artist-content position-relative d-flex flex-column border border-success"
+  >
+    <div class="d-flex flex-row justify-content-center align-items-center">
       <!-- Elf with a sword -->
       <img
         id="sword-elf"
-        class="position-absolute"
         src="../assets/webp/elf.webp"
         alt="Elf with a sword"
         width="200"
         height="auto"
         loading="lazy"
       />
+      <!-- intro text -->
+      <p>
+        Crafting worlds and characters born from imagination, I bring unique
+        visions to life.
+      </p>
     </div>
-    <!-- The Artist from behind in an imaginary world -->
+    <!-- The Artist -->
     <img
-      src="../assets/webp/artiste-4.webp"
-      alt="The artist, seen from behind draws her creations in an imaginary world"
-      width="300"
-      height="auto"
-      loading="lazy"
-    />
-    <!-- Druid -->
-    <img
-      src="../assets/webp/druid.webp"
-      alt="Mushroom Druid"
+      id="artist-picture"
+      src="../assets/webp/artiste-7.webp"
+      alt="Picture of the artist"
       width="300"
       height="auto"
       loading="lazy"
@@ -76,71 +61,83 @@
       height="auto"
       loading="lazy"
     />
+    <!-- Description text -->
+    <p class="text-center px-5">
+      Graphic designer for six years, I've worked with multiple companies to
+      create original artworks.
+    </p>
   </div>
+  <!-- The Artist from behind in an imaginary world -->
+  <img
+    src="../assets/webp/artiste-4.webp"
+    alt="The artist, seen from behind draws her creations in an imaginary world"
+    width="300"
+    height="auto"
+    loading="lazy"
+  />
+  <!-- Druid -->
+  <img
+    src="../assets/webp/druid.webp"
+    alt="Mushroom Druid"
+    width="300"
+    height="auto"
+    loading="lazy"
+  />
 </template>
-<style scoped>
-/******______ ARTIST SECTION ______******/
-.artist-section {
-  padding: var(--section-gap) 0;
-}
 
-.artist-container img {
+<style scoped>
+/******______ GENERAL ______******/
+
+/* TITRE */
+h3 {
+  line-height: 70px;
+}
+/* IMAGES */
+img {
   border-radius: 150px;
 }
 
-.artist-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
+/******______ DETAILS ______******/
 
-/* Titre */
-.artist-container .title-container {
+/* ARTISTE PLUME IMAGE */
+.artist-container #artist-feather img {
   width: 100%;
-  top: 2%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 10px;
-}
-
-/* The Artist in an imaginary world */
-.artist-container #artist-from-the-side img {
-  width: 100%;
-  max-width: 100%;
   height: auto;
   border-radius: 0px;
   clip-path: circle(100% at 50% 85%);
   /* découpe l’image en forme de cercle. 100% indique que le cercle est très grand; at : Où placer le cercle? On dit où le centre du cercle sera placé. 	•	50% = au milieu horizontalement (de gauche à droite),	85% = en bas, à 85% de la hauteur de l’image*/
 }
 
-.artist-content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  text-align: right;
+/* ARTISTE PLUME TITRE */
+.artist-container .title-container {
+  transform: translateX(-50%);
 }
 
-.artist-content p {
-  text-align: right;
-  width: 65vw;
-  padding-right: 30px;
+/* ARTISTE DESCRIPTION SWORD ELF IMAGE */
+.artist-content #sword-elf {
+  transform: translateX(-65px);
+  z-index: 1;
 }
 
+/* ARTISTE DESCRIPTION TEXT 1 */
+.artist-content > div p:nth-child(2) {
+  padding-bottom: 50px;
+}
+
+/* ARTISTE DESCRIPTION ARTISTE IMAGE */
 .artist-content #artist-picture {
-  max-width: 100%;
-  height: auto;
+  margin: 0 auto;
+  transform: translateY(-100px);
   z-index: 2;
 }
-.artist-content #sword-elf {
-  top: 50px;
-  left: -70px;
-  width: 50vw;
+
+.artist-content img:hover img:not(:hover) {
+  filter: grayscale(1) blur(10px);
+}
+
+/* ARTISTE DESCRIPTION TEXT 2 */
+.artist-content p:nth-child(3) {
+  transform: translateY(-50px);
 }
 
 /* The Artist */
@@ -148,4 +145,20 @@
 /* The Artist from behind in an imaginary world  */
 /* Druid */
 /*  Elf with a bow */
+
+/*  >= 576px */
+@media (width >= 576px) {
+}
+
+/*  >= 768px */
+@media (width >= 768px) {
+}
+
+/*  >= 992px */
+@media (width >= 992px) {
+}
+
+/* >= 1200px  */
+@media (width >= 1200px) {
+}
 </style>

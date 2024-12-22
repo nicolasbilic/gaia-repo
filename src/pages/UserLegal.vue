@@ -121,6 +121,15 @@ onMounted(() => {
                 authorization is prohibited and may lead to legal actions as
                 provided by the Intellectual Property Code and the Civil Code.
               </p>
+              <h2>ARTICLE 5 - ATTRIBUTION</h2>
+              <p>
+                This website used an image from Vecteezy :
+                <a
+                  href="https://fr.vecteezy.com/png-gratuit/lierre"
+                  target="_blank"
+                  >Lierre PNGs from Vecteezy</a
+                >
+              </p>
             </article>
           </section>
         </div>
