@@ -81,7 +81,7 @@ onUnmounted(() => {
 
       <!-- <section
         id="contact"
-        class="contact-section transition-section"
+        class="section transition-section"
         :class="{ visible: isElementVisible[4] }"
       >
         <Contact />
@@ -120,5 +120,25 @@ onUnmounted(() => {
 /****** General ******/
 .section {
   padding: var(--section-gap) 0;
+}
+#artist {
+  background: linear-gradient(
+    90deg,
+    rgba(40, 38, 38, 1) 0%,
+    rgba(55, 53, 54, 1) 35%,
+    rgba(40, 38, 38, 1) 100%
+  );
+  clip-path: circle(90.5% at 37% 81%);
+  padding-top: 500px;
+}
+
+#contact {
+  background: linear-gradient(
+    90deg,
+    rgba(37, 35, 33, 1) 0%,
+    rgba(50, 48, 45, 1) 35%,
+    rgba(37, 35, 33, 1) 100%
+  );
+  clip-path: polygon(0 9%, 100% 0, 100% 100%, 0% 100%);
 }
 </style>

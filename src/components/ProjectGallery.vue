@@ -9,7 +9,7 @@
           <!-- Barde -->
           <div class="project">
             <img
-              src="../assets/webp/barde.webp"
+              src="../assets/images/barde.webp"
               alt="Barde"
               width="auto"
               height="auto"
@@ -30,7 +30,7 @@
           <!-- Nomad -->
           <div class="project">
             <img
-              src="../assets/webp/warrior.webp"
+              src="../assets/images/warrior.webp"
               alt="Warrior"
               width="auto"
               height="auto"
@@ -51,7 +51,7 @@
           <!-- Alchemist -->
           <div class="project">
             <img
-              src="../assets/webp/alchemist-2.webp"
+              src="../assets/images/alchemist-2.webp"
               alt="Alchemist"
               width="auto"
               height="auto"
@@ -72,7 +72,7 @@
           <!-- Wraith -->
           <div class="project">
             <img
-              src="../assets/webp/spectral-sailor-2.webp"
+              src="../assets/images/spectral-sailor-2.webp"
               alt="Spectral sailor"
               width="auto"
               height="auto"
@@ -88,7 +88,7 @@
           <!-- Mage -->
           <div class="project">
             <img
-              src="../assets/webp/mage.webp"
+              src="../assets/images/mage.webp"
               alt="Mage"
               width="auto"
               height="auto"
@@ -108,7 +108,7 @@
           <!-- Blacksmith -->
           <div class="project">
             <img
-              src="../assets/webp/blacksmith.webp"
+              src="../assets/images/blacksmith.webp"
               alt="Blacksmith"
               width="auto"
               height="auto"
@@ -128,7 +128,7 @@
           <!-- Fey -->
           <div class="project">
             <img
-              src="../assets/webp/fey.webp"
+              src="../assets/images/fey.webp"
               alt="Fey"
               width="auto"
               height="auto"
@@ -149,7 +149,7 @@
           <!-- Priest -->
           <div class="project">
             <img
-              src="../assets/webp/priest.webp"
+              src="../assets/images/priest.webp"
               alt="Priest"
               width="auto"
               height="auto"
@@ -170,7 +170,7 @@
           <!-- Sorcerer -->
           <div class="project">
             <img
-              src="../assets/webp/spectral-sorcerer.webp"
+              src="../assets/images/spectral-sorcerer.webp"
               alt="Spectral sorcerer"
               width="auto"
               height="auto"
@@ -189,7 +189,7 @@
           <!-- Pirate -->
           <div class="project">
             <img
-              src="../assets/webp/pirate-galaxy-2.webp"
+              src="../assets/images/pirate-galaxy-2.webp"
               alt="Female galactic pirate with a sword"
               width="auto"
               height="auto"
@@ -210,7 +210,7 @@
           <!-- Soulkeeper -->
           <div class="project">
             <img
-              src="../assets/webp/soulkeeper.webp"
+              src="../assets/images/soulkeeper.webp"
               alt="Soulkeeper"
               width="auto"
               height="auto"
@@ -232,7 +232,7 @@
           <!-- architect -->
           <div class="project">
             <img
-              src="../assets/webp/celestial-architect.webp"
+              src="../assets/images/celestial-architect.webp"
               alt="Celestial architect"
               width="auto"
               height="auto"

@@ -107,7 +107,13 @@ body {
   font-family: var(--font-family-secondary);
   color: var(--color-text-secondary);
   background: rgb(36, 34, 35);
-  background: var(--color-background);
+  background: linear-gradient(
+    90deg,
+    rgba(36, 34, 35) 0%,
+    rgba(48, 46, 47, 1) 35%,
+    rgba(36, 34, 35, 1) 100%
+  );
+  /* background: var(--color-background); */
   line-height: 1.6;
   /* line-height: clamp(40px, 14vw, 55px); */
   font-size: 16px;
@@ -135,3 +141,7 @@ h2 {
 h3 {
   font-size: var(--heading-3-size);
 }
+/* 
+Music from #Uppbeat (free for Creators!):
+https://uppbeat.io/t/brock-hewitt-stories-in-sound/lover 
+*/

@@ -7,7 +7,7 @@
     <!-- ARTISTE PLUME IMAGE -->
     <div id="artist-feather">
       <img
-        src="../assets/webp/artiste-2.webp"
+        src="../assets/images/artiste-2.webp"
         alt="The artist from the side draws her creations in an imaginary world"
         width="300"
         height="auto"
@@ -32,7 +32,7 @@
       <!-- Elf with a sword -->
       <img
         id="sword-elf"
-        src="../assets/webp/elf.webp"
+        src="../assets/images/elf.webp"
         alt="Elf with a sword"
         width="200"
         height="auto"
@@ -47,7 +47,7 @@
     <!-- The Artist -->
     <img
       id="artist-picture"
-      src="../assets/webp/artiste-7.webp"
+      src="../assets/images/artiste-7.webp"
       alt="Picture of the artist"
       width="300"
       height="auto"
@@ -55,7 +55,7 @@
     />
     <!-- Elf with a bow -->
     <img
-      src="../assets/webp/elf-2.webp"
+      src="../assets/images/elf-2.webp"
       alt="Elf with a bow"
       width="300"
       height="auto"
@@ -69,7 +69,7 @@
   </div>
   <!-- The Artist from behind in an imaginary world -->
   <img
-    src="../assets/webp/artiste-4.webp"
+    src="../assets/images/artiste-4.webp"
     alt="The artist, seen from behind draws her creations in an imaginary world"
     width="300"
     height="auto"
@@ -77,7 +77,7 @@
   />
   <!-- Druid -->
   <img
-    src="../assets/webp/druid.webp"
+    src="../assets/images/druid.webp"
     alt="Mushroom Druid"
     width="300"
     height="auto"

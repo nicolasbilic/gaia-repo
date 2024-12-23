@@ -222,7 +222,7 @@ const resetConfirmationMessage = () => {
           </label>
         </div>
         <p class="mb-4 error" v-if="consentTouched && !consentValid">
-          Vous devez accepter la politique de confidentialité.
+          You must accept the privacy policy.
         </p>
 
         <!-- Submit Button -->

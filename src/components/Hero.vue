@@ -29,7 +29,7 @@
             >
               <img
                 class="img-fluid w-auto rounded-circle"
-                src="../assets/webp/lunar-archer.webp"
+                src="../assets/images/lunar-archer.webp"
                 alt="Queen Lunar Archer aiming a bow"
                 width="250"
               />
@@ -40,13 +40,13 @@
             <!-- Other Projects -->
             <img
               class="d-none d-md-block img-fluid grayscale"
-              src="../assets/webp/sorceress.webp"
+              src="../assets/images/sorceress.webp"
               alt="Sorceress"
               width="200"
             />
             <img
               class="d-none d-lg-block img-fluid grayscale"
-              src="../assets/webp/moon-sorceress.webp"
+              src="../assets/images/moon-sorceress.webp"
               alt="Moon Sorceress"
               width="200"
             />

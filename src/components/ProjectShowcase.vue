@@ -9,7 +9,7 @@
         >
           <div class="img-box d-flex justify-content-center align-items-start">
             <img
-              src="../assets/webp/desert-sorcerer.webp"
+              src="../assets/images/desert-sorcerer.webp"
               alt="Desert sorcerer"
               width="400"
               height="267"
@@ -18,7 +18,7 @@
           </div>
           <div class="img-box d-flex justify-content-center align-items-start">
             <img
-              src="../assets/webp/cosmic-artisan.webp"
+              src="../assets/images/cosmic-artisan.webp"
               alt="Cosmic artisan"
               width="400"
               height="267"
@@ -27,7 +27,7 @@
           </div>
           <div class="img-box d-flex justify-content-center align-items-start">
             <img
-              src="../assets/webp/soulkeeper-2.webp"
+              src="../assets/images/soulkeeper-2.webp"
               alt="Soulkeeper"
               width="400"
               height="267"
@@ -36,7 +36,7 @@
           </div>
           <div class="img-box d-flex justify-content-center align-items-start">
             <img
-              src="../assets/webp/ocean-priest.webp"
+              src="../assets/images/ocean-priest.webp"
               alt="Ocean priest"
               width="400"
               height="267"
@@ -45,7 +45,7 @@
           </div>
           <div class="img-box d-flex justify-content-center align-items-start">
             <img
-              src="../assets/webp/druid-2.webp"
+              src="../assets/images/druid-2.webp"
               alt="Druid of the rivers"
               width="400"
               height="267"

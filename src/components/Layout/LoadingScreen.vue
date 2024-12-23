@@ -32,7 +32,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("../../assets/webp/loading-bg-before.jpg");
+  background-image: url("../../assets/images/loading-bg-before.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -44,7 +44,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("../../assets/webp/loading-arch-after.png");
+  background-image: url("../../assets/images/loading-arch-after.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

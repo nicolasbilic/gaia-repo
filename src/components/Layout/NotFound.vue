@@ -13,7 +13,7 @@
 
 <style scoped>
 .error-404 {
-  background-image: url("../../assets/webp/not-found.webp");
+  background-image: url("../../assets/images/not-found.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

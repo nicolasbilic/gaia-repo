@@ -8,7 +8,7 @@
     <div class="featured-projects position-relative">
       <div class="project position-absolute">
         <img
-          src="../assets/webp/artisan-celeste.webp"
+          src="../assets/images/artisan-celeste.webp"
           alt="Celestian Artisan"
           width="230"
           height="auto"
@@ -16,7 +16,7 @@
       </div>
       <div class="project position-absolute">
         <img
-          src="../assets/webp/sorceress.webp"
+          src="../assets/images/sorceress.webp"
           alt="Sorceress"
           width="230"
           height="auto"
@@ -24,7 +24,7 @@
       </div>
       <div class="project">
         <img
-          src="../assets/webp/star-nomad.webp"
+          src="../assets/images/star-nomad.webp"
           alt="Star nomad"
           width="230"
           height="auto"
@@ -32,7 +32,7 @@
       </div>
       <div class="project position-absolute">
         <img
-          src="../assets/webp/lunar-archer.webp"
+          src="../assets/images/lunar-archer.webp"
           alt="Lunar archer"
           width="230"
           height="auto"
@@ -40,7 +40,7 @@
       </div>
       <div class="project position-absolute">
         <img
-          src="../assets/webp/oracle.webp"
+          src="../assets/images/oracle.webp"
           alt="Oracle"
           width="230"
           height="auto"
