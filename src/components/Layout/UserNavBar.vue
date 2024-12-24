@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <nav class="navbar navbar-expand-lg mx-2 mx-md-5">
+  <nav class="navbar navbar-expand-lg mx-3 mx-md-5">
     <div class="container-fluid gx-0">
       <RouterLink
         to="/"

@@ -36,7 +36,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  animation: bgZoomIn 3s ease-in-out 1 forwards;
+  animation: bgZoomIn 4s ease-in-out 1 forwards;
   z-index: -1;
   pointer-events: none;
 }
@@ -49,7 +49,7 @@
   background-position: center;
   background-repeat: no-repeat;
   transform: scale(1.7);
-  animation: bgZoomOut 3s ease-in-out 1 forwards;
+  animation: bgZoomOut 4s ease-in-out 1 forwards;
   z-index: -1;
   pointer-events: none;
 }

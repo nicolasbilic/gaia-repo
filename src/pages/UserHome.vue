@@ -53,13 +53,13 @@ onUnmounted(() => {
       <UserNavBar />
       <!-- <Hero /> -->
 
-      <div
+      <section
         id="artist"
         class="section transition-section"
         :class="{ visible: isElementVisible[0] }"
       >
         <Artist />
-      </div>
+      </section>
 
       <!-- <section class="section">
         <FeaturedProjects
@@ -121,7 +121,7 @@ onUnmounted(() => {
 .section {
   padding: var(--section-gap) 0;
 }
-#artist {
+/* #artist {
   background: linear-gradient(
     90deg,
     rgba(40, 38, 38, 1) 0%,
@@ -130,7 +130,7 @@ onUnmounted(() => {
   );
   clip-path: circle(90.5% at 37% 81%);
   padding-top: 500px;
-}
+} */
 
 #contact {
   background: linear-gradient(

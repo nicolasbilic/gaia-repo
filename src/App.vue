@@ -4,6 +4,10 @@ import LoadingScreen from "./components/Layout/LoadingScreen.vue";
 
 const isLoading = ref(true);
 
+// const audio: HTMLAudioElement = new Audio(
+//   "./assets/music/lover-brock-hewitt.mp3"
+// );
+
 // Récupère la date de la dernière visite et compare-la avec la date actuelle
 const lastVisit = localStorage.getItem("lastVisit");
 const now = new Date().getTime();
