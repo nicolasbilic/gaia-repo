@@ -1,69 +1,72 @@
 <script setup lang="ts"></script>
 
 <template>
-  <!-- <template> -->
   <div>
-    <div class="container border border-primary g-0">
-      <!-- Hero Section -->
-      <div
-        class="hero-container d-flex flex-column align-items-end border border-light"
-      >
-        <!-- Projects Row -->
+    <div class="container g-0">
+      <!-- Display column -->
+      <div class="hero-container d-flex flex-column align-items-center">
+        <!-- Display row -->
         <div
-          class="project-row d-flex flex-row justify-content-center align-items-center flex-wrap"
+          class="project-row d-flex flex-column flex-lg-row justify-content-center align-items-center"
         >
-          <!-- Project Title -->
-          <div class="project-title border border-warning text-end p-3">
-            <h1 class="m-0">
+          <div
+            id="carousel-hero"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="6000">
+                <img
+                  src="../assets/images/lunar-archer.webp"
+                  class="d-block w-100"
+                  alt="Queen Lunar Archer aiming a bow"
+                />
+              </div>
+              <div class="carousel-item" data-bs-interval="5000">
+                <img
+                  src="../assets/images/sorceress.webp"
+                  class="d-block w-100"
+                  alt="Sorceress with a purple cloak"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../assets/images/moon-sorceress.webp"
+                  class="d-block w-100"
+                  alt="Moon sorceress"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carousel-hero"
+              data-bs-slide="next"
+            >
+              Explore<i class="bi bi-arrow-right-short"></i>
+              <!-- <span class="carousel-control-next-icon" aria-hidden="true">
+              </span> -->
+            </button>
+          </div>
+          <div class="project-title d-md-none">
+            <h1>
               Queen <br />
               Lunar Archer
             </h1>
           </div>
-          <!-- Image Slider -->
-          <div
-            class="slider d-flex flex-row justify-content-center align-items-center flex-wrap border border-warning gap-3"
-          >
-            <!-- Main Project -->
-            <div
-              class="first-project d-flex flex-column align-items-start justify-content-center border border-info"
-            >
-              <img
-                class="img-fluid w-auto rounded-circle"
-                src="../assets/images/lunar-archer.webp"
-                alt="Queen Lunar Archer aiming a bow"
-                width="250"
-              />
-              <button class="btn-explore mt-3">
-                Explore<i class="bi bi-arrow-right-short"></i>
-              </button>
-            </div>
-            <!-- Other Projects -->
-            <img
-              class="d-none d-md-block img-fluid grayscale"
-              src="../assets/images/sorceress.webp"
-              alt="Sorceress"
-              width="200"
-            />
-            <img
-              class="d-none d-lg-block img-fluid grayscale"
-              src="../assets/images/moon-sorceress.webp"
-              alt="Moon Sorceress"
-              width="200"
-            />
-          </div>
         </div>
-        <!-- Project Summary -->
         <div
-          class="project-summary w-100 d-flex flex-column flex-md-row justify-content-center align-items-center border border-success"
+          class="project-summary w-100 d-flex flex-column flex-md-row justify-content-center align-items-center"
         >
-          <div class="text px-3 py-2">
+          <div class="text">
             <p class="m-0">
               This project was created for Moonlight Nexus, a visionary brand
               dedicated to merging innovation with artistic inspiration.
             </p>
           </div>
+          <hr class="d-block d-md-none" />
           <div class="vertical-line d-none d-md-block"></div>
-          <div class="text px-3 py-2">
+          <div class="text">
             <p class="m-0">
               The Lunar Archer serves as a symbolic figure representing the
               brand’s core values: strength, precision, and a commitment to
@@ -71,7 +74,7 @@
             </p>
           </div>
           <div class="vertical-line d-none d-md-block"></div>
-          <div class="text px-3 py-2 d-none d-lg-block">
+          <div class="text d-none d-md-block">
             <p class="m-0">
               The artwork reflects their mission to explore uncharted
               territories.
@@ -82,78 +85,105 @@
     </div>
   </div>
 </template>
-
 <style scoped>
-/* General */
+/*** General ***/
 h1 {
   line-height: clamp(40px, 14vw, 55px);
-  padding-left: 1rem;
-  font-size: 2rem;
-  font-weight: bold;
+  text-align: left;
 }
 img {
-  border-radius: 10px;
+  /* border-radius: var(--radius); */
 }
 
+/* 2 row containers */
 .hero-container {
   min-height: 88vh;
 }
-
 .project-row {
   flex-grow: 1;
-  gap: 1rem;
 }
 
+/* Project title */
 .project-title {
-  text-align: right;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 2;
+}
+.project-row > div {
 }
 
 /* Slider */
 .slider {
   gap: 1rem;
+  flex-grow: 1;
 }
 
-.first-project img {
-  border: 3px solid rgba(255, 213, 133, 0.9);
+/* Images */
+.first-project {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.first-project > img {
   padding: 8px;
+  max-width: 400px;
 }
 
-.grayscale {
+.slider > img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
   filter: grayscale(1);
 }
 
-/* Buttons */
-.btn-explore {
+/* Button */
+button {
   all: unset;
+  color: var(--color-text-primary);
   font-size: 16px;
-  color: #007bff;
-  cursor: pointer;
+  text-decoration: underline;
   text-transform: uppercase;
 }
 
-.btn-explore i {
-  font-size: 1.2rem;
-}
-
-/* Project Summary */
+/* Project summary */
 .project-summary {
   padding: 2rem 0;
 }
 
-.project-summary .text {
-  max-width: 400px;
+/* Lines separating text columns */
+hr {
+  width: 90%;
+  height: 10px;
+  color: var(--color-divider);
 }
-
-/* Lines */
 .vertical-line {
-  border-left: 1px solid #ccc;
-  height: 50px;
+  border-left: 1px solid var(--color-text-secondary);
+  height: 80px;
+  margin-right: 15px;
+  opacity: 0.6;
 }
 
-/* Media Queries */
-@media (min-width: 768px) {
+/******______ MEDIA QUERIES ______******/
+/****** >= 576px ******/
+@media (width >= 576px) {
+}
+
+/****** >= 768px ******/
+@media (width >= 768px) {
   .project-summary .text {
-    padding: 0 2rem;
+    width: 50%;
+    padding: 0 45px;
+  }
+}
+
+/****** >= 992px ******/
+@media (width >= 992px) {
+}
+/****** >= 1200px ******/
+@media (width >= 1200px) {
+  .project-summary .text {
+    padding: 0 65px;
   }
 }
 </style>

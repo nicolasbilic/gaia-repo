@@ -53,13 +53,13 @@ onUnmounted(() => {
       <UserNavBar />
       <!-- <Hero /> -->
 
-      <section
+      <!-- <section
         id="artist"
         class="section transition-section"
         :class="{ visible: isElementVisible[0] }"
       >
         <Artist />
-      </section>
+      </section> -->
 
       <!-- <section class="section">
         <FeaturedProjects
@@ -79,13 +79,13 @@ onUnmounted(() => {
         />
       </section> -->
 
-      <!-- <section
+      <section
         id="contact"
         class="section transition-section"
         :class="{ visible: isElementVisible[4] }"
       >
         <Contact />
-      </section> -->
+      </section>
 
       <UserFooter />
     </div>

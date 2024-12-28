@@ -1,12 +1,8 @@
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import { ref, onMounted } from "vue";
 import LoadingScreen from "./components/Layout/LoadingScreen.vue";
 
 const isLoading = ref(true);
-
-// const audio: HTMLAudioElement = new Audio(
-//   "./assets/music/lover-brock-hewitt.mp3"
-// );
 
 // Récupère la date de la dernière visite et compare-la avec la date actuelle
 const lastVisit = localStorage.getItem("lastVisit");
@@ -25,19 +21,22 @@ onMounted(() => {
 
   if (!hasVisited) {
     // Si c'est la première visite
-    setTimeout(() => {
-      isLoading.value = false; // Fin du chargement
-      localStorage.setItem("hasVisited", "true"); // Marque comme visité globalement
-    }, 5500);
+    // setTimeout(() => {
+    isLoading.value = true;
+    localStorage.setItem("hasVisited", "true"); // Marque comme visité globalement
+    // }, 7000);
   } else {
     // Si déjà visité
-    isLoading.value = false; // Pas de chargement
+    isLoading.value = false; // N'affiche pas l'écran de chargement
   }
 });
+const handleFinishLoading = () => {
+  isLoading.value = false;
+};
 </script>
 
 <template>
-  <LoadingScreen v-if="isLoading" />
+  <LoadingScreen v-if="isLoading" @finish-loading="handleFinishLoading" />
   <div v-else>
     <RouterView />
   </div>

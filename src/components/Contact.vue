@@ -280,9 +280,9 @@ label a {
 button {
   color: var(--c-dark-blue);
   background-color: var(--color-text-primary);
-  font-weight: 500;
+  font-weight: var(--font-weight-highlight);
   border-radius: var(--radius);
-  transition: all 0.1s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 button:hover {
   color: var(--color-text-secondary);
