@@ -51,17 +51,17 @@ onUnmounted(() => {
   <transition name="fade-slide">
     <div v-if="show">
       <UserNavBar />
-      <!-- <Hero /> -->
+      <Hero />
 
-      <!-- <section
+      <section
         id="artist"
         class="section transition-section"
         :class="{ visible: isElementVisible[0] }"
       >
         <Artist />
-      </section> -->
+      </section>
 
-      <!-- <section class="section">
+      <section class="section">
         <FeaturedProjects
           id="featured-projects"
           class="transition-section"
@@ -77,7 +77,7 @@ onUnmounted(() => {
           class="transition-section"
           :class="{ visible: isElementVisible[3] }"
         />
-      </section> -->
+      </section>
 
       <section
         id="contact"
@@ -107,7 +107,7 @@ onUnmounted(() => {
 }
 
 /****** Animation de chargement de section ******/
-.transition-section {
+/* .transition-section {
   opacity: 0;
   transform: translateY(250px);
   transition: all 0.9s ease-in-out;
@@ -115,7 +115,7 @@ onUnmounted(() => {
 .transition-section.visible {
   opacity: 1;
   transform: translateY(0);
-}
+} */
 
 /****** General ******/
 .section {

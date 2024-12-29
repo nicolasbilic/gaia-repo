@@ -164,7 +164,6 @@ p {
 
 /*** Dual image ***/
 .dual-img {
-  gap: 1rem;
   transform-style: preserve-3d;
   transform: perspective(1000px);
 }
@@ -191,6 +190,9 @@ p {
   .artist-content > p {
     padding: 0 3rem;
   }
+  /* .dual-img {
+    gap: 1rem;
+  } */
 }
 
 /*  >= 768px */
@@ -204,6 +206,9 @@ p {
   .dual-img img:nth-child(2):active {
     transform: translateZ(100px) translateX(-50%) scale(1.05);
   }
+  /* .dual-img {
+    gap: 2rem;
+  } */
 }
 
 /*  >= 992px */
