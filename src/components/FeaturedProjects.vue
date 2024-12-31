@@ -4,9 +4,9 @@
   <div
     class="container d-flex flex-column justify-content-center align-items-center"
   >
-    <h2>Featured Projects</h2>
+    <h2 class="scrollShow">Featured Projects</h2>
     <div class="featured-projects position-relative">
-      <div class="project position-absolute">
+      <div class="project position-absolute scrollBlurToFocus">
         <img
           src="../assets/images/artisan-celeste.webp"
           alt="Celestian Artisan"
@@ -14,7 +14,7 @@
           height="auto"
         />
       </div>
-      <div class="project position-absolute">
+      <div class="project position-absolute scrollBlurToFocus">
         <img
           src="../assets/images/sorceress.webp"
           alt="Sorceress"
@@ -22,7 +22,7 @@
           height="auto"
         />
       </div>
-      <div class="project">
+      <div class="project scrollBlurToFocus">
         <img
           src="../assets/images/star-nomad.webp"
           alt="Star nomad"
@@ -30,7 +30,7 @@
           height="auto"
         />
       </div>
-      <div class="project position-absolute">
+      <div class="project position-absolute scrollBlurToFocus">
         <img
           src="../assets/images/lunar-archer.webp"
           alt="Lunar archer"
@@ -38,7 +38,7 @@
           height="auto"
         />
       </div>
-      <div class="project position-absolute">
+      <div class="project position-absolute scrollBlurToFocus">
         <img
           src="../assets/images/oracle.webp"
           alt="Oracle"

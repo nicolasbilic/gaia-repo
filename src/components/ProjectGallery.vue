@@ -4,16 +4,16 @@
   <div>
     <div class="project-gallery">
       <div class="container">
-        <h2>Project Gallery</h2>
+        <h2 class="scrollShow">Project Gallery</h2>
         <div class="projects">
           <!-- Barde -->
           <div class="project">
             <img
               src="../assets/images/barde.webp"
               alt="Barde"
-              width="auto"
+              width="349.2"
               height="auto"
-              loading="lazy"
+              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -32,9 +32,9 @@
             <img
               src="../assets/images/warrior.webp"
               alt="Warrior"
-              width="auto"
+              width="349.2"
               height="auto"
-              loading="lazy"
+              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -53,9 +53,9 @@
             <img
               src="../assets/images/alchemist-2.webp"
               alt="Alchemist"
-              width="auto"
+              width="349.2"
               height="auto"
-              loading="lazy"
+              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -74,9 +74,9 @@
             <img
               src="../assets/images/spectral-sailor-2.webp"
               alt="Spectral sailor"
-              width="auto"
+              width="349.2"
               height="auto"
-              loading="lazy"
+              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -90,9 +90,9 @@
             <img
               src="../assets/images/mage.webp"
               alt="Mage"
-              width="auto"
+              width="349.2"
               height="auto"
-              loading="lazy"
+              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -110,9 +110,9 @@
             <img
               src="../assets/images/blacksmith.webp"
               alt="Blacksmith"
-              width="auto"
+              width="349.2"
               height="auto"
-              loading="lazy"
+              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -130,9 +130,9 @@
             <img
               src="../assets/images/fey.webp"
               alt="Fey"
-              width="auto"
+              width="349.2"
               height="auto"
-              loading="lazy"
+              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -151,9 +151,9 @@
             <img
               src="../assets/images/priest.webp"
               alt="Priest"
-              width="auto"
+              width="349.2"
               height="auto"
-              loading="lazy"
+              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -172,9 +172,9 @@
             <img
               src="../assets/images/spectral-sorcerer.webp"
               alt="Spectral sorcerer"
-              width="auto"
+              width="349.2"
               height="auto"
-              loading="lazy"
+              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -191,9 +191,9 @@
             <img
               src="../assets/images/pirate-galaxy-2.webp"
               alt="Female galactic pirate with a sword"
-              width="auto"
+              width="349.2"
               height="auto"
-              loading="lazy"
+              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -212,9 +212,9 @@
             <img
               src="../assets/images/soulkeeper.webp"
               alt="Soulkeeper"
-              width="auto"
+              width="349.2"
               height="auto"
-              loading="lazy"
+              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -234,9 +234,9 @@
             <img
               src="../assets/images/celestial-architect.webp"
               alt="Celestial architect"
-              width="auto"
+              width="349.2"
               height="auto"
-              loading="lazy"
+              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -259,7 +259,7 @@
 <style scoped>
 h2 {
   text-align: center;
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
 }
 h3 {
   font-size: clamp(18px, 18vw, var(--heading-3-size));

@@ -137,7 +137,7 @@ const resetConfirmationMessage = () => {
 <template>
   <div class="mx-3 mx-sm-0">
     <div class="container">
-      <h2 class="mb-5">Reach me</h2>
+      <h2 class="mb-5 scrollShow">Reach me</h2>
       <form ref="form" @submit.prevent="handleSubmit">
         <!-- First Name -->
         <label class="form-label mb-2" for="firstName">First name</label>
@@ -252,18 +252,18 @@ const resetConfirmationMessage = () => {
   box-shadow: none;
 }
 
+input:not([type="checkbox"]):invalid:not(:placeholder-shown),
+input:not([type="checkbox"]):valid:not(:placeholder-shown) {
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px);
+}
 input:not([type="checkbox"]):invalid:not(:placeholder-shown) {
   border-color: red;
   background-image: url("../assets/svg/checked_red.svg");
 }
 input:not([type="checkbox"]):valid:not(:placeholder-shown) {
   background-image: url("../assets/svg/checked_green.svg");
-}
-input:not([type="checkbox"]):invalid:not(:placeholder-shown),
-input:not([type="checkbox"]):valid:not(:placeholder-shown) {
-  background-size: 25px;
-  background-repeat: no-repeat;
-  background-position: calc(100% - 10px);
 }
 
 /* Placeholder */

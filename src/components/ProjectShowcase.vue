@@ -3,11 +3,13 @@
   <div>
     <div class="project-showcase">
       <div class="container">
-        <h2>Project Showcase</h2>
+        <h2 class="scrollShow">Project Showcase</h2>
         <div
           class="d-flex flex-column flex-lg-row justify-content-center align-items-center"
         >
-          <div class="img-box d-flex justify-content-center align-items-start">
+          <div
+            class="img-box scrollSlideRight d-flex justify-content-center align-items-start"
+          >
             <img
               src="../assets/images/desert-sorcerer.webp"
               alt="Desert sorcerer"
@@ -16,7 +18,9 @@
               loading="lazy"
             />
           </div>
-          <div class="img-box d-flex justify-content-center align-items-start">
+          <div
+            class="img-box scrollSlideUp d-flex justify-content-center align-items-start"
+          >
             <img
               src="../assets/images/cosmic-artisan.webp"
               alt="Cosmic artisan"
@@ -34,7 +38,9 @@
               loading="lazy"
             />
           </div>
-          <div class="img-box d-flex justify-content-center align-items-start">
+          <div
+            class="img-box scrollSlideUp d-flex justify-content-center align-items-start"
+          >
             <img
               src="../assets/images/ocean-priest.webp"
               alt="Ocean priest"
@@ -43,7 +49,9 @@
               loading="lazy"
             />
           </div>
-          <div class="img-box d-flex justify-content-center align-items-start">
+          <div
+            class="img-box scrollSlideLeft d-flex justify-content-center align-items-start"
+          >
             <img
               src="../assets/images/druid-2.webp"
               alt="Druid of the rivers"
@@ -62,7 +70,7 @@
 /******______ PROJECT SHOWCASE ______******/
 h2 {
   text-align: center;
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
 }
 
 .project-showcase {

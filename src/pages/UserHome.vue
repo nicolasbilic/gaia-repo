@@ -10,8 +10,8 @@ import ProjectGallery from "../components/ProjectGallery.vue";
 import Contact from "../components/Contact.vue";
 
 const show = ref(false);
-const isElementVisible = ref([false, false, false, false, false]);
-const hasElementBeenVisible = ref([false, false, false, false, false]);
+const isElementVisible = ref([false, false, false, false]);
+const hasElementBeenVisible = ref([false, false, false, false]);
 
 const checkVisibility = () => {
   const elements = [
@@ -53,36 +53,31 @@ onUnmounted(() => {
       <UserNavBar />
       <Hero />
 
-      <section
-        id="artist"
-        class="section transition-section"
-        :class="{ visible: isElementVisible[0] }"
-      >
+      <section class="section">
         <Artist />
       </section>
 
       <section class="section">
         <FeaturedProjects
           id="featured-projects"
-          class="transition-section"
-          :class="{ visible: isElementVisible[1] }"
+          :class="{ visible: isElementVisible[0] }"
         />
         <ProjectShowcase
           id="project-showcase"
           class="transition-section"
-          :class="{ visible: isElementVisible[2] }"
+          :class="{ visible: isElementVisible[1] }"
         />
         <ProjectGallery
           id="project-gallery"
           class="transition-section"
-          :class="{ visible: isElementVisible[3] }"
+          :class="{ visible: isElementVisible[2] }"
         />
       </section>
 
       <section
         id="contact"
         class="section transition-section"
-        :class="{ visible: isElementVisible[4] }"
+        :class="{ visible: isElementVisible[3] }"
       >
         <Contact />
       </section>
@@ -106,31 +101,10 @@ onUnmounted(() => {
   transform: translateY(0);
 }
 
-/****** Animation de chargement de section ******/
-/* .transition-section {
-  opacity: 0;
-  transform: translateY(250px);
-  transition: all 0.9s ease-in-out;
-}
-.transition-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-} */
-
 /****** General ******/
 .section {
   padding: var(--section-gap) 0;
 }
-/* #artist {
-  background: linear-gradient(
-    90deg,
-    rgba(40, 38, 38, 1) 0%,
-    rgba(55, 53, 54, 1) 35%,
-    rgba(40, 38, 38, 1) 100%
-  );
-  clip-path: circle(90.5% at 37% 81%);
-  padding-top: 500px;
-} */
 
 #contact {
   background: linear-gradient(

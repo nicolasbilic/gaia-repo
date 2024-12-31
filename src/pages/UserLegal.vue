@@ -122,14 +122,27 @@ onMounted(() => {
                 provided by the Intellectual Property Code and the Civil Code.
               </p>
               <h2>ARTICLE 5 - ATTRIBUTION</h2>
-              <p>
-                This website used an image from Vecteezy :
-                <a
-                  href="https://fr.vecteezy.com/png-gratuit/lierre"
-                  target="_blank"
-                  >Lierre PNGs from Vecteezy</a
-                >
-              </p>
+              <span>This website used :</span>
+              <ul>
+                <li>
+                  an image from Vecteezy :
+                  <a
+                    href="https://fr.vecteezy.com/png-gratuit/lierre"
+                    target="_blank"
+                    >Lierre PNGs from Vecteezy</a
+                  >
+                </li>
+                <li>
+                  music from #Uppbeat (free for Creators!):
+                  <a
+                    href="https://uppbeat.io/t/brock-hewitt-stories-in-sound/lover"
+                    target="_blank"
+                    >Lover form Brock Hewitt</a
+                  >
+                  <br />
+                  license code: XY7DTL3LQSS7VSBB
+                </li>
+              </ul>
             </article>
           </section>
         </div>
@@ -140,6 +153,12 @@ onMounted(() => {
 </template>
 
 <style scoped>
+ul {
+  padding-left: 25px;
+}
+li {
+  list-style-type: disc;
+}
 /****** Transition de la page au chargement ******/
 .fade-slide-enter-active {
   transition: opacity 0.5s ease, transform 0.5s ease;

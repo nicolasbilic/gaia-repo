@@ -1,16 +1,55 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref, onMounted, onUnmounted } from "vue";
+const show = ref(false);
+const isElementVisible = ref([false, false]);
+const hasElementBeenVisible = ref([false, false]);
+
+const checkVisibility = () => {
+  const elements = [
+    document.getElementById("artist"),
+    document.getElementById("featured-projects"),
+    document.getElementById("project-showcase"),
+    document.getElementById("project-gallery"),
+    document.getElementById("contact"),
+  ];
+
+  elements.forEach((element, index) => {
+    if (element && !hasElementBeenVisible.value[index]) {
+      const rect = element.getBoundingClientRect();
+      // -200 on soustrait 200 pixels à la hauteur de la fenêtre. (800 à 600) donc on retarde l'affichage du conteneur cible
+      if (rect.top < window.innerHeight - 200 && rect.bottom > 0) {
+        isElementVisible.value[index] = true;
+        hasElementBeenVisible.value[index] = true;
+      }
+    }
+  });
+};
+
+onMounted(() => {
+  show.value = true;
+  window.addEventListener("scroll", checkVisibility);
+  window.addEventListener("resize", checkVisibility);
+  checkVisibility();
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", checkVisibility);
+  window.removeEventListener("resize", checkVisibility);
+});
+</script>
 
 <template>
   <!-- IMAGINARY ARTISTE -->
   <div class="container-sm g-0">
-    <h2 class="mb-5 mb-lg-4">The Artist</h2>
     <div
-      class="artist-intro position-relative d-flex flex-column justify-content-center align-items-center g-0 pb-5"
+      class="artist-intro transition-section position-relative d-flex flex-column justify-content-center g-0 pb-5"
+      :class="{ visible: isElementVisible[0] }"
     >
+      <h2 class="mb-5 mb-lg-4 scrollShow">The Artist</h2>
       <!-- Imaginary Artist -->
       <div class="imaginary-artist">
         <img
-          class="img-fluid d-md-none"
+          class="img-fluid d-md-none scrollClipSM"
           src="../assets/images/artiste-2.webp"
           alt="The artist from the side draws her creations in an imaginary world"
           width="300"
@@ -18,7 +57,7 @@
           loading="lazy"
         />
         <img
-          class="img-fluid d-none d-md-block d-lg-none"
+          class="img-fluid d-none d-md-block d-lg-none scrollClipMD"
           src="../assets/images/artiste-md.webp"
           alt="The artist from the side draws her beautiful creations in an imaginary world"
           width="auto"
@@ -26,7 +65,7 @@
           loading="lazy"
         />
         <img
-          class="img-fluid d-none d-lg-block"
+          class="img-fluid d-none d-lg-block scrollClipLG"
           src="../assets/images/artiste-lg.webp"
           alt="The artist from the side draws her beautiful creations in an imaginary world"
           width="auto"
@@ -41,15 +80,16 @@
       class="artist-content text-center position-relative d-flex flex-column"
     >
       <div
-        class="artist-crafting-worlds mx-md-2 d-flex flex-column flex-md-row justify-content-center align-items-center"
+        class="artist-crafting-worlds transition-section mx-md-2 d-flex flex-column flex-md-row justify-content-center align-items-center"
+        :class="{ visible: isElementVisible[1] }"
       >
-        <p class="mx-4 mx-md-3">
+        <p class="mx-4 mx-md-3 scrollShow">
           Crafting worlds and characters born from imagination, I bring unique
           visions to life.
         </p>
         <!-- The Artist -->
         <img
-          class="mx-0 mx-md-3"
+          class="mx-0 mx-md-3 scrollColorRound"
           id="artist"
           src="../assets/images/artiste-7.webp"
           alt="Picture of the artist"
@@ -62,7 +102,7 @@
         class="dual-img d-flex flex-row justify-content-center align-items-center"
       >
         <img
-          class="img-fluid"
+          class="img-fluid scrollGrow"
           src="../assets/images/elf-2.webp"
           alt="Elf with a bow"
           width="187.5"
@@ -70,7 +110,7 @@
           loading="lazy"
         />
         <img
-          class="img-fluid"
+          class="img-fluid scrollGrow"
           src="../assets/images/elf.webp"
           alt="Elf with a sword"
           width="187.5"
@@ -78,7 +118,7 @@
           loading="lazy"
         />
       </div>
-      <p>
+      <p class="scrollShow">
         Graphic designer for six years, I've worked with multiple companies to
         create original artworks.
       </p>
@@ -86,7 +126,7 @@
         class="dual-img d-flex flex-row justify-content-center align-items-center"
       >
         <img
-          class="img-fluid"
+          class="img-fluid scrollGrow"
           src="../assets/images/siren-bard.webp"
           alt="Mushroom Druid"
           width="187.5"
@@ -94,7 +134,7 @@
           loading="lazy"
         />
         <img
-          class="img-fluid"
+          class="img-fluid scrollGrow"
           src="../assets/images/celestial-sorceress.webp"
           alt="Elf with a bow"
           width="187.5"
@@ -130,9 +170,7 @@ p {
 .artist-intro img {
   width: 100%;
   border-radius: var(--radius);
-  clip-path: circle(100% at 50% 85%);
   object-fit: cover;
-  /* découpe l’image en forme de cercle. 100% indique que le cercle est très grand; at : Où placer le cercle? On dit où le centre du cercle sera placé. 	•	50% = au milieu horizontalement (de gauche à droite),	85% = en bas, à 85% de la hauteur de l’image*/
 }
 
 .artist-crafting-worlds {
@@ -153,8 +191,8 @@ p {
   padding: 0 1.5rem;
 }
 
-.artist-content #artist {
-  border-radius: 150px;
+.artist-crafting-worlds img {
+  border-radius: var(--radius);
   max-width: 300px;
   transition: filter 0.3s ease-in-out;
   &:hover {
@@ -190,32 +228,20 @@ p {
   .artist-content > p {
     padding: 0 3rem;
   }
-  /* .dual-img {
-    gap: 1rem;
-  } */
 }
 
 /*  >= 768px */
 @media (width >= 768px) {
-  .artist-intro img {
-    clip-path: circle(90% at 50% 85%);
-  }
   .dual-img img:nth-child(1):active {
     transform: translateZ(100px) translateX(50%) scale(1.05);
   }
   .dual-img img:nth-child(2):active {
     transform: translateZ(100px) translateX(-50%) scale(1.05);
   }
-  /* .dual-img {
-    gap: 2rem;
-  } */
 }
 
 /*  >= 992px */
 @media (width >= 992px) {
-  .artist-intro img {
-    clip-path: circle(100% at 50% 160%);
-  }
   .artist-crafting-worlds > * {
     width: 40%;
   }
@@ -233,7 +259,6 @@ p {
   }
   .artist-content > p {
     padding: 0 7rem;
-    /* outline: 3px solid plum; */
   }
 }
 

@@ -121,7 +121,7 @@ onMounted(() => {
               </p>
             </div>
           </div>
-        </transition name="fade-slide">>
+        </transition name="fade-slide">
       </div>
     </div>
   </div>
