@@ -8,8 +8,8 @@ const isLoading = ref(true);
 const lastVisit = localStorage.getItem("lastVisit");
 const now = new Date().getTime();
 
-// Si aucune visite ou si la dernière visite remonte à plus de 1h, réinitialise le statut
-if (!lastVisit || now - parseInt(lastVisit) > 60 * 60 * 1000) {
+// Si aucune visite ou si la dernière visite remonte à plus de 24h, réinitialise le statut
+if (!lastVisit || now - parseInt(lastVisit) > 24 * 60 * 60 * 1000) {
   localStorage.removeItem("hasVisited"); // Réinitialise "hasVisited"
   localStorage.setItem("lastVisit", now.toString()); // Met à jour la date de la dernière visite
 } else {

@@ -1,4 +1,46 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { onMounted, onBeforeUnmount } from "vue";
+
+// Function to add the animation class to my images en largeur lg(>=992px)
+const handleResize = () => {
+  const secondImageBox = document.querySelector('[data-index="2"]');
+  const fourthImageBox = document.querySelector('[data-index="4"]');
+  const fifthImageBox = document.querySelector('[data-index="5"]');
+
+  if (secondImageBox) {
+    if (window.innerWidth >= 992) {
+      secondImageBox.classList.add("scrollSlideUp");
+    } else {
+      secondImageBox.classList.remove("scrollSlideUp");
+    }
+  }
+
+  if (fourthImageBox) {
+    if (window.innerWidth >= 992) {
+      fourthImageBox.classList.add("scrollSlideUp");
+    } else {
+      fourthImageBox.classList.remove("scrollSlideUp");
+    }
+  }
+
+  if (fifthImageBox) {
+    if (window.innerWidth >= 992) {
+      fifthImageBox.classList.add("scrollSlideLeft");
+    } else {
+      fifthImageBox.classList.remove("scrollSlideLeft");
+    }
+  }
+};
+
+onMounted(() => {
+  window.addEventListener("resize", handleResize);
+  handleResize(); // Vérification initiale
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("resize", handleResize);
+});
+</script>
 <template>
   <div>
     <div class="project-showcase">
@@ -9,6 +51,7 @@
         >
           <div
             class="img-box scrollSlideRight d-flex justify-content-center align-items-start"
+            data-index="1"
           >
             <img
               src="../assets/images/desert-sorcerer.webp"
@@ -19,7 +62,8 @@
             />
           </div>
           <div
-            class="img-box scrollSlideUp d-flex justify-content-center align-items-start"
+            class="img-box d-flex justify-content-center align-items-start"
+            data-index="2"
           >
             <img
               src="../assets/images/cosmic-artisan.webp"
@@ -29,7 +73,10 @@
               loading="lazy"
             />
           </div>
-          <div class="img-box d-flex justify-content-center align-items-start">
+          <div
+            class="img-box d-flex justify-content-center align-items-start"
+            data-index="3"
+          >
             <img
               src="../assets/images/soulkeeper-2.webp"
               alt="Soulkeeper"
@@ -39,7 +86,8 @@
             />
           </div>
           <div
-            class="img-box scrollSlideUp d-flex justify-content-center align-items-start"
+            class="img-box d-flex justify-content-center align-items-start"
+            data-index="4"
           >
             <img
               src="../assets/images/ocean-priest.webp"
@@ -50,7 +98,8 @@
             />
           </div>
           <div
-            class="img-box scrollSlideLeft d-flex justify-content-center align-items-start"
+            class="img-box d-flex justify-content-center align-items-start"
+            data-index="5"
           >
             <img
               src="../assets/images/druid-2.webp"

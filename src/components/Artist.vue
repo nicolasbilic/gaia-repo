@@ -1,23 +1,23 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
 const show = ref(false);
-const isElementVisible = ref([false, false]);
-const hasElementBeenVisible = ref([false, false]);
+const isElementVisible = ref([false, false, false, false, false]);
+const hasElementBeenVisible = ref([false, false, false, false, false]);
 
 const checkVisibility = () => {
   const elements = [
-    document.getElementById("artist"),
-    document.getElementById("featured-projects"),
-    document.getElementById("project-showcase"),
-    document.getElementById("project-gallery"),
-    document.getElementById("contact"),
+    document.getElementById("artist-intro"),
+    document.getElementById("artist-crafting-worlds"),
+    document.getElementById("dual-img-1"),
+    document.getElementById("artist-work"),
+    document.getElementById("dual-img-2"),
   ];
 
   elements.forEach((element, index) => {
     if (element && !hasElementBeenVisible.value[index]) {
       const rect = element.getBoundingClientRect();
       // -200 on soustrait 200 pixels à la hauteur de la fenêtre. (800 à 600) donc on retarde l'affichage du conteneur cible
-      if (rect.top < window.innerHeight - 200 && rect.bottom > 0) {
+      if (rect.top < window.innerHeight - 130 && rect.bottom > 0) {
         isElementVisible.value[index] = true;
         hasElementBeenVisible.value[index] = true;
       }
@@ -42,7 +42,8 @@ onUnmounted(() => {
   <!-- IMAGINARY ARTISTE -->
   <div class="container-sm g-0">
     <div
-      class="artist-intro transition-section position-relative d-flex flex-column justify-content-center g-0 pb-5"
+      id="artist-intro"
+      class="transition-section position-relative d-flex flex-column justify-content-center g-0 pb-5"
       :class="{ visible: isElementVisible[0] }"
     >
       <h2 class="mb-5 mb-lg-4 scrollShow">The Artist</h2>
@@ -80,7 +81,8 @@ onUnmounted(() => {
       class="artist-content text-center position-relative d-flex flex-column"
     >
       <div
-        class="artist-crafting-worlds transition-section mx-md-2 d-flex flex-column flex-md-row justify-content-center align-items-center"
+        id="artist-crafting-worlds"
+        class="transition-section mx-md-2 d-flex flex-column flex-md-row justify-content-center align-items-center"
         :class="{ visible: isElementVisible[1] }"
       >
         <p class="mx-4 mx-md-3 scrollShow">
@@ -99,7 +101,9 @@ onUnmounted(() => {
         />
       </div>
       <div
-        class="dual-img d-flex flex-row justify-content-center align-items-center"
+        id="dual-img-1"
+        class="dual-img transition-section d-flex flex-row justify-content-center align-items-center"
+        :class="{ visible: isElementVisible[2] }"
       >
         <img
           class="img-fluid scrollGrow"
@@ -118,12 +122,18 @@ onUnmounted(() => {
           loading="lazy"
         />
       </div>
-      <p class="scrollShow">
+      <p
+        id="artist-work"
+        class="scrollShow transition-section"
+        :class="{ visible: isElementVisible[3] }"
+      >
         Graphic designer for six years, I've worked with multiple companies to
         create original artworks.
       </p>
       <div
-        class="dual-img d-flex flex-row justify-content-center align-items-center"
+        id="dual-img-2"
+        class="dual-img transition-section d-flex flex-row justify-content-center align-items-center"
+        :class="{ visible: isElementVisible[4] }"
       >
         <img
           class="img-fluid scrollGrow"
@@ -164,16 +174,16 @@ p {
 }
 
 /*** ARTIST CONTENT ***/
-.artist-intro {
+#artist-intro {
   margin-bottom: 5rem;
 }
-.artist-intro img {
+#artist-intro img {
   width: 100%;
   border-radius: var(--radius);
   object-fit: cover;
 }
 
-.artist-crafting-worlds {
+#artist-crafting-worlds {
   gap: 5rem;
 }
 
@@ -191,7 +201,7 @@ p {
   padding: 0 1.5rem;
 }
 
-.artist-crafting-worlds img {
+.artist-content > div img {
   border-radius: var(--radius);
   max-width: 300px;
   transition: filter 0.3s ease-in-out;
@@ -242,7 +252,7 @@ p {
 
 /*  >= 992px */
 @media (width >= 992px) {
-  .artist-crafting-worlds > * {
+  #artist-crafting-worlds > * {
     width: 40%;
   }
   .dual-img {
@@ -251,7 +261,7 @@ p {
   .dual-img img {
     max-width: 360px;
   }
-  .artist-intro {
+  #artist-intro {
     margin-bottom: 10rem;
   }
   .artist-content {
@@ -264,7 +274,7 @@ p {
 
 /* >= 1200px  */
 @media (width >= 1200px) {
-  .artist-crafting-worlds > * {
+  #artist-crafting-worlds > * {
     width: 50%;
   }
   .dual-img {

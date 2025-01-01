@@ -162,7 +162,6 @@ li {
     transform: translateX(0);
   }
 }
-
 .scrollSlideUp {
   animation: scrollSlideUpYAnimation both;
   animation-timeline: view(80% 5%);
@@ -200,11 +199,11 @@ li {
   .scrollClipLG {
     clip-path: circle(100% at 50% 160%);
   }
-  .artist-crafting-worlds #artist {
+  #artist-crafting-worlds #artist {
     border-radius: 150px;
   }
 
-  /****** Animation de chargement de section ******/
+  /****** Animation for Safari & other non-supported browsers ******/
   .transition-section {
     opacity: 0;
     transform: translateY(250px);

@@ -15,7 +15,7 @@ const hasElementBeenVisible = ref([false, false, false, false]);
 
 const checkVisibility = () => {
   const elements = [
-    document.getElementById("artist"),
+    // document.getElementById("artist"),
     document.getElementById("featured-projects"),
     document.getElementById("project-showcase"),
     document.getElementById("project-gallery"),
@@ -60,6 +60,7 @@ onUnmounted(() => {
       <section class="section">
         <FeaturedProjects
           id="featured-projects"
+          class="transition-section"
           :class="{ visible: isElementVisible[0] }"
         />
         <ProjectShowcase
