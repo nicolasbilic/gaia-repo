@@ -53,11 +53,11 @@ onUnmounted(() => {
       <UserNavBar />
       <Hero />
 
-      <section class="section">
+      <section id="artist" class="section">
         <Artist />
       </section>
 
-      <section class="section">
+      <section id="artworks" class="section">
         <FeaturedProjects
           id="featured-projects"
           class="transition-section"

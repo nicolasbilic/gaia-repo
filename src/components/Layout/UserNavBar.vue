@@ -32,11 +32,8 @@
             </RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink
-              class="nav-link"
-              :to="{ path: '/', hash: '#collection' }"
-            >
-              Collection
+            <RouterLink class="nav-link" :to="{ path: '/', hash: '#artworks' }">
+              Artworks
             </RouterLink>
           </li>
         </ul>

@@ -92,7 +92,6 @@ onUnmounted(() => {
         <!-- The Artist -->
         <img
           class="mx-0 mx-md-3 scrollColorRound"
-          id="artist"
           src="../assets/images/artiste-7.webp"
           alt="Picture of the artist"
           width="300"
