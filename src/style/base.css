@@ -106,30 +106,19 @@ body {
   min-height: 100vh;
   font-family: var(--font-family-secondary);
   color: var(--color-text-secondary);
-  background: rgb(36, 34, 35);
+  /* background: rgb(36, 34, 35);
   background: linear-gradient(
     90deg,
     rgba(36, 34, 35) 0%,
     rgba(48, 46, 47, 1) 35%,
     rgba(36, 34, 35, 1) 100%
-  );
+  ); */
+  background-color: #000000;
   line-height: 1.6;
   font-size: 16px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-@keyframes bgAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 h1,
@@ -139,7 +128,8 @@ h4,
 h5,
 h6 {
   font-family: var(--font-family-primary);
-  color: var(--color-text-primary);
+  /* color: var(--color-text-primary); */
+  color: var(--color-text-secondary);
   margin: 0;
 }
 h1 {
@@ -151,8 +141,3 @@ h2 {
 h3 {
   font-size: var(--heading-3-size);
 }
-/* 
-Music from #Uppbeat (free for Creators!):
-https://uppbeat.io/t/brock-hewitt-stories-in-sound/lover
-License code: XY7DTL3LQSS7VSBB
-*/

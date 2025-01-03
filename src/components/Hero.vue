@@ -2,20 +2,28 @@
 import { ref, onMounted } from "vue";
 const indexActuel = ref(0);
 
-const title = ref(["The Cosmic Artisan", "The soulkeeper", "The Druid"]);
+const title = ref([
+  "The Cosmic Artisan",
+  "The soulkeeper",
+  "The Druid",
+  "The Celestral Huntress",
+]);
 const desc1 = ref([
   "This project was created for Moonlight Nexus, a visionary brand dedicated to merging innovation with artistic inspiration.",
   "This project was crafted for Stellar Odyssey, a pioneering brand that seeks to blend technology with human expression.",
+  "This creation was made for Celestial Innovations, a forward-thinking company focused on the intersection of science and art.",
   "This creation was made for Celestial Innovations, a forward-thinking company focused on the intersection of science and art.",
 ]);
 const desc2 = ref([
   "The Cosmic Artisan serves as a symbolic figure representing the brand’s core values: strength, precision, and a commitment to transformative ideas.",
   "The Digital Alchemist embodies the brand’s essence: creativity, ingenuity, and a drive for groundbreaking solutions.",
   "The Horizon Seeker symbolizes the brand’s foundational principles: exploration, vision, and a quest for the unknown.",
+  "The Horizon Seeker symbolizes the brand’s foundational principles: exploration, vision, and a quest for the unknown.",
 ]);
 const desc3 = ref([
   "The artwork reflects their mission to explore uncharted territories.",
   "The design captures their vision of pushing the boundaries of the digital realm.",
+  "The piece resonates with their goal to expand the horizons of possibility.",
   "The piece resonates with their goal to expand the horizons of possibility.",
 ]);
 
@@ -46,33 +54,60 @@ onMounted(() => {
       <div class="hero-container d-flex flex-column align-items-center">
         <!-- Display row -->
         <div
-          class="d-flex flex-column flex-lg-row justify-content-center align-items-center"
+          class="d-flex flex-column flex-xl-row justify-content-center align-items-center"
         >
           <div
             id="carousel-hero"
-            class="carousel slide order-lg-2"
+            class="carousel slide order-xl-2"
             data-bs-ride="carousel"
           >
             <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="6000">
+              <div class="carousel-item active" data-bs-interval="4000">
                 <img
-                  src="../assets/images/cosmic-artisan.webp"
+                  src="../assets/images/cosmic-artisan-black-white.webp"
                   class="d-block w-100"
-                  alt="Queen Lunar Archer aiming a bow"
+                  alt="Cosmic Artisan in black and white"
+                />
+                <img
+                  src="../assets/images/cosmic-artisan-color.webp"
+                  class="d-block w-100 carousel-image"
+                  alt="Cosmic Artisan"
                 />
               </div>
-              <div class="carousel-item" data-bs-interval="6000">
-                <img
+              <div class="carousel-item" data-bs-interval="4000">
+                <!-- <img
                   src="../assets/images/soulkeeper-2.webp"
                   class="d-block w-100"
-                  alt="Sorceress with a purple cloak"
+                  alt="Soulkeeper in color"
+                /> -->
+                <img
+                  src="../assets/images/soulkeeper-black-white.webp"
+                  class="d-block w-100"
+                  alt="Soulkeeper in black and white"
                 />
               </div>
               <div class="carousel-item">
-                <img
+                <!-- <img
                   src="../assets/images/druid-2.webp"
                   class="d-block w-100"
-                  alt="Moon sorceress"
+                  alt="Druid in color"
+                /> -->
+                <img
+                  src="../assets/images/druid-black-white.webp"
+                  class="d-block w-100"
+                  alt="Druid in black and white"
+                />
+              </div>
+              <div class="carousel-item">
+                <!-- <img
+                  src="../assets/images/druid-2.webp"
+                  class="d-block w-100"
+                  alt="Celestial Huntress in color"
+                /> -->
+                <img
+                  src="../assets/images/celestral-huntress-black-white.webp"
+                  class="d-block w-100"
+                  alt="Celestial Huntress in black and white"
                 />
               </div>
             </div>
@@ -89,14 +124,14 @@ onMounted(() => {
           </div>
           <transition name="fade-slide" mode="out-in">
             <!-- :key force vue à traiter le composant comme étant complètement ré-ajoutés au DOM-->
-            <div class="project-title order-lg-1 py-3" :key="indexActuel">
+            <div class="project-title order-xl-1 py-3" :key="indexActuel">
               <h1>{{ title[indexActuel] }}</h1>
             </div>
           </transition>
         </div>
         <transition name="fade-slide" mode="out-in">
           <div
-            class="project-summary py-3 pt-lg-5 w-100 d-flex flex-column flex-lg-row justify-content-center align-items-center"
+            class="project-summary py-3 pt-xl-5 w-100 d-flex flex-column flex-xl-row justify-content-center align-items-center"
             :key="indexActuel"
           >
             <div class="text">
@@ -105,23 +140,23 @@ onMounted(() => {
               </p>
             </div>
             <!-- horizontal line -->
-            <hr class="d-block d-lg-none" />
+            <hr class="d-block d-xl-none" />
             <!-- vertical line -->
-            <div class="vertical-line d-none d-lg-block"></div>
+            <div class="vertical-line d-none d-xl-block"></div>
             <div class="text">
               <p class="m-0">
                 {{ desc2[indexActuel] }}
               </p>
             </div>
             <!-- vertical line -->
-            <div class="vertical-line d-none d-lg-block"></div>
-            <div class="text d-none d-lg-block">
+            <div class="vertical-line d-none d-xl-block"></div>
+            <div class="text d-none d-xl-block">
               <p class="m-0">
                 {{ desc3[indexActuel] }}
               </p>
             </div>
           </div>
-        </transition name="fade-slide">
+        </transition>
       </div>
     </div>
   </div>
@@ -134,27 +169,52 @@ onMounted(() => {
 /* Images */
 .carousel-item {
   max-height: 400px;
+  position: relative;
 }
 .carousel-item img {
   object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel-item img:nth-child(1) {
+  opacity: 1;
+}
+/* .carousel-item:hover img:nth-child(1) {
+  opacity: 0;
+} */
+.carousel-item img:nth-child(2) {
+  opacity: 0;
+}
+.carousel-item:hover img:nth-child(2) {
+  opacity: 1;
 }
 
 /* Button */
 button {
   all: unset;
-  color: var(--color-text-primary);
+  /* color: var(--color-text-primary); */
+  color: var(--color-text-secondary);
   text-decoration: underline;
   font-size: 18px;
 }
 button:hover,
 button:focus {
-  color: var(--color-text-primary);
+  /* color: var(--color-text-primary); */
+  color: var(--color-text-secondary);
   text-decoration: underline;
 }
 h1 {
-  font-size: 65px;
+  font-size: 105px;
   font-weight: bolder;
-  line-height: clamp(40px, 14vw, 55px);
+  line-height: clamp(40px, 14vw, 90px);
   text-align: center;
 }
 /*** Project title ***/
@@ -168,7 +228,7 @@ h1 {
   padding: 0 1rem;
 }
 
- /* État initial de l’élément (invisible et décalé vers le bas) */
+/* État initial de l’élément (invisible et décalé vers le bas) */
 .fade-slide-enter-from {
   opacity: 0;
   transform: translateY(30px);
@@ -192,7 +252,7 @@ h1 {
 }
 .fade-slide-leave-to {
   opacity: 0;
-  transform: translateY(-30px);;
+  transform: translateY(-30px);
 }
 
 .project-summary .text {
@@ -217,9 +277,12 @@ hr {
 /******______ MEDIA QUERIES ______******/
 /****** >= 576px ******/
 @media (width >= 576px) {
+  .carousel-inner {
+    border-radius: var(--radius);
+  }
   .carousel-item img {
-  border-radius: var(--radius);
-}
+    border-radius: var(--radius);
+  }
 }
 
 /****** >= 768px ******/
@@ -231,18 +294,16 @@ hr {
 
 /****** >= 992px ******/
 @media (width >= 992px) {
+}
+
+/****** >= 1200px ******/
+@media (width >= 1200px) {
   .project-title {
     width: 30%;
   }
   .carousel {
     width: 70%;
   }
-  .project-summary .text {
-    padding: 0 45px;
-  }
-}
-/****** >= 1200px ******/
-@media (width >= 1200px) {
   .project-summary .text {
     padding: 0 65px;
   }

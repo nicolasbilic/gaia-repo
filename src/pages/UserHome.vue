@@ -15,7 +15,6 @@ const hasElementBeenVisible = ref([false, false, false, false]);
 
 const checkVisibility = () => {
   const elements = [
-    // document.getElementById("artist"),
     document.getElementById("featured-projects"),
     document.getElementById("project-showcase"),
     document.getElementById("project-gallery"),
@@ -53,7 +52,7 @@ onUnmounted(() => {
       <UserNavBar />
       <Hero />
 
-      <section id="artist" class="section">
+      <section class="section">
         <Artist />
       </section>
 
@@ -108,12 +107,12 @@ onUnmounted(() => {
 }
 
 #contact {
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(37, 35, 33, 1) 0%,
     rgba(50, 48, 45, 1) 35%,
     rgba(37, 35, 33, 1) 100%
-  );
+  ); */
   clip-path: polygon(0 9%, 100% 0, 100% 100%, 0% 100%);
 }
 </style>

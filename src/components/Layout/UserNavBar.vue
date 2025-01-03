@@ -31,7 +31,7 @@
               Artist
             </RouterLink>
           </li>
-          <li class="nav-item">
+          <li class="nav-item ps-lg-2">
             <RouterLink class="nav-link" :to="{ path: '/', hash: '#artworks' }">
               Artworks
             </RouterLink>
@@ -46,9 +46,9 @@
         </RouterLink>
         <ul class="ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <RouterLink class="nav-link" :to="{ path: '/', hash: '#contact' }"
-              >Reach Me</RouterLink
-            >
+            <RouterLink class="nav-link" :to="{ path: '/', hash: '#contact' }">
+              Reach Me
+            </RouterLink>
           </li>
         </ul>
       </div>
@@ -94,6 +94,4 @@ a {
   color: var(--color-text-secondary);
   box-shadow: 0 0 0 0.25rem;
 }
-
-/******* Media Queries *******/
 </style>

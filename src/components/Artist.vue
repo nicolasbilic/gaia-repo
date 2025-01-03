@@ -40,7 +40,7 @@ onUnmounted(() => {
 
 <template>
   <!-- IMAGINARY ARTISTE -->
-  <div class="container-sm g-0">
+  <div id="artist" class="container-sm g-0">
     <div
       id="artist-intro"
       class="transition-section position-relative d-flex flex-column justify-content-center g-0 pb-5"

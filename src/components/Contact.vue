@@ -138,7 +138,7 @@ const resetConfirmationMessage = () => {
   <div class="mx-3 mx-sm-0">
     <div class="container">
       <h2 class="mb-5 scrollShow">Reach me</h2>
-      <form ref="form" @submit.prevent="handleSubmit">
+      <form id="contact" ref="form" @submit.prevent="handleSubmit">
         <!-- First Name -->
         <label class="form-label mb-2" for="firstName">First name</label>
         <input
@@ -147,7 +147,7 @@ const resetConfirmationMessage = () => {
           name="firstName"
           id="firstName"
           placeholder="Your first name"
-          pattern="[a-zA-Z]{2,}"
+          pattern="[a-zA-Zàâäéèêëïîôöùûüç]{2,}"
           maxlength="80"
           required
           v-model="firstName"
@@ -171,7 +171,7 @@ const resetConfirmationMessage = () => {
           name="lastName"
           id="lastName"
           placeholder="Your last name"
-          pattern="[a-zA-Z]{2,}"
+          pattern="[a-zA-Zàâäéèêëïîôöùûüç]{2,}"
           maxlength="80"
           required
           v-model="name"

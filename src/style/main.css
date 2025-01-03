@@ -176,7 +176,7 @@ li {
 }
 
 @supports not (animation-timeline: view()) {
-  /* remove the animations */
+  /****** Remove the animation-timeline animations ******/
   .scrollShow,
   .scrollColorRound,
   .scrollGrow,
@@ -203,7 +203,7 @@ li {
     border-radius: 150px;
   }
 
-  /****** Animation for Safari & other non-supported browsers ******/
+  /****** Add Animation for Safari & other non-supported browsers ******/
   .transition-section {
     opacity: 0;
     transform: translateY(250px);
