@@ -45,7 +45,7 @@ onBeforeUnmount(() => {
   <div>
     <div class="project-showcase">
       <div class="container">
-        <h2 class="scrollShow">Project Showcase</h2>
+        <!-- <h2 class="scrollShow">Project Showcase</h2> -->
         <div
           class="d-flex flex-column flex-lg-row justify-content-center align-items-center"
         >
@@ -124,6 +124,7 @@ h2 {
 
 .project-showcase {
   padding: var(--section-gap) 0;
+  margin-top: 5rem;
 }
 
 .img-box {

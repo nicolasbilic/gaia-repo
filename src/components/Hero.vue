@@ -213,14 +213,15 @@ button:focus {
 }
 h1 {
   font-size: 105px;
+  font-size: clamp(80px, 14vw, 105px);
   font-weight: bolder;
-  line-height: clamp(40px, 14vw, 90px);
+  line-height: clamp(70px, 14vw, 90px);
   text-align: center;
 }
 /*** Project title ***/
 .project-title {
   height: 100%;
-  padding: 0 1rem;
+  padding: 0 3rem;
   z-index: 2;
 }
 /* Project summary */

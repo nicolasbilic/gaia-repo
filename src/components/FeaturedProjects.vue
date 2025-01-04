@@ -4,7 +4,7 @@
   <div
     class="container d-flex flex-column justify-content-center align-items-center"
   >
-    <h2 class="scrollShow">Featured Projects</h2>
+    <h2 class="scrollShow">Artworks</h2>
     <div class="featured-projects position-relative">
       <div class="project position-absolute scrollBlurToFocus">
         <img
@@ -54,7 +54,7 @@
 /******______ FEATURED PROJECTS SECTION ______******/
 h2 {
   text-align: center;
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
 }
 
 .featured-projects {

@@ -4,16 +4,16 @@
   <div>
     <div class="project-gallery">
       <div class="container">
-        <h2 class="scrollShow">Project Gallery</h2>
+        <h2 class="scrollShow">Gallery</h2>
         <div class="projects">
           <!-- Barde -->
           <div class="project">
             <img
+              class="scrollColorRewind"
               src="../assets/images/barde.webp"
               alt="Barde"
               width="349.2"
               height="auto"
-              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -30,11 +30,11 @@
           <!-- Nomad -->
           <div class="project">
             <img
+              class="scrollColorRewind"
               src="../assets/images/warrior.webp"
               alt="Warrior"
               width="349.2"
               height="auto"
-              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -51,11 +51,11 @@
           <!-- Alchemist -->
           <div class="project">
             <img
+              class="scrollColorRewind"
               src="../assets/images/alchemist-2.webp"
               alt="Alchemist"
               width="349.2"
               height="auto"
-              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -72,11 +72,11 @@
           <!-- Wraith -->
           <div class="project">
             <img
+              class="scrollColorRewind"
               src="../assets/images/spectral-sailor-2.webp"
               alt="Spectral sailor"
               width="349.2"
               height="auto"
-              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -88,11 +88,11 @@
           <!-- Mage -->
           <div class="project">
             <img
+              class="scrollColorRewind"
               src="../assets/images/mage.webp"
               alt="Mage"
               width="349.2"
               height="auto"
-              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -108,11 +108,11 @@
           <!-- Blacksmith -->
           <div class="project">
             <img
+              class="scrollColorRewind"
               src="../assets/images/blacksmith.webp"
               alt="Blacksmith"
               width="349.2"
               height="auto"
-              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -128,11 +128,11 @@
           <!-- Fey -->
           <div class="project">
             <img
+              class="scrollColorRewind"
               src="../assets/images/fey.webp"
               alt="Fey"
               width="349.2"
               height="auto"
-              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -149,11 +149,11 @@
           <!-- Priest -->
           <div class="project">
             <img
+              class="scrollColorRewind"
               src="../assets/images/priest.webp"
               alt="Priest"
               width="349.2"
               height="auto"
-              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -170,11 +170,11 @@
           <!-- Sorcerer -->
           <div class="project">
             <img
+              class="scrollColorRewind"
               src="../assets/images/spectral-sorcerer.webp"
               alt="Spectral sorcerer"
               width="349.2"
               height="auto"
-              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -189,11 +189,11 @@
           <!-- Pirate -->
           <div class="project">
             <img
+              class="scrollColorRewind"
               src="../assets/images/pirate-galaxy-2.webp"
               alt="Female galactic pirate with a sword"
               width="349.2"
               height="auto"
-              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -210,11 +210,11 @@
           <!-- Soulkeeper -->
           <div class="project">
             <img
+              class="scrollColorRewind"
               src="../assets/images/soulkeeper.webp"
               alt="Soulkeeper"
               width="349.2"
               height="auto"
-              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
@@ -232,11 +232,11 @@
           <!-- architect -->
           <div class="project">
             <img
+              class="scrollColorRewind"
               src="../assets/images/celestial-architect.webp"
               alt="Celestial architect"
               width="349.2"
               height="auto"
-              class="scrollColorRewind"
             />
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
