@@ -16,7 +16,7 @@ interface Meta extends RouteMeta {
 }
 
 const routes = [
-  { path: '/', component: UserHome, meta: { title: 'Gaia - Official Site', description: 'Explore the unique world of Gaia, a graphic designer specializing in AI-generated fantasy characters. Dive into imaginary realms where every illustration tells a story.' } as Meta },
+  { path: '/', component: UserHome, meta: { title: 'Gaia - Graphic Designer', description: 'Explore the unique world of Gaia, a graphic designer specializing in AI-generated fantasy characters. Dive into imaginary realms where every illustration tells a story.' } as Meta },
   { path: '/legal', component: UserLegal, meta: { title: 'Legal - Gaia', description: 'Find the legal notices - Gaia' } as Meta },
   { path: '/404', component: NotFound, meta: { title: 'Page Not Found - Gaia', description: 'Oops! The page you are looking for doesn’t exist.' } as Meta },
   { path: '/:catchAll(.*)', redirect: '/404' }
@@ -44,7 +44,7 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   const meta = to.meta as Meta;
-  document.title = meta.title || "Gaia - Official Site";
+  document.title = meta.title || "Gaia - Graphic Designer";
   const metaDescription = document.querySelector('meta[name="description"]');
   if (metaDescription) {
     metaDescription.setAttribute('content', meta.description || "Explore the unique world of Gaia, a graphic designer specializing in AI-generated fantasy characters. Dive into imaginary realms where every illustration tells a story.");
