@@ -4,27 +4,31 @@ const indexActuel = ref(0);
 
 const title = ref([
   "The Cosmic Artisan",
-  "The soulkeeper",
+  "The Soulkeeper",
   "The Druid",
-  "The Celestral Huntress",
+  "The Celestial Huntress",
+  "The Fey",
 ]);
 const desc1 = ref([
   "This project was created for Moonlight Nexus, a visionary brand dedicated to merging innovation with artistic inspiration.",
-  "This project was crafted for Stellar Odyssey, a pioneering brand that seeks to blend technology with human expression.",
-  "This creation was made for Celestial Innovations, a forward-thinking company focused on the intersection of science and art.",
-  "This creation was made for Celestial Innovations, a forward-thinking company focused on the intersection of science and art.",
+  "This project was crafted for Eternal Haven, a brand devoted to preserving the essence of timeless connections and profound emotional resonance.",
+  "This project was created for Verdant Horizon, a brand rooted in harmonizing nature’s wisdom with modern sustainability.",
+  "This project was created for Starbound Visions, a brand dedicated to exploring the infinite potential of the cosmos through innovation and artistry.",
+  "This project was created for Whispering Grove, a brand that blends the allure of ancient myths with a modern, mystical touch.",
 ]);
 const desc2 = ref([
   "The Cosmic Artisan serves as a symbolic figure representing the brand’s core values: strength, precision, and a commitment to transformative ideas.",
-  "The Digital Alchemist embodies the brand’s essence: creativity, ingenuity, and a drive for groundbreaking solutions.",
-  "The Horizon Seeker symbolizes the brand’s foundational principles: exploration, vision, and a quest for the unknown.",
-  "The Horizon Seeker symbolizes the brand’s foundational principles: exploration, vision, and a quest for the unknown.",
+  "The Soulkeeper embodies the brand’s philosophy: compassion, guardianship, and a deep reverence for the intangible bonds that unite us.",
+  "The Druid symbolizes the brand’s ethos: balance, renewal, and an unwavering connection to the natural world.",
+  "The Celestial Huntress represents the brand’s ideals: determination, grace, and an unyielding pursuit of excellence among the stars.",
+  "The Fey symbolizes the brand’s essence: elegance, magic, and a profound connection to the realms of imagination and nature.",
 ]);
 const desc3 = ref([
   "The artwork reflects their mission to explore uncharted territories.",
-  "The design captures their vision of pushing the boundaries of the digital realm.",
-  "The piece resonates with their goal to expand the horizons of possibility.",
-  "The piece resonates with their goal to expand the horizons of possibility.",
+  "The artwork reflects their mission to safeguard and celebrate the ethereal beauty of human experiences and memories.",
+  "The artwork reflects their mission to cultivate a deeper appreciation for the beauty and resilience of the environment.",
+  "The artwork reflects their mission to inspire awe and curiosity by charting new frontiers and embracing the mysteries of the universe.",
+  "The artwork reflects their mission to explore the hidden dimensions of nature, revealing its quiet strength and transformative power.",
 ]);
 
 // Utilisation de onMounted pour ajouter un écouteur d'événement quand le composant est monté
@@ -70,43 +74,80 @@ onMounted(() => {
                 />
                 <img
                   src="../assets/images/cosmic-artisan-color.webp"
-                  class="d-block w-100 carousel-image"
+                  class="d-block d-lg-none w-100 hover-image"
+                  alt="Cosmic Artisan"
+                />
+                <img
+                  src="../assets/images/cosmic-artisan-color-lg.webp"
+                  class="d-none d-lg-block w-100 hover-image"
                   alt="Cosmic Artisan"
                 />
               </div>
               <div class="carousel-item" data-bs-interval="4000">
-                <!-- <img
-                  src="../assets/images/soulkeeper-2.webp"
-                  class="d-block w-100"
-                  alt="Soulkeeper in color"
-                /> -->
                 <img
                   src="../assets/images/soulkeeper-black-white.webp"
                   class="d-block w-100"
                   alt="Soulkeeper in black and white"
                 />
+                <img
+                  src="../assets/images/soulkeeper-colors.webp"
+                  class="d-block d-md-none w-100 hover-image"
+                  alt="Soulkeeper in color"
+                />
+                <img
+                  src="../assets/images/soulkeeper-colors-lg.webp"
+                  class="d-none d-md-block w-100 hover-image"
+                  alt="Soulkeeper in color"
+                />
               </div>
               <div class="carousel-item">
-                <!-- <img
-                  src="../assets/images/druid-2.webp"
-                  class="d-block w-100"
-                  alt="Druid in color"
-                /> -->
                 <img
                   src="../assets/images/druid-black-white.webp"
                   class="d-block w-100"
                   alt="Druid in black and white"
                 />
+                <img
+                  src="../assets/images/druid-colors.webp"
+                  class="d-block d-lg-none w-100 hover-image"
+                  alt="Druid in color"
+                />
+                <img
+                  src="../assets/images/druid-colors-lg.webp"
+                  class="d-none d-lg-block w-100 hover-image"
+                  alt="Soulkeeper in color"
+                />
               </div>
               <div class="carousel-item">
-                <!-- <img
-                  src="../assets/images/druid-2.webp"
-                  class="d-block w-100"
-                  alt="Celestial Huntress in color"
-                /> -->
                 <img
                   src="../assets/images/celestral-huntress-black-white.webp"
                   class="d-block w-100"
+                  alt="Celestial Huntress in black and white"
+                />
+                <img
+                  src="../assets/images/celestial-huntress-colors.webp"
+                  class="d-block d-md-none w-100 hover-image"
+                  alt="Celestial Huntress in black and white"
+                />
+                <img
+                  src="../assets/images/celestial-huntress-colors-lg.webp"
+                  class="d-none d-md-block w-100 hover-image"
+                  alt="Celestial Huntress in black and white"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../assets/images/fey-black-white.webp"
+                  class="d-block w-100"
+                  alt="Celestial Huntress in color"
+                />
+                <img
+                  src="../assets/images/fey-colors.webp"
+                  class="d-block d-lg-none w-100 hover-image"
+                  alt="Celestial Huntress in black and white"
+                />
+                <img
+                  src="../assets/images/fey-colors-lg.webp"
+                  class="d-none d-lg-block w-100 hover-image"
                   alt="Celestial Huntress in black and white"
                 />
               </div>
@@ -176,24 +217,20 @@ onMounted(() => {
   transition: opacity 0.3s ease-in-out;
 }
 
-.carousel-image {
+.carousel-item img:nth-child(1) {
+  opacity: 1;
+}
+
+.carousel-item .hover-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-.carousel-item img:nth-child(1) {
-  opacity: 1;
-}
-/* .carousel-item:hover img:nth-child(1) {
-  opacity: 0;
-} */
-.carousel-item img:nth-child(2) {
   opacity: 0;
 }
-.carousel-item:hover img:nth-child(2) {
+.carousel-item:hover .hover-image {
   opacity: 1;
 }
 
