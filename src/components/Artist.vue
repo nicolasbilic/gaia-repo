@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
 const show = ref(false);
-const isElementVisible = ref([false, false, false, false, false]);
-const hasElementBeenVisible = ref([false, false, false, false, false]);
+const isElementVisible = ref([false, false, false, false]);
+const hasElementBeenVisible = ref([false, false, false, false]);
 
 const checkVisibility = () => {
   const elements = [
@@ -10,7 +10,6 @@ const checkVisibility = () => {
     document.getElementById("artist-crafting-worlds"),
     document.getElementById("dual-img-1"),
     document.getElementById("artist-work"),
-    document.getElementById("dual-img-2"),
   ];
 
   elements.forEach((element, index) => {
@@ -99,53 +98,31 @@ onUnmounted(() => {
           loading="lazy"
         />
       </div>
-      <div
-        id="dual-img-1"
-        class="dual-img transition-section d-flex flex-row justify-content-center align-items-center"
-        :class="{ visible: isElementVisible[2] }"
-      >
-        <img
-          class="img-fluid scrollGrow"
-          src="../assets/images/elf-2.webp"
-          alt="Elf with a bow"
-          width="187.5"
-          height="281.25"
-          loading="lazy"
-        />
-        <img
-          class="img-fluid scrollGrow"
-          src="../assets/images/elf.webp"
-          alt="Elf with a sword"
-          width="187.5"
-          height="281.25"
-          loading="lazy"
-        />
-      </div>
       <p
         id="artist-work"
         class="scrollShow transition-section"
-        :class="{ visible: isElementVisible[3] }"
+        :class="{ visible: isElementVisible[2] }"
       >
         Graphic designer for six years, I've worked with multiple companies to
         create original artworks.
       </p>
       <div
-        id="dual-img-2"
+        id="dual-img-1"
         class="dual-img transition-section d-flex flex-row justify-content-center align-items-center"
-        :class="{ visible: isElementVisible[4] }"
+        :class="{ visible: isElementVisible[3] }"
       >
         <img
           class="img-fluid scrollGrow"
-          src="../assets/images/siren-bard.webp"
-          alt="Mushroom Druid"
+          src="../assets/images/artiste-4.webp"
+          alt="Elf with a bow"
           width="187.5"
           height="281.25"
           loading="lazy"
         />
         <img
           class="img-fluid scrollGrow"
-          src="../assets/images/celestial-sorceress.webp"
-          alt="Elf with a bow"
+          src="../assets/images/artiste-5.webp"
+          alt="Elf with a sword"
           width="187.5"
           height="281.25"
           loading="lazy"
@@ -215,17 +192,10 @@ p {
   transform: perspective(1000px);
 }
 
-.dual-img img {
+#dual-img-1 img {
   width: 50%;
   object-fit: cover;
-  border-radius: var(--radius);
-  transition: transform 0.3s ease-in-out;
-}
-.dual-img img:nth-child(1):active {
-  transform: translateZ(200px) translateX(50%) scale(1.2);
-}
-.dual-img img:nth-child(2):active {
-  transform: translateZ(200px) translateX(-50%) scale(1.2);
+  border-radius: 0;
 }
 
 /******______ MEDIA QUERIES ______******/
@@ -237,16 +207,18 @@ p {
   .artist-content > p {
     padding: 0 3rem;
   }
+  #dual-img-1 img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: var(--radius);
+  }
+  .dual-img {
+    gap: 1rem;
+  }
 }
 
 /*  >= 768px */
 @media (width >= 768px) {
-  .dual-img img:nth-child(1):active {
-    transform: translateZ(100px) translateX(50%) scale(1.05);
-  }
-  .dual-img img:nth-child(2):active {
-    transform: translateZ(100px) translateX(-50%) scale(1.05);
-  }
 }
 
 /*  >= 992px */
