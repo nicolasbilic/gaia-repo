@@ -31,30 +31,30 @@
 
 .error-404 h1 {
   font-family: var(--font-family-secondary);
-  font-size: 22px;
-  color: var(--color-text-secondary);
+  font-size: var(--text-20px-size);
+  color: var(--text-color-secondary);
   font-weight: var(--font-weight-strong);
   text-transform: uppercase;
   padding: 10px 20px 10px;
   margin-bottom: 5px;
-  background-color: var(--color-background);
   transition: 0.3s ease-in-out;
   border-radius: var(--radius);
 }
 
 .error-404 a {
-  font-size: 20px;
-  color: var(--c-white-mute);
+  font-size: var(--text-20px-size);
+  color: var(--btn-color);
   font-weight: var(--font-weight-strong);
   text-transform: uppercase;
   padding: 10px 20px;
-  background-color: var(--color-background-dark);
+  background-color: var(--background-light-color);
   border-radius: var(--radius);
+  outline: var(--outline-dark);
 }
 
 .error-404 a:hover {
-  color: var(--color-text-accent-dark);
-  background-color: var(--color-background-light);
-  outline: 2px solid var(--color-outline-dark);
+  color: var(--btn-color-hover);
+  background-color: var(--btn-background-color-hover);
+  outline: 2px solid var(--outline-light);
 }
 </style>

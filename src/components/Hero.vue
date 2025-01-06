@@ -237,21 +237,26 @@ onMounted(() => {
 /* Button */
 button {
   all: unset;
-  /* color: var(--color-text-primary); */
-  color: var(--color-text-secondary);
-  text-decoration: underline;
-  font-size: 18px;
+  color: var(--text-color-secondary);
+  font-size: var(--text-18px-size);
+  position: relative;
+}
+button::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 65%;
+  height: 1px;
+  background-color: var(--underline-light);
+  margin-left: 16px;
 }
 button:hover,
 button:focus {
-  /* color: var(--color-text-primary); */
-  color: var(--color-text-secondary);
-  text-decoration: underline;
+  color: var(--text-color-secondary);
 }
 h1 {
-  font-size: 105px;
-  font-size: clamp(80px, 14vw, 105px);
-  font-weight: bolder;
+  font-size: clamp(80px, 14vw, var(--heading-size));
   line-height: clamp(70px, 14vw, 90px);
   text-align: center;
 }
@@ -302,11 +307,12 @@ h1 {
 hr {
   width: 50%;
   height: 1px;
-  color: var(--color-divider);
+  color: var(--divider);
+  opacity: 0.6;
 }
 /* Line for desktop */
 .vertical-line {
-  border-left: 1px solid var(--color-divider);
+  border-left: 1px solid var(--divider);
   height: 80px;
   margin-right: 15px;
   opacity: 0.6;
@@ -315,11 +321,13 @@ hr {
 /******______ MEDIA QUERIES ______******/
 /****** >= 576px ******/
 @media (width >= 576px) {
-  .carousel-inner {
-    border-radius: var(--radius);
-  }
+  .carousel-inner,
   .carousel-item img {
     border-radius: var(--radius);
+  }
+  button::after {
+    width: 78%;
+    margin: 0px;
   }
 }
 

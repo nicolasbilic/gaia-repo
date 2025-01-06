@@ -235,8 +235,8 @@ const resetConfirmationMessage = () => {
 <style scoped>
 /* Inputs */
 .form-control {
-  color: var(--color-text-secondary);
-  border-bottom: 1px solid var(--color-input-border);
+  color: var(--text-color-secondary);
+  border-bottom: 1px solid var(--input-border-color);
   background-color: transparent;
   border-top: none;
   border-left: none;
@@ -246,7 +246,7 @@ const resetConfirmationMessage = () => {
 
 .form-control:hover,
 .form-control:focus {
-  border-bottom: 1px solid var(--color-text-secondary);
+  border-bottom: 1px solid var(--input-border-color-hover);
 }
 .form-control:focus {
   box-shadow: none;
@@ -259,7 +259,7 @@ input:not([type="checkbox"]):valid:not(:placeholder-shown) {
   background-position: calc(100% - 10px);
 }
 input:not([type="checkbox"]):invalid:not(:placeholder-shown) {
-  border-color: red;
+  border-color: var(--error-color);
   background-image: url("../assets/svg/checked_red.svg");
 }
 input:not([type="checkbox"]):valid:not(:placeholder-shown) {
@@ -268,26 +268,26 @@ input:not([type="checkbox"]):valid:not(:placeholder-shown) {
 
 /* Placeholder */
 input::placeholder {
-  color: var(--color-input-placeholder);
+  color: var(--input-placeholder-color);
 }
 
 /* Privacy policy link */
 label a {
-  color: var(--color-text-primary);
+  color: var(--text-color-primary);
 }
 
 /* Submit button */
 button {
-  color: var(--c-dark-blue);
-  background-color: var(--color-text-primary);
-  font-weight: var(--font-weight-highlight);
-  border-radius: var(--radius);
+  color: var(--btn-color);
+  background-color: var(--btn-background-color);
+  font-weight: var(--btn-font-weight);
+  border-radius: var(--btn-radius);
   transition: all 0.3s ease-in-out;
 }
 button:hover {
-  color: var(--color-text-secondary);
-  background-color: var(--color-background);
-  outline: 2px solid var(--color-text-primary);
+  color: var(--btn-color-hover);
+  background-color: var(--btn-background-color-hover);
+  outline: var(--btn-outline-hover);
 }
 
 /* "~" sélectionne les frères à l'intérieur d'un conteneur, pas forcément directement à côté comme "+" */
@@ -298,23 +298,18 @@ input:invalid ~ button[type="submit"] {
 
 /* Text info */
 p {
-  color: var(--color-text-info);
-  font-size: 14px;
+  color: var(--text-color-info);
+  font-size: var(--text-14px-size);
 }
 span {
-  color: var(--color-error);
-  font-size: 14px;
+  color: var(--error-color);
+  font-size: var(--text-14px-size);
 }
 .error {
-  color: var(--color-error);
+  color: var(--error-color);
 }
 
 input:invalid:not(:placeholder-shown) + p {
-  color: var(--color-error);
+  color: var(--error-color);
 }
-
-/* cible le p après le span après l'input invalide */
-/* input:invalid:not(:placeholder-shown) + span + p {
-  color: var(--color-error);
-} */
 </style>

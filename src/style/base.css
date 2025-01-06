@@ -1,3 +1,4 @@
+/*** Importation of fonts ***/
 @font-face {
   font-family: "Fuggles Pro";
   src: url("./../fonts/FugglesPro-Regular.ttf") format("truetype");
@@ -5,90 +6,110 @@
   font-style: normal;
 }
 
+/*** Global Variables ***/
 :root {
   --c-white: #ffffff;
-  --c-white-soft: #f9fafb;
-  --c-white-mute: #f4f4f4;
+  --c-white-mute-opacity-60: rgba(234, 236, 240, 0.6);
 
   --c-black: #000000;
-  --c-black-soft: #0c0c0c;
-  --c-black-mute: #202020;
+  --c-black-soft: rgba(36, 34, 35, 0.7);
 
-  --c-grey: #475467;
   --c-grey-soft: #57667d;
   --c-grey-mute: #cccccc;
 
   --c-gold: #ffd585;
-  --c-dark-blue: #242223;
-  --c-silver-grey: linear-gradient(
-    90deg,
-    rgba(36, 34, 35) 0%,
-    rgba(48, 46, 47, 1) 35%,
-    rgba(36, 34, 35, 1) 100%
-  );
-  --c-green: #155724;
   --c-red: #ff0000;
-  --c-divider-light: rgba(234, 236, 240, 0.6);
 
-  --fm-fuggles: "Fuggles Pro", serif;
-  --fm-inter: "Inter", sans-serif;
+  --ff-fuggles: "Fuggles Pro", serif;
+  --ff-inter: "Inter", sans-serif;
 
-  --fw-extrabold: 900;
   --fw-bolder: 800;
   --fw-bold: 700;
   --fw-sm-bold: 500;
 
-  --fs-h1: 50px;
+  --fs-h1: 105px;
   --fs-h2: 95px;
   --fs-h3: 80px;
-  --fs-18px: 18px;
   --fs-20px: 20px;
+  --fs-18px: 18px;
+  --fs-16px: 16px;
+  --fs-14px: 14px;
 
   --radius: 12px;
-  --section-gap: 160px;
+  --section-gap: 160px 0;
+
+  --outline-gold: 2px solid var(--c-gold);
+  --outline-white: 2px solid var(--c-white);
+  --outline-black: 2px solid var(--c-black);
+
+  --perspective-1500: perspective(1500px);
+
+  --atv-70-5: view(70% 5%);
+  --atv-80-5: view(80% 5%);
 }
 
-/* semantic color variables for this project */
+/*** Variables for this Project ***/
 :root {
-  /* colors */
-  --color-background: var(--c-silver-grey);
-  --color-background-soft: var(--c-black-soft);
-  --color-background-dark: var(--c-black);
-  --color-background-light: var(--c-white);
+  /** 3d **/
+  --perspective-medium: var(--perspective-1500);
 
-  --color-background-button-secondary: var(--c-blue);
+  /** Animation **/
+  --animation-timeline-view: var(--atv-70-5);
+  --animation-timeline-view-fast: var(--atv-80-5);
 
-  --color-text-primary: var(--c-gold);
-  --color-text-secondary: var(--c-white);
-  --color-text-accent-dark: var(--c-black-soft);
-  --color-text-accent-light: var(--c-white);
-  --color-text-info: var(--c-grey-soft);
+  /** Buttons **/
+  --btn-color: var(--c-black);
+  --btn-background-color: var(--c-gold);
+  --btn-font-weight: var(--fw-sm-bold);
+  --btn-radius: var(--radius);
+  --btn-color-hover: var(--c-white);
+  --btn-background-color-hover: var(--c-black);
+  --btn-outline-hover: var(--outline-gold);
 
-  --color-outline-dark: var(--c-black);
-  --color-outline-light: var(--c-white);
+  /** Colors **/
+  --background-color: var(--c-black);
+  --background-light-color: var(--c-white);
 
-  --color-divider: var(--c-divider-light);
-  --color-input-border: var(--c-grey-mute);
-  --color-input-placeholder: var(--c-grey-mute);
+  --text-color-primary: var(--c-gold);
+  --text-color-secondary: var(--c-white);
+  --text-color-info: var(--c-grey-soft);
 
-  --color-error: var(--c-red);
+  --input-border-color: var(--c-grey-mute);
+  --input-border-color-hover: var(--c-white);
+  --input-placeholder-color: var(--c-grey-mute);
 
-  /* font families */
-  --font-family-primary: var(--fm-fuggles);
-  --font-family-secondary: var(--fm-inter);
+  --underline: var(--c-gold);
+  --underline-light: var(--c-white);
 
-  /* font sizes */
+  --divider: var(--c-white-mute-opacity-60);
+
+  --error-color: var(--c-red);
+
+  --svg-path-color: var(--c-white);
+
+  --mask-background-color: var(--c-black-soft);
+
+  /** Font families **/
+  --font-family-primary: var(--ff-fuggles);
+  --font-family-secondary: var(--ff-inter);
+
+  /** Font sizes **/
   --heading-size: var(--fs-h1);
   --heading-2-size: var(--fs-h2);
   --heading-3-size: var(--fs-h3);
-  --text-18px-size: var(--fs-18px);
   --text-20px-size: var(--fs-20px);
+  --text-18px-size: var(--fs-18px);
+  --text-16px-size: var(--fs-16px);
+  --text-14px-size: var(--fs-14px);
 
-  /* font weights */
-  --font-weight-hero-heading: var(--fw-extrabold);
+  /** Font weights **/
   --font-weight-heading: var(--fw-bolder);
   --font-weight-strong: var(--fw-bold);
   --font-weight-highlight: var(--fw-sm-bold);
+
+  /** Outlines **/
+  --outline-light: var(--outline-white);
+  --outline-dark: var(--outline-black);
 }
 
 *,
@@ -105,15 +126,8 @@ html {
 body {
   min-height: 100vh;
   font-family: var(--font-family-secondary);
-  color: var(--color-text-secondary);
-  /* background: rgb(36, 34, 35);
-  background: linear-gradient(
-    90deg,
-    rgba(36, 34, 35) 0%,
-    rgba(48, 46, 47, 1) 35%,
-    rgba(36, 34, 35, 1) 100%
-  ); */
-  background-color: #000000;
+  color: var(--text-color-secondary);
+  background-color: var(--background-color);
   line-height: 1.6;
   font-size: 16px;
   text-rendering: optimizeLegibility;
@@ -128,12 +142,12 @@ h4,
 h5,
 h6 {
   font-family: var(--font-family-primary);
-  /* color: var(--color-text-primary); */
-  color: var(--color-text-secondary);
+  color: var(--text-color-secondary);
   margin: 0;
 }
 h1 {
   font-size: var(--heading-size);
+  font-weight: var(--font-weight-heading);
 }
 h2 {
   font-size: var(--heading-2-size);

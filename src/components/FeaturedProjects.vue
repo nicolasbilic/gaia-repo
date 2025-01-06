@@ -59,7 +59,7 @@ h2 {
 
 .featured-projects {
   transform-style: preserve-3d;
-  transform: perspective(1500px);
+  transform: var(--perspective-medium);
   width: fit-content;
 }
 

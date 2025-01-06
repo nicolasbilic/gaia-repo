@@ -187,11 +187,6 @@ p {
 }
 
 /*** Dual image ***/
-.dual-img {
-  transform-style: preserve-3d;
-  transform: perspective(1000px);
-}
-
 #dual-img-1 img {
   width: 50%;
   object-fit: cover;

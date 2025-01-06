@@ -45,7 +45,6 @@ onBeforeUnmount(() => {
   <div>
     <div class="project-showcase">
       <div class="container">
-        <!-- <h2 class="scrollShow">Project Showcase</h2> -->
         <div
           class="d-flex flex-column flex-lg-row justify-content-center align-items-center"
         >
@@ -117,13 +116,8 @@ onBeforeUnmount(() => {
 
 <style scoped>
 /******______ PROJECT SHOWCASE ______******/
-h2 {
-  text-align: center;
-  padding-bottom: 5rem;
-}
-
 .project-showcase {
-  padding: var(--section-gap) 0;
+  padding: var(--section-gap);
   margin-top: 5rem;
 }
 

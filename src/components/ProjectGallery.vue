@@ -263,6 +263,10 @@ h2 {
 }
 h3 {
   font-size: clamp(18px, 18vw, var(--heading-3-size));
+  color: var(--text-color-primary);
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all 0.3s ease-in-out;
 }
 
 /******______ PROJECT GALLERY ______******/
@@ -296,17 +300,10 @@ h3 {
   width: 100%;
   height: 100%;
   padding: 0 20px 30px;
-  background-color: rgba(36, 34, 35, 0.7);
+  background-color: var(--mask-background-color);
   overflow: hidden;
   opacity: 0;
   transition: all 0.3s ease-in-out;
-}
-
-.project .mask h3 {
-  opacity: 0;
-  transform: translateY(-100px);
-  transition: all 0.3s ease-in-out;
-  /* padding-bottom: 1rem; */
 }
 
 .project .mask p {
@@ -316,13 +313,13 @@ h3 {
 }
 
 .project .mask a {
+  display: none;
   position: relative;
   font-size: var(--text-18px-size);
-  color: var(--color-text-primary);
+  color: var(--text-color-primary);
   font-weight: var(--font-weight-strong);
   text-transform: uppercase;
   opacity: 0;
-  display: none;
   transition: all 0.3s ease-in-out;
 }
 .project .mask a:after {
@@ -332,7 +329,7 @@ h3 {
   left: 0px;
   width: 100%;
   height: 1px;
-  background-color: var(--color-text-primary);
+  background-color: var(--underline);
 }
 
 .project:hover .mask {

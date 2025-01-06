@@ -125,7 +125,7 @@ onMounted(() => {
               <span>This website used :</span>
               <ul>
                 <li>
-                  an image from Vecteezy :
+                  An image from Vecteezy :
                   <a
                     href="https://fr.vecteezy.com/png-gratuit/lierre"
                     target="_blank"
@@ -133,14 +133,14 @@ onMounted(() => {
                   >
                 </li>
                 <li>
-                  music from #Uppbeat (free for Creators!):
+                  Music from #Uppbeat (free for Creators!):
                   <a
                     href="https://uppbeat.io/t/brock-hewitt-stories-in-sound/lover"
                     target="_blank"
-                    >Lover form Brock Hewitt</a
+                    >https://uppbeat.io/t/brock-hewitt-stories-in-sound/lover</a
                   >
                   <br />
-                  license code: XY7DTL3LQSS7VSBB
+                  License code: XY7DTL3LQSS7VSBB
                 </li>
               </ul>
             </article>
@@ -199,7 +199,7 @@ li {
   font-size: 1.625rem;
   font-weight: bold;
   font-family: var(--font-family-secondary);
-  color: var(--color-text-secondary);
+  color: var(--text-color-secondary);
 }
 
 .sub-text {
@@ -230,14 +230,14 @@ article {
 article h2 {
   font-size: var(--text-20px-size);
   font-family: var(--font-family-secondary);
-  color: var(--color-text-secondary);
+  color: var(--text-color-secondary);
   margin: 30px 0 15px;
 }
 
 article h3 {
   font-size: 1.25rem;
   font-family: var(--font-family-secondary);
-  color: var(--color-text-secondary);
+  color: var(--text-color-secondary);
   margin: 20px 0 10px;
 }
 
@@ -252,7 +252,7 @@ article p {
   }
 
   .relative-container h1 {
-    font-size: var(--heading-size);
+    font-size: 50px;
   }
 
   article h2 {

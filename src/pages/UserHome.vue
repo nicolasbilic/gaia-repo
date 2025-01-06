@@ -103,16 +103,6 @@ onUnmounted(() => {
 
 /****** General ******/
 .section {
-  padding: var(--section-gap) 0;
-}
-
-#contact {
-  /* background: linear-gradient(
-    90deg,
-    rgba(37, 35, 33, 1) 0%,
-    rgba(50, 48, 45, 1) 35%,
-    rgba(37, 35, 33, 1) 100%
-  ); */
-  clip-path: polygon(0 9%, 100% 0, 100% 100%, 0% 100%);
+  padding: var(--section-gap);
 }
 </style>

@@ -27,23 +27,14 @@
 
 <style scoped>
 /****** Global ******/
-h5 {
-  font-family: var(--font-family-secondary);
-  color: var(--color-text-accent-dark);
-  margin-bottom: 0.5rem;
-}
 footer .brand {
   display: block;
   font-family: var(--font-family-primary);
-  color: var(--color-text-primary);
+  color: var(--text-color-primary);
   font-size: clamp(100px, 13vw, 160px);
 }
 .legal {
   display: block;
-  font-size: 17px;
+  font-size: var(--text-16px-size);
 }
-
-/****** Version mobile ******/
-
-/****** Media queries ******/
 </style>

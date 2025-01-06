@@ -60,7 +60,7 @@
 /******* Global *******/
 a {
   font-family: var(--font-family-primary);
-  color: var(--color-text-secondary);
+  color: var(--text-color-secondary);
   font-size: 40px;
   line-height: clamp(40px, 14vw, 55px);
 }
@@ -76,7 +76,7 @@ a {
 .nav-link:focus,
 .navbar-brand:hover,
 .navbar-brand:focus {
-  color: var(--color-text-secondary);
+  color: var(--text-color-secondary);
 }
 
 /* Change la couleur des barres */
@@ -86,12 +86,12 @@ a {
 
 /* Change la couleur de la bordure */
 .navbar-toggler {
-  border-color: var(--color-text-secondary);
+  border-color: var(--outline-light);
   z-index: 20;
 }
 .navbar-toggler:hover,
 .navbar-toggler:focus {
-  color: var(--color-text-secondary);
+  color: var(--outline-light);
   box-shadow: 0 0 0 0.25rem;
 }
 </style>

@@ -74,7 +74,7 @@ const playAudioWithFadeOut = () => {
 <style scoped>
 .play-button {
   font-family: var(--font-family-primary);
-  color: var(--color-text-secondary);
+  color: var(--text-color-secondary);
   font-size: 200px;
   cursor: pointer;
   z-index: 9999;
@@ -84,7 +84,7 @@ const playAudioWithFadeOut = () => {
 }
 
 .play-button:hover {
-  color: var(--color-text-primary);
+  color: var(--text-color-primary);
 }
 
 .banner {
@@ -155,7 +155,7 @@ const playAudioWithFadeOut = () => {
 
 svg path {
   fill: transparent;
-  stroke: #fff;
+  stroke: var(--svg-path-color);
   stroke-width: 0.1;
   stroke-dasharray: 55;
   stroke-dashoffset: 55;
@@ -171,7 +171,7 @@ svg path.animated {
     fill: transparent;
   }
   100% {
-    fill: #fff;
+    fill: var(--svg-path-color);
     stroke-dashoffset: 0;
   }
 }

@@ -24,7 +24,7 @@ li {
 /* Make content appear */
 .scrollShow {
   animation: scrollShowAnimation both;
-  animation-timeline: view(70% 5%);
+  animation-timeline: var(--animation-timeline-view);
 }
 @keyframes scrollShowAnimation {
   from {
@@ -40,7 +40,7 @@ li {
 /* Go from grey to color & round-border */
 .scrollColorRound {
   animation: scrollColorRoundAnimation both;
-  animation-timeline: view(70% 5%);
+  animation-timeline: var(--animation-timeline-view);
 }
 @keyframes scrollColorRoundAnimation {
   from {
@@ -56,7 +56,7 @@ li {
 /* Grow content */
 .scrollGrow {
   animation: scrollGrowAnimation both;
-  animation-timeline: view(70% 5%);
+  animation-timeline: var(--animation-timeline-view);
 }
 @keyframes scrollGrowAnimation {
   from {
@@ -70,7 +70,7 @@ li {
 /* Go from blur to focus */
 .scrollBlurToFocus {
   animation: scrollBlurToFocusAnimation both;
-  animation-timeline: view(70% 5%);
+  animation-timeline: var(--animation-timeline-view);
 }
 @keyframes scrollBlurToFocusAnimation {
   from {
@@ -86,7 +86,7 @@ li {
 /* Go back to original color */
 .scrollColorRewind {
   animation: scrollColorRewindAnimation both;
-  animation-timeline: view(70% 5%);
+  animation-timeline: var(--animation-timeline-view);
 }
 @keyframes scrollColorRewindAnimation {
   from {
@@ -101,7 +101,7 @@ li {
 /* Clip part of the content */
 .scrollClipSM {
   animation: scrollClipSMAnimation both;
-  animation-timeline: view(70% 5%);
+  animation-timeline: var(--animation-timeline-view);
 }
 @keyframes scrollClipSMAnimation {
   from {
@@ -114,7 +114,7 @@ li {
 }
 .scrollClipMD {
   animation: scrollClipMDAnimation both;
-  animation-timeline: view(70% 5%);
+  animation-timeline: var(--animation-timeline-view);
 }
 @keyframes scrollClipMDAnimation {
   from {
@@ -126,7 +126,7 @@ li {
 }
 .scrollClipLG {
   animation: scrollClipLGAnimation both;
-  animation-timeline: view(70% 5%);
+  animation-timeline: var(--animation-timeline-view);
 }
 @keyframes scrollClipLGAnimation {
   from {
@@ -140,7 +140,7 @@ li {
 /* Move part of the content */
 .scrollSlideRight {
   animation: scrollSlideRightAnimation both;
-  animation-timeline: view(80% 5%);
+  animation-timeline: var(--animation-timeline-view-fast);
 }
 @keyframes scrollSlideRightAnimation {
   from {
@@ -152,7 +152,7 @@ li {
 }
 .scrollSlideLeft {
   animation: scrollSlideLeftAnimation both;
-  animation-timeline: view(80% 5%);
+  animation-timeline: var(--animation-timeline-view-fast);
 }
 @keyframes scrollSlideLeftAnimation {
   from {
@@ -164,7 +164,7 @@ li {
 }
 .scrollSlideUp {
   animation: scrollSlideUpYAnimation both;
-  animation-timeline: view(80% 5%);
+  animation-timeline: var(--animation-timeline-view-fast);
 }
 @keyframes scrollSlideUpYAnimation {
   from {
