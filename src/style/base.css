@@ -36,7 +36,7 @@
   --fs-14px: 14px;
 
   --radius: 12px;
-  --section-gap: 160px 0;
+  --section-gap: 160px;
 
   --outline-gold: 2px solid var(--c-gold);
   --outline-white: 2px solid var(--c-white);

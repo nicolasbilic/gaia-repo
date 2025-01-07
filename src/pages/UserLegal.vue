@@ -137,8 +137,9 @@ onMounted(() => {
                   <a
                     href="https://uppbeat.io/t/brock-hewitt-stories-in-sound/lover"
                     target="_blank"
-                    >https://uppbeat.io/t/brock-hewitt-stories-in-sound/lover</a
                   >
+                    https://uppbeat.io/t/brock-hewitt-stories-in-sound/lover
+                  </a>
                   <br />
                   License code: XY7DTL3LQSS7VSBB
                 </li>
@@ -153,12 +154,6 @@ onMounted(() => {
 </template>
 
 <style scoped>
-ul {
-  padding-left: 25px;
-}
-li {
-  list-style-type: disc;
-}
 /****** Transition de la page au chargement ******/
 .fade-slide-enter-active {
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -243,6 +238,13 @@ article h3 {
 
 article p {
   padding-bottom: 10px;
+}
+
+ul {
+  padding-left: 25px;
+}
+li {
+  list-style-type: disc;
 }
 
 /****** MEDIA QUERIES ******/

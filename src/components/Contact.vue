@@ -233,6 +233,9 @@ const resetConfirmationMessage = () => {
 </template>
 
 <style scoped>
+h2 {
+  color: var(--text-color-primary);
+}
 /* Inputs */
 .form-control {
   color: var(--text-color-secondary);
@@ -298,12 +301,12 @@ input:invalid ~ button[type="submit"] {
 
 /* Text info */
 p {
-  color: var(--text-color-info);
   font-size: var(--text-14px-size);
+  color: var(--text-color-info);
 }
 span {
-  color: var(--error-color);
   font-size: var(--text-14px-size);
+  color: var(--error-color);
 }
 .error {
   color: var(--error-color);

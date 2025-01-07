@@ -122,6 +122,7 @@ onBeforeUnmount(() => {
 }
 
 .img-box {
+  position: relative;
   width: 350px;
   height: 140px;
   margin: 3px;
@@ -136,6 +137,7 @@ onBeforeUnmount(() => {
 	•	0.03 : Ralentit rapidement après le pic.
 	•	1.54 : Permet un effet de dépassement et de retour. */
 }
+
 .img-box:hover {
   height: 255px;
   filter: grayscale(0);

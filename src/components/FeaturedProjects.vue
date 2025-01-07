@@ -4,7 +4,7 @@
   <div
     class="container d-flex flex-column justify-content-center align-items-center"
   >
-    <h2 class="scrollShow">Artworks</h2>
+    <h2 class="scrollShow text-center">Artworks</h2>
     <div class="featured-projects position-relative">
       <div class="project position-absolute scrollBlurToFocus">
         <img
@@ -12,6 +12,7 @@
           alt="Celestian Artisan"
           width="230"
           height="auto"
+          loading="lazy"
         />
       </div>
       <div class="project position-absolute scrollBlurToFocus">
@@ -20,6 +21,7 @@
           alt="Sorceress"
           width="230"
           height="auto"
+          loading="lazy"
         />
       </div>
       <div class="project scrollBlurToFocus">
@@ -28,6 +30,7 @@
           alt="Star nomad"
           width="230"
           height="auto"
+          loading="lazy"
         />
       </div>
       <div class="project position-absolute scrollBlurToFocus">
@@ -36,6 +39,7 @@
           alt="Lunar archer"
           width="230"
           height="auto"
+          loading="lazy"
         />
       </div>
       <div class="project position-absolute scrollBlurToFocus">
@@ -44,6 +48,7 @@
           alt="Oracle"
           width="230"
           height="auto"
+          loading="lazy"
         />
       </div>
     </div>
@@ -53,7 +58,6 @@
 <style scoped>
 /******______ FEATURED PROJECTS SECTION ______******/
 h2 {
-  text-align: center;
   padding-bottom: 5rem;
 }
 

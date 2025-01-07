@@ -4,10 +4,10 @@
   <div>
     <div class="project-gallery">
       <div class="container">
-        <h2 class="scrollShow">Gallery</h2>
+        <h2 class="scrollShow text-center">Gallery</h2>
         <div class="projects">
           <!-- Barde -->
-          <div class="project">
+          <div class="project text-center">
             <img
               class="scrollColorRewind"
               src="../assets/images/barde.webp"
@@ -28,7 +28,7 @@
             </div>
           </div>
           <!-- Nomad -->
-          <div class="project">
+          <div class="project text-center">
             <img
               class="scrollColorRewind"
               src="../assets/images/warrior.webp"
@@ -49,7 +49,7 @@
             </div>
           </div>
           <!-- Alchemist -->
-          <div class="project">
+          <div class="project text-center">
             <img
               class="scrollColorRewind"
               src="../assets/images/alchemist-2.webp"
@@ -70,7 +70,7 @@
             </div>
           </div>
           <!-- Wraith -->
-          <div class="project">
+          <div class="project text-center">
             <img
               class="scrollColorRewind"
               src="../assets/images/spectral-sailor-2.webp"
@@ -86,7 +86,7 @@
             </div>
           </div>
           <!-- Mage -->
-          <div class="project">
+          <div class="project text-center">
             <img
               class="scrollColorRewind"
               src="../assets/images/mage.webp"
@@ -106,7 +106,7 @@
             </div>
           </div>
           <!-- Blacksmith -->
-          <div class="project">
+          <div class="project text-center">
             <img
               class="scrollColorRewind"
               src="../assets/images/blacksmith.webp"
@@ -126,7 +126,7 @@
             </div>
           </div>
           <!-- Fey -->
-          <div class="project">
+          <div class="project text-center">
             <img
               class="scrollColorRewind"
               src="../assets/images/fey.webp"
@@ -147,7 +147,7 @@
             </div>
           </div>
           <!-- Priest -->
-          <div class="project">
+          <div class="project text-center">
             <img
               class="scrollColorRewind"
               src="../assets/images/priest.webp"
@@ -168,7 +168,7 @@
             </div>
           </div>
           <!-- Sorcerer -->
-          <div class="project">
+          <div class="project text-center">
             <img
               class="scrollColorRewind"
               src="../assets/images/spectral-sorcerer.webp"
@@ -187,7 +187,7 @@
             </div>
           </div>
           <!-- Pirate -->
-          <div class="project">
+          <div class="project text-center">
             <img
               class="scrollColorRewind"
               src="../assets/images/pirate-galaxy-2.webp"
@@ -208,7 +208,7 @@
             </div>
           </div>
           <!-- Soulkeeper -->
-          <div class="project">
+          <div class="project text-center">
             <img
               class="scrollColorRewind"
               src="../assets/images/soulkeeper.webp"
@@ -230,7 +230,7 @@
             </div>
           </div>
           <!-- architect -->
-          <div class="project">
+          <div class="project text-center">
             <img
               class="scrollColorRewind"
               src="../assets/images/celestial-architect.webp"
@@ -258,7 +258,6 @@
 
 <style scoped>
 h2 {
-  text-align: center;
   padding-bottom: 5rem;
 }
 h3 {
@@ -289,7 +288,6 @@ h3 {
 
 .project {
   position: relative;
-  text-align: center;
   transition: all 0.3s ease-in-out;
 }
 
@@ -310,6 +308,8 @@ h3 {
   opacity: 0;
   transform: translateY(100px);
   transition: all 0.3s ease-in-out;
+  text-wrap: pretty;
+  /* works on Chrome and Androidn, not on Safari */
 }
 
 .project .mask a {
@@ -355,10 +355,6 @@ h3 {
   .project-gallery {
     padding: 0 70px;
   }
-}
-
-/****** >= 768px ******/
-@media (width >= 768px) {
 }
 
 /****** >= 992px ******/

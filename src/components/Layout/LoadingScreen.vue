@@ -4,8 +4,12 @@ import { ref } from "vue";
 const isBlurred = ref(true);
 const isAnimated = ref(false);
 const isButtonVisible = ref(true);
-const isLoading = ref(true);
-const emit = defineEmits();
+// définit les événements que le composant émet. Cela permet de spécifier quels événements ce composant peut déclencher pour communiquer avec ses parents.
+// il est utilisé pour émettre l’événement "finish-loading". Cela signifie que ce composant peut signaler à son parent que le chargement est terminé.
+// const emit = defineEmits();
+const emit = defineEmits<{
+  (event: "finish-loading"): void;
+}>();
 
 const audio: HTMLAudioElement = new Audio("/lover-brock-hewitt.mp3");
 audio.volume = 0.8;
@@ -19,10 +23,11 @@ const playAudioWithFadeOut = () => {
   isAnimated.value = true;
   // Fait disparaitre le bouton
   isButtonVisible.value = false;
+  // Le code pour baisser le son est préparé avant les 7 secondes, mais il ne s’exécute qu’après un délai de 7 secondes grâce à un timeout
   setTimeout(() => {
-    const fadeInterval = 50; // Intervalle en millisecondes pour le fade-out
-    const totalFadeOutDuration = 2000; // Durée totale du fade-out en ms
-    const fadeStep = audio.volume / (totalFadeOutDuration / fadeInterval);
+    const fadeInterval = 50; // Intervalle en millisecondes pour le fade-out, le volume sera ajusté toutes les 50 millisecondes.
+    const totalFadeOutDuration = 2000; // Durée totale du fade-out en ms, le volume baisse en 2 secondes
+    const fadeStep = audio.volume / (totalFadeOutDuration / fadeInterval); // Quantité de volume à diminuer à chaque fadeInterval, totalFadeOutDuration / intervalDuration indique combien de fois (ici 2000/50=40 fois) le volume sera mis à jour pendant toute la durée du fondu. // 0.8 / 40 = 0.02 Le volume diminuera de 0.02 toutes les 50 millisecondes
 
     // Créer un intervalle pour diminuer le volume progressivement
     const fadeOutInterval = setInterval(() => {
@@ -34,7 +39,7 @@ const playAudioWithFadeOut = () => {
         clearInterval(fadeOutInterval); // Supprimer l'intervalle
       }
     }, fadeInterval);
-    emit("finish-loading"); // Cache la page de chargement après 6 secondes
+    emit("finish-loading"); // Cache la page de chargement après 7 secondes
   }, 7000);
 };
 </script>
@@ -43,11 +48,11 @@ const playAudioWithFadeOut = () => {
   <div
     :class="[
       'banner',
-      'position-relative',
+      'position-relative d-flex justify-content-center align-items-center overflow-hidden',
       { blurred: isBlurred, animated: isAnimated },
     ]"
   >
-    <div class="title">
+    <div>
       <svg
         width="250"
         height="250"
@@ -89,11 +94,6 @@ const playAudioWithFadeOut = () => {
 
 .banner {
   height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
   filter: blur(5px);
   transition: filter 1s ease;
 }
@@ -157,6 +157,11 @@ svg path {
   fill: transparent;
   stroke: var(--svg-path-color);
   stroke-width: 0.1;
+  /* stroke-dasharray: 5 2
+  [=====  =====  =====  ]
+  Un segment de 5 unités visibles, suivi d’un espace de 2 unités invisibles
+  stroke-dasharray: 55;
+  Un segment de 55 unités visibles, suivi d’un espace de 55 unités invisibles*/
   stroke-dasharray: 55;
   stroke-dashoffset: 55;
 }

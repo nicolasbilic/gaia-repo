@@ -13,11 +13,11 @@ const desc1 = ref([
   "This project was created for Moonlight Nexus, a visionary brand dedicated to merging innovation with artistic inspiration.",
   "This project was crafted for Eternal Haven, a brand devoted to preserving the essence of timeless connections and profound emotional resonance.",
   "This project was created for Verdant Horizon, a brand rooted in harmonizing nature’s wisdom with modern sustainability.",
-  "This project was created for Starbound Visions, a brand dedicated to exploring the infinite potential of the cosmos through innovation and artistry.",
+  "This project was created for Starbound, a brand dedicated to exploring the potential of the cosmos through innovation and artistry.",
   "This project was created for Whispering Grove, a brand that blends the allure of ancient myths with a modern, mystical touch.",
 ]);
 const desc2 = ref([
-  "The Cosmic Artisan serves as a symbolic figure representing the brand’s core values: strength, precision, and a commitment to transformative ideas.",
+  "The Cosmic Artisan serves as a figure representing the brand’s core values: strength, precision, and a commitment to transformative ideas.",
   "The Soulkeeper embodies the brand’s philosophy: compassion, guardianship, and a deep reverence for the intangible bonds that unite us.",
   "The Druid symbolizes the brand’s ethos: balance, renewal, and an unwavering connection to the natural world.",
   "The Celestial Huntress represents the brand’s ideals: determination, grace, and an unyielding pursuit of excellence among the stars.",
@@ -53,7 +53,7 @@ onMounted(() => {
 
 <template>
   <div class="pt-4">
-    <div class="container g-0">
+    <div class="container hero-component g-0">
       <!-- Display column -->
       <div class="hero-container d-flex flex-column align-items-center">
         <!-- Display row -->
@@ -165,14 +165,17 @@ onMounted(() => {
           </div>
           <transition name="fade-slide" mode="out-in">
             <!-- :key force vue à traiter le composant comme étant complètement ré-ajoutés au DOM-->
-            <div class="project-title order-xl-1 py-3" :key="indexActuel">
+            <div
+              class="project-title d-xl-flex justify-content-center align-items-center order-xl-1 py-3"
+              :key="indexActuel"
+            >
               <h1>{{ title[indexActuel] }}</h1>
             </div>
           </transition>
         </div>
         <transition name="fade-slide" mode="out-in">
           <div
-            class="project-summary py-3 pt-xl-5 w-100 d-flex flex-column flex-xl-row justify-content-center align-items-center"
+            class="project-summary px-3 w-100 d-flex flex-column flex-xl-row justify-content-center align-items-center"
             :key="indexActuel"
           >
             <div class="text">
@@ -181,7 +184,7 @@ onMounted(() => {
               </p>
             </div>
             <!-- horizontal line -->
-            <hr class="d-block d-xl-none" />
+            <hr class="d-block d-xl-none w-50" />
             <!-- vertical line -->
             <div class="vertical-line d-none d-xl-block"></div>
             <div class="text">
@@ -203,8 +206,12 @@ onMounted(() => {
   </div>
 </template>
 <style scoped>
+.hero-component {
+  padding-bottom: var(--section-gap);
+}
+
 .hero-container {
-  min-height: 88vh;
+  height: 720px;
 }
 
 /* Images */
@@ -237,10 +244,11 @@ onMounted(() => {
 /* Button */
 button {
   all: unset;
-  color: var(--text-color-secondary);
-  font-size: var(--text-18px-size);
   position: relative;
+  font-size: var(--text-18px-size);
+  color: var(--text-color-secondary);
 }
+
 button::after {
   content: "";
   position: absolute;
@@ -265,10 +273,6 @@ h1 {
   height: 100%;
   padding: 0 3rem;
   z-index: 2;
-}
-/* Project summary */
-.project-summary {
-  padding: 0 1rem;
 }
 
 /* État initial de l’élément (invisible et décalé vers le bas) */
@@ -305,7 +309,6 @@ h1 {
 /* Lines separating text columns */
 /* Line for mobile & tablet */
 hr {
-  width: 50%;
   height: 1px;
   color: var(--divider);
   opacity: 0.6;
@@ -338,17 +341,19 @@ hr {
   }
 }
 
-/****** >= 992px ******/
-@media (width >= 992px) {
-}
-
 /****** >= 1200px ******/
 @media (width >= 1200px) {
-  .project-title {
-    width: 30%;
+  .hero-component {
+    padding-bottom: 0;
   }
   .carousel {
     width: 70%;
+  }
+  .project-title {
+    width: 30%;
+  }
+  .project-summary {
+    padding-top: 70px;
   }
   .project-summary .text {
     padding: 0 65px;

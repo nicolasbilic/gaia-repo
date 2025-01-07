@@ -1,23 +1,29 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
-const show = ref(false);
-const isElementVisible = ref([false, false, false, false]);
-const hasElementBeenVisible = ref([false, false, false, false]);
+// Une liste réactive indiquant si chaque élément spécifique est visible à l’écran.
+const isElementVisible = ref([false, false, false]);
+// Une liste réactive indiquant si chaque élément a déjà été visible au moins une fois.
+const hasElementBeenVisible = ref([false, false, false]);
 
 const checkVisibility = () => {
+  // Surveille ces éléments HTML
   const elements = [
     document.getElementById("artist-intro"),
     document.getElementById("artist-crafting-worlds"),
-    document.getElementById("dual-img-1"),
     document.getElementById("artist-work"),
   ];
 
+  // element : Un des éléments HTML de la liste. index : La position de l’élément dans le tableau.
   elements.forEach((element, index) => {
+    // vérifie que l’élément existe et qu’il n’a jamais été visible auparavant.
     if (element && !hasElementBeenVisible.value[index]) {
+      // Renvoie un objet avec des propriétés comme top, bottom, etc., indiquant la position de l’élément par rapport au viewport.
       const rect = element.getBoundingClientRect();
-      // -200 on soustrait 200 pixels à la hauteur de la fenêtre. (800 à 600) donc on retarde l'affichage du conteneur cible
+      // Vérifie si le haut de l’élément est dans la fenêtre visible, mais avec une marge de 130 pixels pour retarder son affichage. rect.bottom > 0 : Vérifie si le bas de l’élément est au-dessus du haut du viewport.
       if (rect.top < window.innerHeight - 130 && rect.bottom > 0) {
+        // L’élément est marqué comme visible
         isElementVisible.value[index] = true;
+        // 	L’élément est marqué comme ayant été visible au moins une fois
         hasElementBeenVisible.value[index] = true;
       }
     }
@@ -25,12 +31,15 @@ const checkVisibility = () => {
 };
 
 onMounted(() => {
-  show.value = true;
+  // Ajoute un écouteur d’événements pour exécuter checkVisibility à chaque défilement.
   window.addEventListener("scroll", checkVisibility);
+  // Fait de même pour le redimensionnement de la fenêtre.
   window.addEventListener("resize", checkVisibility);
+  // Lance une première vérification pour détecter les éléments déjà visibles au chargement.
   checkVisibility();
 });
 
+// Supprime les écouteurs d’événements pour éviter les fuites de mémoire ou des appels inutiles une fois le composant détruit.
 onUnmounted(() => {
   window.removeEventListener("scroll", checkVisibility);
   window.removeEventListener("resize", checkVisibility);
@@ -38,7 +47,6 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <!-- IMAGINARY ARTISTE -->
   <div id="artist" class="container-sm g-0">
     <div
       id="artist-intro"
@@ -49,7 +57,7 @@ onUnmounted(() => {
       <!-- Imaginary Artist -->
       <div class="imaginary-artist">
         <img
-          class="img-fluid d-md-none scrollClipSM"
+          class="img-fluid d-md-none scrollClipSM w-100"
           src="../assets/images/artiste-2.webp"
           alt="The artist from the side draws her creations in an imaginary world"
           width="300"
@@ -77,7 +85,7 @@ onUnmounted(() => {
 
     <!-- ARTIST CONTENT-->
     <div
-      class="artist-content text-center position-relative d-flex flex-column"
+      class="artist-content text-center position-relative d-flex flex-column align-items-center justify-content-center"
     >
       <div
         id="artist-crafting-worlds"
@@ -106,7 +114,7 @@ onUnmounted(() => {
         Graphic designer for six years, I've worked with multiple companies to
         create original artworks.
       </p>
-      <div
+      <!-- <div
         id="dual-img-1"
         class="dual-img transition-section d-flex flex-row justify-content-center align-items-center"
         :class="{ visible: isElementVisible[3] }"
@@ -127,7 +135,7 @@ onUnmounted(() => {
           height="281.25"
           loading="lazy"
         />
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -154,9 +162,8 @@ p {
   margin-bottom: 5rem;
 }
 #artist-intro img {
-  width: 100%;
-  border-radius: var(--radius);
   object-fit: cover;
+  border-radius: var(--radius);
 }
 
 #artist-crafting-worlds {
@@ -164,8 +171,6 @@ p {
 }
 
 .artist-content {
-  align-items: center;
-  justify-content: center;
   gap: 8rem;
 }
 
@@ -178,57 +183,32 @@ p {
 }
 
 .artist-content > div img {
-  border-radius: var(--radius);
   max-width: 300px;
+  border-radius: var(--radius);
   transition: filter 0.3s ease-in-out;
   &:hover {
     filter: grayscale(1);
   }
 }
 
-/*** Dual image ***/
-#dual-img-1 img {
-  width: 50%;
-  object-fit: cover;
-  border-radius: 0;
-}
-
 /******______ MEDIA QUERIES ______******/
 /*  >= 576px */
 @media (width >= 576px) {
   h2 {
-    padding-left: 0rem;
+    padding-left: 0;
   }
   .artist-content > p {
     padding: 0 3rem;
   }
-  #dual-img-1 img {
-    width: 50%;
-    object-fit: cover;
-    border-radius: var(--radius);
-  }
-  .dual-img {
-    gap: 1rem;
-  }
-}
-
-/*  >= 768px */
-@media (width >= 768px) {
 }
 
 /*  >= 992px */
 @media (width >= 992px) {
-  #artist-crafting-worlds > * {
-    width: 40%;
-  }
-  .dual-img {
-    gap: 4.5rem;
-  }
-  .dual-img img {
-    max-width: 360px;
-  }
   #artist-intro {
     margin-bottom: 10rem;
+  }
+  #artist-crafting-worlds > * {
+    width: 40%;
   }
   .artist-content {
     gap: 13rem;
@@ -242,9 +222,6 @@ p {
 @media (width >= 1200px) {
   #artist-crafting-worlds > * {
     width: 50%;
-  }
-  .dual-img {
-    gap: 10rem;
   }
 }
 </style>

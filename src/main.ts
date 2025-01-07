@@ -1,5 +1,7 @@
+// Importation de bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+// Importation de la librairie d'icones bootstrap
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './style/main.css'
 

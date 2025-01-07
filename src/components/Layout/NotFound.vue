@@ -1,15 +1,17 @@
+<script setup lang="ts"></script>
+
 <template>
   <div>
     <div class="error-404">
-      <div class="error-404-content">
+      <div
+        class="error-404-content d-flex flex-column align-items-center justify-content-center gap-3"
+      >
         <h1>Oops! The page you are looking for doesn’t exist.</h1>
         <a href="/" aria-label="Retourner à l'accueil"> Go Home </a>
       </div>
     </div>
   </div>
 </template>
-
-<script setup lang="ts"></script>
 
 <style scoped>
 .error-404 {
@@ -21,11 +23,6 @@
 
 .error-404-content {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
   padding: 2rem;
 }
 
@@ -35,7 +32,7 @@
   color: var(--text-color-secondary);
   font-weight: var(--font-weight-strong);
   text-transform: uppercase;
-  padding: 10px 20px 10px;
+  padding: 10px 20px;
   margin-bottom: 5px;
   transition: 0.3s ease-in-out;
   border-radius: var(--radius);
@@ -48,13 +45,13 @@
   text-transform: uppercase;
   padding: 10px 20px;
   background-color: var(--background-light-color);
-  border-radius: var(--radius);
   outline: var(--outline-dark);
+  border-radius: var(--radius);
 }
 
 .error-404 a:hover {
   color: var(--btn-color-hover);
   background-color: var(--btn-background-color-hover);
-  outline: 2px solid var(--outline-light);
+  outline: var(--outline-light);
 }
 </style>

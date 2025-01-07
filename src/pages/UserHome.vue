@@ -103,6 +103,6 @@ onUnmounted(() => {
 
 /****** General ******/
 .section {
-  padding: var(--section-gap);
+  padding: var(--section-gap) 0;
 }
 </style>
