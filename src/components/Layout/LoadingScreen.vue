@@ -33,7 +33,14 @@ audio.volume = 0.8;
 
 const playAudioWithFadeOut = () => {
   if (isMobile.value) {
-    return; // Ne pas jouer la musique si l'utilisateur est sur mobile
+    // Ne pas jouer la musique si l'utilisateur est sur mobile, mais continuer le reste
+    isBlurred.value = false;
+    isAnimated.value = true;
+    isButtonVisible.value = false;
+    setTimeout(() => {
+      emit("finish-loading");
+    }, 7000);
+    return; // Sortir de la fonction sans jouer de son
   }
   // Démarre la musique
   audio.play();
