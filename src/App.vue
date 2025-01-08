@@ -9,7 +9,7 @@ const lastVisit = localStorage.getItem("lastVisit");
 const now = new Date().getTime();
 
 // Si l'user n'a jamais visité le site ou si la dernière visite remonte à plus de 1h, réinitialise le statut
-if (!lastVisit || now - parseInt(lastVisit) > 60 * 60 * 1000) {
+if (!lastVisit || now - parseInt(lastVisit) > 60 * 1000) {
   localStorage.removeItem("hasVisited"); // Réinitialise "hasVisited"
   localStorage.setItem("lastVisit", now.toString()); // Met à jour la date de la dernière visite
 } else {

@@ -1,9 +1,26 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+
+// Détection mobile
+const isMobile = ref(false);
+
+// Fonction pour détecter si l'utilisateur est sur mobile
+const checkMobile = () => {
+  const userAgent = navigator.userAgent.toLowerCase();
+  if (/mobile|android|iphone|ipad|ipod|windows phone/.test(userAgent)) {
+    isMobile.value = true;
+  }
+};
+
+// Au montage du composant, vérifier si l'utilisateur est sur mobile
+onMounted(() => {
+  checkMobile();
+});
 
 const isBlurred = ref(true);
 const isAnimated = ref(false);
 const isButtonVisible = ref(true);
+
 // définit les événements que le composant émet. Cela permet de spécifier quels événements ce composant peut déclencher pour communiquer avec ses parents.
 // il est utilisé pour émettre l’événement "finish-loading". Cela signifie que ce composant peut signaler à son parent que le chargement est terminé.
 // const emit = defineEmits();
@@ -15,6 +32,9 @@ const audio: HTMLAudioElement = new Audio("/lover-brock-hewitt.mp3");
 audio.volume = 0.8;
 
 const playAudioWithFadeOut = () => {
+  if (isMobile.value) {
+    return; // Ne pas jouer la musique si l'utilisateur est sur mobile
+  }
   // Démarre la musique
   audio.play();
   // Enlève le flou
