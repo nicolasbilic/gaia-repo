@@ -249,7 +249,13 @@ h2 {
 
 .form-control:hover,
 .form-control:focus {
+  color: var(--text-color-secondary);
   border-bottom: 1px solid var(--input-border-color-hover);
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
 }
 .form-control:focus {
   box-shadow: none;
@@ -314,5 +320,12 @@ span {
 
 input:invalid:not(:placeholder-shown) + p {
   color: var(--error-color);
+}
+
+/* Pour Safari */
+/* supprime l'icône de remplissage automatique sur Safari */
+input::-webkit-contacts-auto-fill-button {
+  display: none !important;
+  visibility: hidden !important;
 }
 </style>
