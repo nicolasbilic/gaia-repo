@@ -192,6 +192,7 @@ const resetConfirmationMessage = () => {
           name="email"
           id="email"
           placeholder="Your email"
+          pattern=".+@.+\..+"
           required
           v-model="email"
           @input="validateEmail"
