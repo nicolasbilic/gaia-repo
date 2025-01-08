@@ -88,7 +88,7 @@
           <!-- Mage -->
           <div class="project text-center">
             <img
-              class="scrollColorRewind"
+              class=""
               src="../assets/images/mage.webp"
               alt="Mage"
               width="349.2"
@@ -292,16 +292,19 @@ h3 {
 }
 
 .project .mask {
+  will-change: opacity, transform;
+  /* informe le navigateur que l’opacité et la transformation de cet élément vont changer, ce qui évite les effets visuels indésirables comme le flash */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 16px);
   padding: 0 20px 30px;
   background-color: var(--mask-background-color);
   overflow: hidden;
   opacity: 0;
   transition: all 0.3s ease-in-out;
+  border-radius: var(--radius);
 }
 
 .project .mask p {
