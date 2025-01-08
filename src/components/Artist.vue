@@ -164,7 +164,7 @@ p {
 }
 #artist-intro img {
   object-fit: cover;
-  border-radius: var(--radius);
+  border-radius: 0px;
 }
 
 #artist-crafting-worlds {
@@ -197,6 +197,9 @@ p {
 @media (width >= 576px) {
   h2 {
     padding-left: 0;
+  }
+  #artist-intro img {
+    border-radius: var(--radius);
   }
   .artist-content > p {
     padding: 0 3rem;
