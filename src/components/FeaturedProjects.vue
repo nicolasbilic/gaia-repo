@@ -12,7 +12,6 @@
           alt="Celestian Artisan"
           width="230"
           height="auto"
-          loading="lazy"
         />
       </div>
       <div class="project position-absolute scrollBlurToFocus">
@@ -21,7 +20,6 @@
           alt="Sorceress"
           width="230"
           height="auto"
-          loading="lazy"
         />
       </div>
       <div class="project scrollBlurToFocus">
@@ -30,7 +28,6 @@
           alt="Star nomad"
           width="230"
           height="auto"
-          loading="lazy"
         />
       </div>
       <div class="project position-absolute scrollBlurToFocus">
@@ -39,7 +36,6 @@
           alt="Lunar archer"
           width="230"
           height="auto"
-          loading="lazy"
         />
       </div>
       <div class="project position-absolute scrollBlurToFocus">
@@ -48,7 +44,6 @@
           alt="Oracle"
           width="230"
           height="auto"
-          loading="lazy"
         />
       </div>
     </div>

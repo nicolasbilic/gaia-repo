@@ -42,6 +42,7 @@ li {
   animation: scrollColorRoundAnimation both;
   animation-timeline: var(--animation-timeline-view);
 }
+
 @keyframes scrollColorRoundAnimation {
   from {
     filter: grayscale(1);
@@ -199,8 +200,12 @@ li {
   .scrollClipLG {
     clip-path: circle(100% at 50% 160%);
   }
-  #artist-crafting-worlds #artist {
+  .artist-content #artist-img {
     border-radius: 150px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .artist-content #artist-img:hover {
+    transform: scale(1.05);
   }
 
   /****** Add Animation for Safari & other non-supported browsers ******/

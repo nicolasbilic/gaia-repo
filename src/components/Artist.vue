@@ -98,6 +98,7 @@ onUnmounted(() => {
         </p>
         <!-- The Artist -->
         <img
+          id="artist-img"
           class="mx-0 mx-md-3 scrollColorRound"
           src="../assets/images/artiste-7.webp"
           alt="Picture of the artist"
@@ -182,13 +183,13 @@ p {
   padding: 0 1.5rem;
 }
 
-.artist-content > div img {
+.artist-content img {
   max-width: 300px;
   border-radius: var(--radius);
-  transition: filter 0.3s ease-in-out;
-  &:hover {
-    filter: grayscale(1);
-  }
+  transition: transform 0.3s ease-in-out;
+}
+.artist-content img :hover {
+  transform: scale(1.05);
 }
 
 /******______ MEDIA QUERIES ______******/
