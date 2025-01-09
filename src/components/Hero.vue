@@ -100,7 +100,7 @@ onMounted(() => {
                   class="d-block w-100"
                   alt="Soulkeeper in black and white"
                 />
-                <!-- <img
+                <img
                   src="../assets/images/soulkeeper-colors.webp"
                   class="d-block d-md-none w-100 hover-image"
                   alt="Soulkeeper in color"
@@ -109,7 +109,7 @@ onMounted(() => {
                   src="../assets/images/soulkeeper-colors-lg.webp"
                   class="d-none d-md-block w-100 hover-image"
                   alt="Soulkeeper in color"
-                /> -->
+                />
               </div>
               <div class="carousel-item">
                 <img
@@ -117,7 +117,7 @@ onMounted(() => {
                   class="d-block w-100"
                   alt="Druid in black and white"
                 />
-                <!-- <img
+                <img
                   src="../assets/images/druid-colors.webp"
                   class="d-block d-lg-none w-100 hover-image"
                   alt="Druid in color"
@@ -126,7 +126,7 @@ onMounted(() => {
                   src="../assets/images/druid-colors-lg.webp"
                   class="d-none d-lg-block w-100 hover-image"
                   alt="Soulkeeper in color"
-                /> -->
+                />
               </div>
               <div class="carousel-item">
                 <img
@@ -134,7 +134,7 @@ onMounted(() => {
                   class="d-block w-100"
                   alt="Celestial Huntress in black and white"
                 />
-                <!-- <img
+                <img
                   src="../assets/images/celestial-huntress-colors.webp"
                   class="d-block d-md-none w-100 hover-image"
                   alt="Celestial Huntress in black and white"
@@ -143,7 +143,7 @@ onMounted(() => {
                   src="../assets/images/celestial-huntress-colors-lg.webp"
                   class="d-none d-md-block w-100 hover-image"
                   alt="Celestial Huntress in black and white"
-                /> -->
+                />
               </div>
               <div class="carousel-item">
                 <img
@@ -151,7 +151,7 @@ onMounted(() => {
                   class="d-block w-100"
                   alt="Celestial Huntress in color"
                 />
-                <!-- <img
+                <img
                   src="../assets/images/fey-colors.webp"
                   class="d-block d-lg-none w-100 hover-image"
                   alt="Celestial Huntress in black and white"
@@ -160,7 +160,7 @@ onMounted(() => {
                   src="../assets/images/fey-colors-lg.webp"
                   class="d-none d-lg-block w-100 hover-image"
                   alt="Celestial Huntress in black and white"
-                /> -->
+                />
               </div>
             </div>
             <button
@@ -232,14 +232,14 @@ onMounted(() => {
 }
 .carousel-item img {
   object-fit: cover;
-  /* transition: opacity 0.3s ease-in-out; */
+  transition: opacity 0.3s ease-in-out;
 }
 
-/* .carousel-item img:nth-child(1) {
+.carousel-item img:nth-child(1) {
   opacity: 1;
-} */
+}
 
-/* .carousel-item .hover-image {
+.carousel-item .hover-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -250,7 +250,7 @@ onMounted(() => {
 }
 .carousel-item:hover .hover-image {
   opacity: 1;
-}  */
+}
 
 /* Button */
 button {
