@@ -7,7 +7,10 @@
         class="error-404-content d-flex flex-column align-items-center justify-content-center gap-3"
       >
         <h1>Oops! The page you are looking for doesn’t exist.</h1>
-        <a href="/" aria-label="Retourner à l'accueil"> Go Home </a>
+        <a href="/" aria-label="Return to homepage"> Go Home </a>
+        <a @click="$router.back" aria-label="Go back to the previous page">
+          Go Back
+        </a>
       </div>
     </div>
   </div>
@@ -38,7 +41,8 @@
   border-radius: var(--radius);
 }
 
-.error-404 a {
+.error-404 a,
+.error-404 a:not([href]):not([class]) {
   font-size: var(--text-20px-size);
   color: var(--btn-color);
   font-weight: var(--font-weight-strong);
@@ -49,7 +53,8 @@
   border-radius: var(--radius);
 }
 
-.error-404 a:hover {
+.error-404 a:hover,
+.error-404 a:not([href]):not([class]):hover {
   color: var(--btn-color-hover);
   background-color: var(--btn-background-color-hover);
   outline: var(--outline-light);
