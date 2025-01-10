@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-// import bootstrap, { Carousel } from "bootstrap";
 import { Carousel } from "bootstrap";
 
 const indexActuel = ref(0);

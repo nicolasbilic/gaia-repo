@@ -312,6 +312,7 @@ h3 {
   transform: translateY(100px);
   transition: all 0.3s ease-in-out;
   text-wrap: pretty;
+  text-wrap: balance;
   /* works on Chrome and Androidn, not on Safari */
 }
 
