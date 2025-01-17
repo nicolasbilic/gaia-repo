@@ -1,3 +1,10 @@
+// Importation de bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+// Importation de la librairie d'icones bootstrap
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import './style/main.css';
+
 import { createApp } from 'vue'
 import App from './App.vue'
 import { createRouter, createWebHistory, type RouteMeta } from 'vue-router'
@@ -5,12 +12,6 @@ import UserHome from './pages/UserHome.vue';
 import UserLegal from './pages/UserLegal.vue';
 import NotFound from './components/Layout/NotFound.vue';
 
-// Importation de bootstrap
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-// Importation de la librairie d'icones bootstrap
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import './style/main.css';
 
 interface Meta extends RouteMeta {
   title?: string;
