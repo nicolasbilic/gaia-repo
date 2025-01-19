@@ -5,29 +5,29 @@ import { Carousel } from "bootstrap";
 const indexActuel = ref(0);
 
 const title = ref([
-  "The Cosmic Artisan",
   "The Soulkeeper",
+  "The Cosmic Artisan",
   "The Druid",
   "The Celestial Huntress",
   "The Fey",
 ]);
 const desc1 = ref([
-  "This project was created for Moonlight Nexus, a visionary brand dedicated to merging innovation with artistic inspiration.",
   "This project was crafted for Eternal Haven, a brand devoted to preserving the essence of timeless connections and profound emotional resonance.",
+  "This project was created for Moonlight Nexus, a visionary brand dedicated to merging innovation with artistic inspiration.",
   "This project was created for Verdant Horizon, a brand rooted in harmonizing nature’s wisdom with modern sustainability.",
   "This project was created for Starbound, a brand dedicated to exploring the potential of the cosmos through innovation and artistry.",
   "This project was created for Whispering Grove, a brand that blends the allure of ancient myths with a modern, mystical touch.",
 ]);
 const desc2 = ref([
-  "The Cosmic Artisan serves as a figure representing the brand’s core values: strength, precision, and a commitment to transformative ideas.",
   "The Soulkeeper embodies the brand’s philosophy: compassion, guardianship, and a deep reverence for the intangible bonds that unite us.",
+  "The Cosmic Artisan serves as a figure representing the brand’s core values: strength, precision, and a commitment to transformative ideas.",
   "The Druid symbolizes the brand’s ethos: balance, renewal, and an unwavering connection to the natural world.",
   "The Celestial Huntress represents the brand’s ideals: determination, grace, and an unyielding pursuit of excellence among the stars.",
   "The Fey symbolizes the brand’s essence: elegance, magic, and a profound connection to the realms of imagination and nature.",
 ]);
 const desc3 = ref([
-  "The artwork reflects their mission to explore uncharted territories.",
   "The artwork reflects their mission to safeguard and celebrate the ethereal beauty of human experiences and memories.",
+  "The artwork reflects their mission to explore uncharted territories.",
   "The artwork reflects their mission to cultivate a deeper appreciation for the beauty and resilience of the environment.",
   "The artwork reflects their mission to inspire awe and curiosity by charting new frontiers and embracing the mysteries of the universe.",
   "The artwork reflects their mission to explore the hidden dimensions of nature, revealing its quiet strength and transformative power.",
@@ -78,28 +78,11 @@ onMounted(() => {
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img
-                  src="../assets/images/cosmic-artisan-black-white.webp"
-                  class="d-block w-100"
-                  alt="Cosmic Artisan in black and white"
-                />
-                <!-- <img 
-                  src="../assets/images/cosmic-artisan-color.webp"
-                  class="d-block d-lg-none w-100 hover-image"
-                  alt="Cosmic Artisan"
-                />
-                <img
-                  src="../assets/images/cosmic-artisan-color-lg.webp"
-                  class="d-none d-lg-block w-100 hover-image"
-                  alt="Cosmic Artisan"
-                /> -->
-              </div>
-              <div class="carousel-item">
-                <img
                   src="../assets/images/soulkeeper-black-white.webp"
                   class="d-block w-100"
                   alt="Soulkeeper in black and white"
                 />
-                <img
+                <!-- <img
                   src="../assets/images/soulkeeper-colors.webp"
                   class="d-block d-md-none w-100 hover-image"
                   alt="Soulkeeper in color"
@@ -108,6 +91,23 @@ onMounted(() => {
                   src="../assets/images/soulkeeper-colors-lg.webp"
                   class="d-none d-md-block w-100 hover-image"
                   alt="Soulkeeper in color"
+                /> -->
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../assets/images/cosmic-artisan-black-white.webp"
+                  class="d-block w-100"
+                  alt="Cosmic Artisan in black and white"
+                />
+                <img
+                  src="../assets/images/cosmic-artisan-color.webp"
+                  class="d-block d-lg-none w-100 hover-image"
+                  alt="Cosmic Artisan"
+                />
+                <img
+                  src="../assets/images/cosmic-artisan-color-lg.webp"
+                  class="d-none d-lg-block w-100 hover-image"
+                  alt="Cosmic Artisan"
                 />
               </div>
               <div class="carousel-item">
