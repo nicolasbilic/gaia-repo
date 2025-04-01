@@ -53,6 +53,23 @@ const markEmailTouched = () => {
   emailTouched.value = true;
 };
 
+//Message
+const messageTouched = ref(false);
+const markMessageTouched = () => {
+  messageTouched.value = true;
+};
+
+const message = ref("");
+const messageValid = ref(true);
+const validateMessage = () => {
+  const messageRegex = /^[a-zA-ZÀ-ÿ0-9\s,.!?()'"`\-–—$€£:]*$/; //autorise les lettres, chiffres, espaces, ponctuation Courante, certains caractères spéciaux et symboles monétaires
+  messageValid.value =
+    messageRegex.test(message.value) &&
+    message.value.length >= 5 &&
+    message.value.length <= 1000;
+  messageValid.value = messageValid.value && message.value !== "";
+};
+
 //Consent
 const consent = ref(false);
 const consentValid = ref(false);
@@ -70,11 +87,13 @@ const validateForm = () => {
   validateFirstName();
   validateName();
   validateEmail();
+  validateMessage();
   validateConsent();
   return (
     firstNameValid.value &&
     nameValid.value &&
     emailValid.value &&
+    messageValid.value &&
     consentValid.value
   );
 };
@@ -103,6 +122,7 @@ const markAllTouched = () => {
   firstNameTouched.value = true;
   nameTouched.value = true;
   emailTouched.value = true;
+  messageTouched.value = true;
   consentTouched.value = true;
 };
 
@@ -125,6 +145,9 @@ const resetForm = () => {
   email.value = "";
   emailValid.value = true;
   emailTouched.value = false;
+  message.value = "";
+  messageValid.value = true;
+  messageTouched.value = false;
   consent.value = false;
   consentValid.value = true;
   consentTouched.value = false;
@@ -206,6 +229,30 @@ const resetConfirmationMessage = () => {
           Please enter a valid email address in the format example@domain.com.
         </p>
 
+        <!-- Message -->
+        <label class="form-label mb-2" for="message">Message</label>
+        <textarea
+          class="form-control mb-3"
+          name="message"
+          id="message"
+          placeholder="My message"
+          required
+          v-model="message"
+          @input="validateMessage"
+          @blur="markMessageTouched"
+          @click="resetConfirmationMessage"
+        >
+        </textarea>
+        <span
+          v-if="messageTouched && (!messageValid || message === '')"
+          class="error-message"
+        >
+          This field is mandatory and must consist of valid symbols only
+        </span>
+        <div class="invalid-feedback">
+          Please enter a message in the textarea.
+        </div>
+
         <!-- Privacy Policy -->
         <div class="form-check mb-4">
           <input
@@ -277,8 +324,12 @@ input:not([type="checkbox"]):valid:not(:placeholder-shown) {
 }
 
 /* Placeholder */
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: var(--input-placeholder-color);
+}
+textarea {
+  height: 120px;
 }
 
 /* Privacy policy link */
