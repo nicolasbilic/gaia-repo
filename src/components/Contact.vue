@@ -235,7 +235,7 @@ const resetConfirmationMessage = () => {
           class="form-control mb-3"
           name="message"
           id="message"
-          placeholder="My message"
+          placeholder="Your message"
           required
           v-model="message"
           @input="validateMessage"
