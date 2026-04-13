@@ -78,10 +78,10 @@
             <div
               class="mask d-flex flex-column justify-content-center align-items-center"
             >
-              <h3>Mother and Child</h3>
+              <h3>Family</h3>
               <p>
-                A seated woman holds a doll and a book as a child beside her
-                playfully tugs at her hat.
+                A seated woman holds a book as a child playfully tugs at her
+                hat.
               </p>
               <a href="#contact">Get Your Art</a>
             </div>
