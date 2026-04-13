@@ -8,42 +8,37 @@
     <div class="featured-projects position-relative">
       <div class="project position-absolute scrollBlurToFocus">
         <img
-          src="../assets/images/artisan-celeste.webp"
+          src="../assets/images/national-gal.jpg"
           alt="Celestian Artisan"
-          width="230"
-          height="auto"
+          style="height: 345px; width: 230px; object-fit: cover"
         />
       </div>
       <div class="project position-absolute scrollBlurToFocus">
         <img
-          src="../assets/images/sorceress.webp"
+          src="../assets/images/europeana-YIfFVwDcgu8-un.jpg"
           alt="Sorceress"
-          width="230"
-          height="auto"
+          style="height: 345px; width: 230px; object-fit: cover"
         />
       </div>
       <div class="project scrollBlurToFocus">
         <img
-          src="../assets/images/star-nomad.webp"
+          src="../assets/images/europeana-VsnDYMWollM-un.jpg"
           alt="Star nomad"
-          width="230"
-          height="auto"
+          style="height: 345px; width: 230px; object-fit: cover"
         />
       </div>
       <div class="project position-absolute scrollBlurToFocus">
         <img
-          src="../assets/images/lunar-archer.webp"
+          src="../assets/images/art-as.jpg"
           alt="Lunar archer"
-          width="230"
-          height="auto"
+          style="height: 345px; width: 230px; object-fit: cover"
         />
       </div>
       <div class="project position-absolute scrollBlurToFocus">
         <img
-          src="../assets/images/oracle.webp"
+          src="../assets/images/fwcefvrcds.jpg"
           alt="Oracle"
-          width="230"
-          height="auto"
+          style="height: 345px; width: 230px; object-fit: cover"
         />
       </div>
     </div>
@@ -63,7 +58,9 @@ h2 {
 }
 
 .featured-projects .project {
-  transition: transform 0.6s ease, filter 0.5s ease;
+  transition:
+    transform 0.6s ease,
+    filter 0.5s ease;
   filter: brightness(0.8);
   transform: translateZ(0);
   will-change: transform, filter;

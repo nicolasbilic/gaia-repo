@@ -53,20 +53,27 @@ onBeforeUnmount(() => {
             data-index="1"
           >
             <img
+              src="../assets/images/art-institdewxds.jpg"
+              alt="Cosmic artisan"
+              width="400"
+              height="267"
+              loading="lazy"
+            />
+            <!-- <img
               src="../assets/images/desert-sorcerer.webp"
               alt="Desert sorcerer"
               width="400"
               height="267"
               loading="lazy"
-            />
+            /> -->
           </div>
           <div
             class="img-box d-flex justify-content-center align-items-start"
             data-index="2"
           >
             <img
-              src="../assets/images/cosmic-artisan.webp"
-              alt="Cosmic artisan"
+              src="../assets/images/wwwewsda.jpg"
+              alt="Ocean priest"
               width="400"
               height="267"
               loading="lazy"
@@ -77,8 +84,8 @@ onBeforeUnmount(() => {
             data-index="3"
           >
             <img
-              src="../assets/images/soulkeeper-2.webp"
-              alt="Soulkeeper"
+              src="../assets/images/frwieujokde.jpg"
+              alt="Desert sorcerer"
               width="400"
               height="267"
               loading="lazy"
@@ -89,8 +96,8 @@ onBeforeUnmount(() => {
             data-index="4"
           >
             <img
-              src="../assets/images/ocean-priest.webp"
-              alt="Ocean priest"
+              src="../assets/images/fewdcsxd.jpg"
+              alt="Druid of the rivers"
               width="400"
               height="267"
               loading="lazy"
@@ -101,8 +108,8 @@ onBeforeUnmount(() => {
             data-index="5"
           >
             <img
-              src="../assets/images/druid-2.webp"
-              alt="Druid of the rivers"
+              src="../assets/images/uhhhhyhu.jpg"
+              alt="Soulkeeper"
               width="400"
               height="267"
               loading="lazy"

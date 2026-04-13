@@ -57,29 +57,53 @@ onUnmounted(() => {
       <!-- Imaginary Artist -->
       <div class="imaginary-artist">
         <img
+          class="img-fluid d-md-none scrollClipLG w-100"
+          src="../assets/images/sasha-matveev.jpg"
+          alt="The artist from the side draws her creations in an imaginary world"
+          width="300"
+          height="562.5"
+          loading="lazy"
+        />
+        <!-- <img
           class="img-fluid d-md-none scrollClipSM w-100"
           src="../assets/images/artiste-2.webp"
           alt="The artist from the side draws her creations in an imaginary world"
           width="300"
           height="562.5"
           loading="lazy"
-        />
+        /> -->
         <img
+          class="img-fluid d-none d-md-block d-lg-none scrollClipLG"
+          src="../assets/images/sasha-matveev.jpg"
+          alt="The artist from the side draws her beautiful creations in an imaginary world"
+          width="auto"
+          height="auto"
+          loading="lazy"
+        />
+        <!-- <img
           class="img-fluid d-none d-md-block d-lg-none scrollClipMD"
           src="../assets/images/artiste-md.webp"
           alt="The artist from the side draws her beautiful creations in an imaginary world"
           width="auto"
           height="auto"
           loading="lazy"
-        />
+        /> -->
         <img
+          class="img-fluid d-none d-lg-block scrollClipLG"
+          src="../assets/images/sasha-matveev.jpg"
+          alt="The artist from the side draws her beautiful creations in an imaginary world"
+          width="auto"
+          height="auto"
+          loading="lazy"
+        />
+        <!-- <img
           class="img-fluid d-none d-lg-block scrollClipLG"
           src="../assets/images/artiste-lg.webp"
           alt="The artist from the side draws her beautiful creations in an imaginary world"
           width="auto"
           height="auto"
           loading="lazy"
-        />
+        /> -->
       </div>
     </div>
 
@@ -100,19 +124,28 @@ onUnmounted(() => {
         <img
           id="artist-img"
           class="mx-0 mx-md-3 scrollColorRound"
-          src="../assets/images/artiste-7.webp"
+          src="../assets/images/olga-guryano.jpg"
           alt="Picture of the artist"
           width="300"
           height="auto"
           loading="lazy"
         />
+        <!-- <img
+          id="artist-img"
+          class="mx-0 mx-md-3 scrollColorRound"
+          src="../assets/images/artiste-7.webp"
+          alt="Picture of the artist"
+          width="300"
+          height="auto"
+          loading="lazy"
+        /> -->
       </div>
       <p
         id="artist-work"
         class="scrollShow transition-section"
         :class="{ visible: isElementVisible[2] }"
       >
-        Graphic designer for six years, I've worked with multiple companies to
+        Freelance artist for six years, I've worked with multiple companies to
         create original artworks.
       </p>
       <!-- <div

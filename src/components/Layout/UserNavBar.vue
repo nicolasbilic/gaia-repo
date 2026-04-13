@@ -1,4 +1,17 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from "vue";
+
+/** Vue-owned state so parent re-renders (e.g. Hero carousel) never strip Bootstrap's `.show` and desync the toggler. */
+const navExpanded = ref(false);
+
+function toggleNav() {
+  navExpanded.value = !navExpanded.value;
+}
+
+function closeNav() {
+  navExpanded.value = false;
+}
+</script>
 
 <template>
   <nav class="navbar navbar-expand-lg mx-3 mx-md-5">
@@ -7,32 +20,42 @@
         to="/"
         class="navbar-brand active d-block d-lg-none"
         aria-current="page"
+        @click="closeNav"
       >
         Gaia
       </RouterLink>
       <button
         class="navbar-toggler ms-auto"
         type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent"
-        aria-expanded="false"
+        :aria-expanded="navExpanded"
+        :class="{ collapsed: !navExpanded }"
         aria-label="Toggle navigation"
+        @click="toggleNav"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div
-        class="collapse navbar-collapse position-relative"
         id="navbarSupportedContent"
+        class="collapse navbar-collapse position-relative"
+        :class="{ show: navExpanded }"
       >
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item">
-            <RouterLink class="nav-link" :to="{ path: '/', hash: '#artist' }">
+            <RouterLink
+              class="nav-link"
+              :to="{ path: '/', hash: '#artist' }"
+              @click="closeNav"
+            >
               Artist
             </RouterLink>
           </li>
           <li class="nav-item ps-lg-2">
-            <RouterLink class="nav-link" :to="{ path: '/', hash: '#artworks' }">
+            <RouterLink
+              class="nav-link"
+              :to="{ path: '/', hash: '#artworks' }"
+              @click="closeNav"
+            >
               Artworks
             </RouterLink>
           </li>
@@ -46,7 +69,11 @@
         </RouterLink>
         <ul class="ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <RouterLink class="nav-link" :to="{ path: '/', hash: '#contact' }">
+            <RouterLink
+              class="nav-link"
+              :to="{ path: '/', hash: '#contact' }"
+              @click="closeNav"
+            >
               Reach Me
             </RouterLink>
           </li>

@@ -5,38 +5,37 @@ import { Carousel } from "bootstrap";
 const indexActuel = ref(0);
 
 const title = ref([
-  "The Soulkeeper",
-  "The Cosmic Artisan",
-  "The Druid",
-  "The Celestial Huntress",
-  "The Fey",
+  "Quiet Townscape",
+  "Voices Across the Field",
+  "River Harvest",
+  "Morning in the Prairie",
 ]);
+
 const desc1 = ref([
-  "This project was crafted for Eternal Haven, a brand devoted to preserving the essence of timeless connections and profound emotional resonance.",
-  "This project was created for Moonlight Nexus, a visionary brand dedicated to merging innovation with artistic inspiration.",
-  "This project was created for Verdant Horizon, a brand rooted in harmonizing nature’s wisdom with modern sustainability.",
-  "This project was created for Starbound, a brand dedicated to exploring the potential of the cosmos through innovation and artistry.",
-  "This project was created for Whispering Grove, a brand that blends the allure of ancient myths with a modern, mystical touch.",
+  "This artwork portrays a peaceful town surrounded by trees and open grass, where nature gently blends into everyday life.",
+  "This piece captures a small group engaged in conversation, standing together with a wide field stretching beyond them.",
+  "This scene illustrates rural workers tending to their daily tasks, gathering water near a modest riverside dwelling.",
+  "This painting depicts a mother and her children stepping out into the open prairie, embraced by the vastness of the land.",
 ]);
+
 const desc2 = ref([
-  "The Soulkeeper embodies the brand’s philosophy: compassion, guardianship, and a deep reverence for the intangible bonds that unite us.",
-  "The Cosmic Artisan serves as a figure representing the brand’s core values: strength, precision, and a commitment to transformative ideas.",
-  "The Druid symbolizes the brand’s ethos: balance, renewal, and an unwavering connection to the natural world.",
-  "The Celestial Huntress represents the brand’s ideals: determination, grace, and an unyielding pursuit of excellence among the stars.",
-  "The Fey symbolizes the brand’s essence: elegance, magic, and a profound connection to the realms of imagination and nature.",
+  "The composition emphasizes calmness and balance, with soft greenery and distant buildings creating a sense of quiet harmony.",
+  "The figures form a natural focal point, their interaction contrasting with the stillness of the landscape behind them.",
+  "The presence of animals and flowing water adds movement and life, grounding the scene in simple, essential routines.",
+  "The figures are framed by the openness of the prairie, highlighting both intimacy and the expansive world around them.",
 ]);
+
 const desc3 = ref([
-  "The artwork reflects their mission to safeguard and celebrate the ethereal beauty of human experiences and memories.",
-  "The artwork reflects their mission to explore uncharted territories.",
-  "The artwork reflects their mission to cultivate a deeper appreciation for the beauty and resilience of the environment.",
-  "The artwork reflects their mission to inspire awe and curiosity by charting new frontiers and embracing the mysteries of the universe.",
-  "The artwork reflects their mission to explore the hidden dimensions of nature, revealing its quiet strength and transformative power.",
+  "The artwork reflects a serene connection between human presence and the surrounding environment.",
+  "The artwork reflects shared moments and the subtle energy of human connection within a vast natural setting.",
+  "The artwork reflects resilience and the enduring relationship between people, animals, and the land.",
+  "The artwork reflects themes of family, transition, and the quiet beauty of everyday beginnings.",
 ]);
 
 // Utilisation de onMounted pour ajouter un écouteur d'événement quand le composant est monté
 onMounted(() => {
   const carouselElement = document.querySelector(
-    "#carousel-hero"
+    "#carousel-hero",
   ) as HTMLElement;
   // Vérifie que l'élément existe avant d'ajouter l'écouteur d'événement
   if (carouselElement) {
@@ -51,7 +50,7 @@ onMounted(() => {
     carouselElement.addEventListener("slid.bs.carousel", (event: Event) => {
       // Récupère l'index de la diapositive active
       const activeIndex = Array.from(
-        carouselElement.querySelectorAll(".carousel-item")
+        carouselElement.querySelectorAll(".carousel-item"),
       ).indexOf(carouselElement.querySelector(".active") as HTMLElement);
       // Met à jour l'indexActuel
       indexActuel.value = activeIndex;
@@ -78,7 +77,7 @@ onMounted(() => {
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img
-                  src="../assets/images/soulkeeper-black-white.webp"
+                  src="../assets/images/art-1.avif"
                   class="d-block w-100"
                   alt="Soulkeeper in black and white"
                 />
@@ -95,11 +94,11 @@ onMounted(() => {
               </div>
               <div class="carousel-item">
                 <img
-                  src="../assets/images/cosmic-artisan-black-white.webp"
+                  src="../assets/images/birmingh.avif"
                   class="d-block w-100"
                   alt="Cosmic Artisan in black and white"
                 />
-                <img
+                <!-- <img
                   src="../assets/images/cosmic-artisan-color.webp"
                   class="d-block d-lg-none w-100 hover-image"
                   alt="Cosmic Artisan"
@@ -108,15 +107,15 @@ onMounted(() => {
                   src="../assets/images/cosmic-artisan-color-lg.webp"
                   class="d-none d-lg-block w-100 hover-image"
                   alt="Cosmic Artisan"
-                />
+                /> -->
               </div>
               <div class="carousel-item">
                 <img
-                  src="../assets/images/druid-black-white.webp"
+                  src="../assets/images/europeandew.jpg"
                   class="d-block w-100"
                   alt="Druid in black and white"
                 />
-                <img
+                <!-- <img
                   src="../assets/images/druid-colors.webp"
                   class="d-block d-lg-none w-100 hover-image"
                   alt="Druid in color"
@@ -125,15 +124,15 @@ onMounted(() => {
                   src="../assets/images/druid-colors-lg.webp"
                   class="d-none d-lg-block w-100 hover-image"
                   alt="Soulkeeper in color"
-                />
+                /> -->
               </div>
               <div class="carousel-item">
                 <img
-                  src="../assets/images/celestral-huntress-black-white.webp"
+                  src="../assets/images/birmingham.jpg"
                   class="d-block w-100"
                   alt="Celestial Huntress in black and white"
                 />
-                <img
+                <!-- <img
                   src="../assets/images/celestial-huntress-colors.webp"
                   class="d-block d-md-none w-100 hover-image"
                   alt="Celestial Huntress in black and white"
@@ -142,9 +141,9 @@ onMounted(() => {
                   src="../assets/images/celestial-huntress-colors-lg.webp"
                   class="d-none d-md-block w-100 hover-image"
                   alt="Celestial Huntress in black and white"
-                />
+                /> -->
               </div>
-              <div class="carousel-item">
+              <!-- <div class="carousel-item">
                 <img
                   src="../assets/images/fey-black-white.webp"
                   class="d-block w-100"
@@ -160,7 +159,7 @@ onMounted(() => {
                   class="d-none d-lg-block w-100 hover-image"
                   alt="Celestial Huntress in black and white"
                 />
-              </div>
+              </div> -->
             </div>
             <button
               class="carousel-control-next ps-3 ps-sm-0 pt-2"
@@ -216,8 +215,26 @@ onMounted(() => {
   </div>
 </template>
 <style scoped>
-.hero-component {
+/* .hero-component {
   padding-bottom: var(--section-gap);
+} */
+
+@media (width < 992px) {
+  .hero-component {
+    padding: 0px 0 128px;
+  }
+}
+
+@media (width < 768px) {
+  .hero-component {
+    padding: 0px 0 0px;
+  }
+}
+
+@media (width < 480px) {
+  .hero-component {
+    padding: 0px 0 0px;
+  }
 }
 
 .hero-container {
@@ -292,7 +309,9 @@ h1 {
 }
 /* Décrit comment la transition se déroule */
 .fade-slide-enter-active {
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 /* État final de l’élément (visible et à sa position finale) */
 .fade-slide-enter-to {
@@ -305,7 +324,9 @@ h1 {
   transform: translateY(0);
 }
 .fade-slide-leave-active {
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 .fade-slide-leave-to {
   opacity: 0;
@@ -329,6 +350,10 @@ hr {
   height: 80px;
   margin-right: 15px;
   opacity: 0.6;
+}
+
+.carousel-inner {
+  max-height: 332px;
 }
 
 /******______ MEDIA QUERIES ______******/
