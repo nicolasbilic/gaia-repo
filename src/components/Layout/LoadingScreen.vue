@@ -144,6 +144,7 @@ const playAudioWithFadeOut = () => {
   z-index: -1;
   pointer-events: none;
 }
+/* comment */
 .banner.animated::before {
   animation: bgZoomIn 5s ease-in-out 1 forwards;
 }
